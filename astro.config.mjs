@@ -6,6 +6,9 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://alestaos.com',
+  // Canonical URLs, sitemap entries and the Static Web Apps config all agree
+  // on no trailing slash, so internal links never cost a 301.
+  trailingSlash: 'never',
   integrations: [sitemap()],
 
   markdown: {
