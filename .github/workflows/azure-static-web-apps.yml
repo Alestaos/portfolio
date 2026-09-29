@@ -54,7 +54,6 @@ jobs:
           output_location: ''
           # dist is already built above; skip Oryx's own build step.
           skip_app_build: true
-          skip_api_build: true
 
   close_pull_request:
     name: Tear down PR preview
