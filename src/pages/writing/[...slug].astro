@@ -1,0 +1,30 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import CaseStudy from '../../layouts/CaseStudy.astro';
+import { getWork } from '../../lib/collections';
+
+export async function getStaticPaths() {
+  const entries = await getWork('writing');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+type Props = { entry: CollectionEntry<'writing'> };
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { client, role, year, channels, results, externalUrl } = entry.data;
+
+const meta = [
+  { label: 'Client', value: client },
+  { label: 'Role', value: role },
+  { label: 'Year', value: String(year) },
+  ...(channels.length ? [{ label: 'Channels', value: channels.join(', ') }] : []),
+  ...results.map((result, i) => ({ label: i === 0 ? 'Results' : ' ', value: result })),
+];
+
+const links = externalUrl ? [{ label: 'View campaign', href: externalUrl, primary: true }] : [];
+---
+
+<CaseStudy {entry} {meta} {links}>
+  <Content />
+</CaseStudy>

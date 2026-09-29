@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import { getFeatured } from '../lib/collections';
+import { site } from '../config';
+
+const featured = await getFeatured(5);
+---
+
+<Base title={site.title} description={site.description}>
+  <Hero />
+
+  <section class="mx-auto max-w-6xl px-4 sm:px-6">
+    <SectionHeading
+      eyebrow="Selected work"
+      title="A few things worth showing"
+      blurb="Brand and campaign design alongside playable prototypes. Full archive on the work page."
+    />
+    <ProjectGrid entries={featured} featureFirst />
+
+    <p data-reveal class="mt-10">
+      <a
+        href="/work"
+        class="group inline-flex items-center gap-2 text-sm text-(--color-muted) transition-colors hover:text-(--color-fg)"
+      >
+        View everything
+        <span
+          class="transition-transform duration-300 ease-(--ease-out-expo) group-hover:translate-x-1"
+          aria-hidden="true">&rarr;</span
+        >
+      </a>
+    </p>
+  </section>
+</Base>

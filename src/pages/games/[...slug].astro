@@ -1,0 +1,44 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import CaseStudy from '../../layouts/CaseStudy.astro';
+import { getWork } from '../../lib/collections';
+
+export async function getStaticPaths() {
+  const entries = await getWork('games');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+type Props = { entry: CollectionEntry<'games'> };
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { role, engine, year, platforms, teamSize, status, course, itchUrl, sourceUrl, trailerUrl } =
+  entry.data;
+
+const statusLabel = {
+  prototype: 'Prototype',
+  'in-development': 'In development',
+  released: 'Released',
+  archived: 'Archived',
+}[status];
+
+const meta = [
+  { label: 'Role', value: role },
+  { label: 'Engine', value: engine },
+  { label: 'Year', value: String(year) },
+  { label: 'Status', value: statusLabel },
+  ...(platforms.length ? [{ label: 'Platforms', value: platforms.join(', ') }] : []),
+  ...(teamSize ? [{ label: 'Team', value: teamSize === 1 ? 'Solo' : `${teamSize} people` }] : []),
+  ...(course ? [{ label: 'Course', value: course }] : []),
+];
+
+const links = [
+  ...(itchUrl ? [{ label: 'Play on itch.io', href: itchUrl, primary: true }] : []),
+  ...(trailerUrl ? [{ label: 'Watch trailer', href: trailerUrl }] : []),
+  ...(sourceUrl ? [{ label: 'Source', href: sourceUrl }] : []),
+];
+---
+
+<CaseStudy {entry} {meta} {links}>
+  <Content />
+</CaseStudy>

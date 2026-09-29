@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, socials } from '../config';
+
+// TODO(stuart): rewrite these in your own voice — the shape is right,
+// the specifics are placeholders.
+const timeline = [
+  {
+    period: 'In progress',
+    title: 'MSc Game Development & XR',
+    body: 'Moving from static visuals into interactive and spatial work — engine programming, real-time rendering, and XR interaction design.',
+    discipline: 'games',
+  },
+  {
+    period: 'Certification',
+    title: 'Graphic Design',
+    body: 'Formal grounding in typography, layout, colour and production — the craft underneath everything in the design archive.',
+    discipline: 'design',
+  },
+  {
+    period: 'Bachelor of Arts',
+    title: 'Marketing',
+    body: 'Brand strategy, consumer behaviour and campaign planning. The reason the design work is built around an audience rather than a mood board.',
+    discipline: 'writing',
+  },
+] as const;
+
+const capabilities = [
+  'Brand identity & systems',
+  'Campaign art direction',
+  'Print & production artwork',
+  'Motion & social assets',
+  'Unity / real-time 3D',
+  'XR interaction prototyping',
+];
+---
+
+<Base
+  title="About"
+  description="Stuart May — marketing graduate, certified graphic designer, MSc game development and XR student."
+>
+  <div class="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-28">
+    <header class="max-w-2xl" data-reveal>
+      <h1 class="text-4xl sm:text-5xl">About</h1>
+      <div class="prose mt-7">
+        <p>
+          I'm {site.name}. I started in marketing, learned to make the artwork myself, and I'm now
+          studying game development and XR — which is really the same job with an extra dimension
+          and a frame budget.
+        </p>
+        <p>
+          Most of what's in the archive was made under a brief: a launch, a rebrand, a campaign with
+          a date attached. The games and XR work is newer and mostly academic, with playable builds
+          on itch.io where a build exists.
+        </p>
+      </div>
+    </header>
+
+    <section class="mt-20" aria-labelledby="background">
+      <h2 id="background" class="text-2xl" data-reveal>Background</h2>
+      <ol class="mt-8 flex flex-col gap-4" data-stagger>
+        {
+          timeline.map((item) => (
+            <li class="glass rounded-2xl p-6" data-reveal data-discipline={item.discipline}>
+              <p class="accent-text text-xs font-medium uppercase tracking-[0.16em]">
+                {item.period}
+              </p>
+              <h3 class="mt-2 text-lg">{item.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-(--color-muted)">{item.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="mt-20" aria-labelledby="capabilities">
+      <h2 id="capabilities" class="text-2xl" data-reveal>What I do</h2>
+      <ul class="mt-8 grid gap-3 sm:grid-cols-2" data-reveal>
+        {
+          capabilities.map((c) => (
+            <li class="flex items-center gap-3 rounded-xl border border-white/8 bg-white/3 px-4 py-3 text-sm text-(--color-muted)">
+              <span class="size-1.5 shrink-0 rounded-full bg-(--color-accent)" aria-hidden="true" />
+              {c}
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="mt-20" aria-labelledby="contact" data-reveal>
+      <h2 id="contact" class="text-2xl">Get in touch</h2>
+      <p class="mt-4 text-(--color-muted)">
+        Open to design work, and to game and XR collaborations.
+      </p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a
+          href={`mailto:${site.email}`}
+          class="glass rounded-full px-6 py-3 text-sm font-medium transition-transform duration-300 hover:-translate-y-0.5"
+        >
+          {site.email}
+        </a>
+        {
+          socials.map((s) => (
+            <a
+              href={s.href}
+              target="_blank"
+              rel="me noopener"
+              class="rounded-full border border-white/12 px-6 py-3 text-sm font-medium text-(--color-muted) transition-colors duration-300 hover:border-white/25 hover:text-(--color-fg)"
+            >
+              {s.label}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Base>

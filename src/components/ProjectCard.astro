@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+import { disciplines, hrefFor, type WorkEntry, type WorkCollection } from '../lib/collections';
+
+interface Props {
+  entry: WorkEntry;
+  /** Index within the grid. Drives eager-vs-lazy image loading. */
+  index?: number;
+  /** Featured cards span two columns on wide screens. */
+  wide?: boolean;
+}
+
+const { entry, index = 0, wide = false } = Astro.props;
+const collection = entry.collection as WorkCollection;
+const discipline = disciplines[collection];
+const { title, summary, year, cover, coverAlt, tags } = entry.data;
+
+// Only games carry a playable build link.
+const itchUrl = 'itchUrl' in entry.data ? entry.data.itchUrl : undefined;
+---
+
+<article
+  data-reveal
+  data-discipline={collection}
+  class:list={[
+    'glass group relative flex flex-col overflow-hidden rounded-2xl transition-[transform,box-shadow] duration-500 ease-(--ease-out-expo) hover:-translate-y-1',
+    wide && 'sm:col-span-2',
+  ]}
+>
+  <div class="relative aspect-16/10 overflow-hidden bg-(--color-ink)">
+    <Image
+      src={cover}
+      alt={coverAlt}
+      widths={[400, 800, 1200]}
+      sizes={wide
+        ? '(min-width: 1024px) 760px, 100vw'
+        : '(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw'}
+      loading={index < 2 ? 'eager' : 'lazy'}
+      class="h-full w-full object-cover transition-transform duration-700 ease-(--ease-out-expo) group-hover:scale-[1.04]"
+    />
+    <!-- Keeps the eyebrow legible over any cover art. -->
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-(--color-void) via-transparent to-transparent opacity-80"
+      aria-hidden="true"
+    >
+    </div>
+  </div>
+
+  <div class="flex flex-1 flex-col gap-3 p-5 sm:p-6">
+    <p class="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em]">
+      <span class="accent-text">{discipline.label}</span>
+      <span class="text-(--color-faint)" aria-hidden="true">/</span>
+      <span class="text-(--color-faint)">{year}</span>
+      {
+        itchUrl && (
+          <span class="ml-auto rounded-full border border-white/12 px-2 py-0.5 text-[0.65rem] normal-case tracking-normal text-(--color-muted)">
+            Playable
+          </span>
+        )
+      }
+    </p>
+
+    <h3 class="text-xl leading-snug">
+      <a
+        href={hrefFor(entry)}
+        class="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
+      >
+        {title}
+      </a>
+    </h3>
+
+    <p class="text-sm leading-relaxed text-(--color-muted)">{summary}</p>
+
+    {
+      tags.length > 0 && (
+        <ul class="mt-auto flex flex-wrap gap-1.5 pt-2">
+          {tags.slice(0, 4).map((tag) => (
+            <li class="rounded-full border border-white/10 bg-white/4 px-2.5 py-1 text-xs text-(--color-faint)">
+              {tag}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+
+  <!-- Accent hairline that lights up on hover. -->
+  <span
+    class="accent-bg pointer-events-none absolute inset-x-0 bottom-0 h-px scale-x-0 opacity-70 transition-transform duration-500 ease-(--ease-out-expo) group-hover:scale-x-100"
+    aria-hidden="true"></span>
+</article>

@@ -1,0 +1,27 @@
+---
+import type { WorkCollection } from '../lib/collections';
+
+interface Props {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  blurb?: string;
+  /** Selects the accent colour via CSS; falls back to the site accent. */
+  discipline?: WorkCollection;
+}
+
+const { id, eyebrow, title, blurb, discipline } = Astro.props;
+---
+
+<div class="mb-10 max-w-2xl" {id} data-reveal data-discipline={discipline}>
+  {
+    eyebrow && (
+      <p class="mb-3 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-(--color-faint)">
+        <span class="accent-bg h-px w-8" aria-hidden="true" />
+        {eyebrow}
+      </p>
+    )
+  }
+  <h2 class="text-3xl sm:text-4xl">{title}</h2>
+  {blurb && <p class="mt-4 text-base leading-relaxed text-(--color-muted)">{blurb}</p>}
+</div>

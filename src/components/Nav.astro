@@ -1,0 +1,46 @@
+---
+import { nav, site } from '../config';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isCurrent = (href: string) => {
+  const base = href.split('#')[0];
+  return base === '/' ? path === '/' : path === base || path.startsWith(`${base}/`);
+};
+---
+
+<a
+  href="#main"
+  class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-(--color-ink) focus:px-5 focus:py-2.5 focus:text-sm"
+>
+  Skip to content
+</a>
+
+<header class="glass-bar sticky top-0 z-40">
+  <nav
+    aria-label="Primary"
+    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6"
+  >
+    <a
+      href="/"
+      class="font-[family-name:var(--font-display)] text-base font-semibold tracking-tight transition-opacity hover:opacity-70"
+    >
+      {site.name}
+    </a>
+
+    <ul class="flex items-center gap-1 text-sm sm:gap-2">
+      {
+        nav.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              aria-current={isCurrent(item.href) ? 'page' : undefined}
+              class="rounded-full px-2.5 py-1.5 text-(--color-muted) transition-colors hover:bg-white/5 hover:text-(--color-fg) aria-[current=page]:bg-white/8 aria-[current=page]:text-(--color-fg) sm:px-3"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

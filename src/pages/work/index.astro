@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import ProjectGrid from '../../components/ProjectGrid.astro';
+import { getAllWork, disciplines } from '../../lib/collections';
+
+const work = await getAllWork();
+
+// Design leads — it is the deepest archive. Games second, marketing last.
+const sections = [
+  { ...disciplines.design, entries: work.design },
+  { ...disciplines.games, entries: work.games },
+  { ...disciplines.writing, entries: work.writing },
+];
+---
+
+<Base
+  title="Work"
+  description="Graphic design, brand marketing, and game & XR development projects by Stuart May."
+>
+  <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+    <header class="mb-20 max-w-2xl" data-reveal>
+      <h1 class="text-4xl sm:text-5xl">Work</h1>
+      <p class="mt-5 text-lg leading-relaxed text-(--color-muted)">
+        Grouped by discipline. Design and marketing pieces are client work; games and XR are mostly
+        MSc coursework and personal prototypes, with playable builds on itch.io where they exist.
+      </p>
+    </header>
+
+    <div class="flex flex-col gap-24">
+      {
+        sections.map((section) => (
+          <section id={section.id} aria-labelledby={`${section.id}-heading`}>
+            <SectionHeading
+              id={`${section.id}-heading`}
+              eyebrow={section.label}
+              title={section.label}
+              blurb={section.blurb}
+              discipline={section.id}
+            />
+            <ProjectGrid
+              entries={section.entries}
+              emptyMessage={`${section.label} case studies are being written up.`}
+            />
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</Base>

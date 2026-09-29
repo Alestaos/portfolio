@@ -1,0 +1,141 @@
+---
+import { Image } from 'astro:assets';
+import Base from './Base.astro';
+import { disciplines, type WorkEntry, type WorkCollection } from '../lib/collections';
+
+interface MetaItem {
+  label: string;
+  value: string;
+}
+
+interface LinkItem {
+  label: string;
+  href: string;
+  primary?: boolean;
+}
+
+interface Props {
+  entry: WorkEntry;
+  meta: MetaItem[];
+  links?: LinkItem[];
+}
+
+const { entry, meta, links = [] } = Astro.props;
+const collection = entry.collection as WorkCollection;
+const discipline = disciplines[collection];
+const { title, summary, cover, coverAlt, tags } = entry.data;
+const gallery = 'gallery' in entry.data ? entry.data.gallery : [];
+---
+
+<Base title={title} description={summary} type="article" image={cover.src}>
+  <article class="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24" data-discipline={collection}>
+    <a
+      href="/work"
+      class="group inline-flex items-center gap-2 text-sm text-(--color-faint) transition-colors hover:text-(--color-fg)"
+    >
+      <span
+        class="transition-transform duration-300 ease-(--ease-out-expo) group-hover:-translate-x-1"
+        aria-hidden="true">&larr;</span
+      >
+      All work
+    </a>
+
+    <header class="mt-8" data-reveal>
+      <p class="accent-text mb-4 text-xs font-medium uppercase tracking-[0.16em]">
+        {discipline.label}
+      </p>
+      <h1 class="text-4xl leading-[1.1] sm:text-5xl">{title}</h1>
+      <p class="mt-5 text-lg leading-relaxed text-(--color-muted)">{summary}</p>
+    </header>
+
+    <div class="glass mt-10 overflow-hidden rounded-2xl" data-reveal data-delay="1">
+      <Image
+        src={cover}
+        alt={coverAlt}
+        widths={[600, 1000, 1600]}
+        sizes="(min-width: 896px) 896px, 100vw"
+        loading="eager"
+        class="w-full object-cover"
+      />
+    </div>
+
+    <dl
+      class="mt-10 grid gap-x-8 gap-y-5 border-y border-white/8 py-7 sm:grid-cols-3"
+      data-reveal
+      data-delay="2"
+    >
+      {
+        meta.map((item) => (
+          <div>
+            <dt class="text-xs uppercase tracking-[0.14em] text-(--color-faint)">{item.label}</dt>
+            <dd class="mt-1.5 text-sm text-(--color-fg)">{item.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    {
+      links.length > 0 && (
+        <div class="mt-8 flex flex-wrap gap-3" data-reveal>
+          {links.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener"
+              class:list={[
+                'rounded-full px-5 py-2.5 text-sm font-medium transition-[transform,background-color,border-color] duration-300 hover:-translate-y-0.5',
+                link.primary
+                  ? 'glass hover:bg-white/10'
+                  : 'border border-white/12 text-(--color-muted) hover:border-white/25 hover:text-(--color-fg)',
+              ]}
+            >
+              {link.label} &nearr;
+            </a>
+          ))}
+        </div>
+      )
+    }
+
+    <div class="prose mt-14 max-w-none" data-reveal>
+      <slot />
+    </div>
+
+    {
+      gallery.length > 0 && (
+        <section class="mt-20" aria-label="Project gallery">
+          <div class="flex flex-col gap-8" data-stagger>
+            {gallery.map((shot) => (
+              <figure data-reveal>
+                <div class="glass overflow-hidden rounded-2xl">
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    widths={[600, 1000, 1600]}
+                    sizes="(min-width: 896px) 896px, 100vw"
+                    loading="lazy"
+                    class="w-full object-cover"
+                  />
+                </div>
+                {shot.caption && (
+                  <figcaption class="mt-3 text-sm text-(--color-faint)">{shot.caption}</figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      tags.length > 0 && (
+        <ul class="mt-16 flex flex-wrap gap-2 border-t border-white/8 pt-8" data-reveal>
+          {tags.map((tag) => (
+            <li class="rounded-full border border-white/10 bg-white/4 px-3 py-1 text-xs text-(--color-faint)">
+              {tag}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </article>
+</Base>

@@ -1,0 +1,28 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import CaseStudy from '../../layouts/CaseStudy.astro';
+import { getWork } from '../../lib/collections';
+
+export async function getStaticPaths() {
+  const entries = await getWork('design');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+type Props = { entry: CollectionEntry<'design'> };
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { client, role, year, deliverables, tools } = entry.data;
+
+const meta = [
+  { label: 'Client', value: client },
+  { label: 'Role', value: role },
+  { label: 'Year', value: String(year) },
+  ...(deliverables.length ? [{ label: 'Deliverables', value: deliverables.join(', ') }] : []),
+  ...(tools.length ? [{ label: 'Tools', value: tools.join(', ') }] : []),
+];
+---
+
+<CaseStudy {entry} {meta}>
+  <Content />
+</CaseStudy>

@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/space-grotesk";
+
+/* ---------------------------------------------------------------
+   Design tokens
+   Dark-first glassmorphism. Each discipline carries its own hue so
+   a mixed grid stays readable at a glance.
+   --------------------------------------------------------------- */
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /* Surfaces */
+  --color-void: oklch(0.129 0.014 279);
+  --color-ink: oklch(0.176 0.017 279);
+  --color-slate: oklch(0.243 0.019 279);
+
+  /* Type */
+  --color-fg: oklch(0.967 0.004 279);
+  --color-muted: oklch(0.742 0.015 279);
+  --color-faint: oklch(0.578 0.016 279);
+
+  /* Discipline accents */
+  --color-accent: oklch(0.714 0.178 301);
+  --color-accent-soft: oklch(0.806 0.104 301);
+  --color-design: oklch(0.793 0.148 64);
+  --color-games: oklch(0.714 0.178 301);
+  --color-writing: oklch(0.812 0.117 205);
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------------------------------------------------------------
+   Base
+   --------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-void);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100svh;
+    overflow-x: hidden;
+  }
+
+  /* Ambient light that the glass surfaces refract. Fixed, non-interactive,
+     painted once — cheaper than any canvas or JS gradient. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -20vmax;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(38vmax 38vmax at 18% 8%, oklch(0.714 0.178 301 / 0.20), transparent 62%),
+      radial-gradient(42vmax 42vmax at 84% 22%, oklch(0.812 0.117 205 / 0.14), transparent 64%),
+      radial-gradient(36vmax 36vmax at 62% 92%, oklch(0.793 0.148 64 / 0.11), transparent 62%);
+    filter: blur(24px);
+  }
+
+  /* Fine noise breaks up the gradient banding that large blurs create. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-soft);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: oklch(0.714 0.178 301 / 0.35);
+    color: var(--color-fg);
+  }
+
+  img, video { max-width: 100%; height: auto; }
+}
+
+/* ---------------------------------------------------------------
+   Glass surfaces
+   --------------------------------------------------------------- */
+@utility glass {
+  background-image: linear-gradient(
+    150deg,
+    color-mix(in oklab, white 7%, transparent),
+    color-mix(in oklab, white 2%, transparent)
+  );
+  border: 1px solid color-mix(in oklab, white 10%, transparent);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  box-shadow:
+    0 1px 0 0 color-mix(in oklab, white 8%, transparent) inset,
+    0 16px 40px -24px oklch(0 0 0 / 0.9);
+}
+
+/* Slightly denser glass for bars that sit over scrolling content. */
+@utility glass-bar {
+  background-color: color-mix(in oklab, var(--color-void) 72%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, white 8%, transparent);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+/* ---------------------------------------------------------------
+   Scroll reveal
+   Modern browsers run this entirely on the compositor via
+   scroll-driven animations. Older ones get a class toggled by a
+   ~15-line IntersectionObserver that no-ops where unneeded.
+   --------------------------------------------------------------- */
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(1.5rem);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s var(--ease-out-expo) var(--reveal-delay, 0ms),
+    transform 0.7s var(--ease-out-expo) var(--reveal-delay, 0ms);
+}
+
+@supports (animation-timeline: view()) {
+  [data-reveal] {
+    animation: reveal-in linear both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 30%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  [data-reveal],
+  [data-reveal].is-revealed {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Long-form content rendered from Markdown
+   --------------------------------------------------------------- */
+.prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+}
+
+.prose > * + * { margin-top: 1.25em; }
+
+.prose h2 {
+  margin-top: 2.5em;
+  font-size: 1.5rem;
+  color: var(--color-fg);
+}
+
+.prose h3 {
+  margin-top: 2em;
+  font-size: 1.175rem;
+  color: var(--color-fg);
+}
+
+.prose strong { color: var(--color-fg); font-weight: 600; }
+
+.prose a {
+  color: var(--color-accent-soft);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in oklab, var(--color-accent-soft) 45%, transparent);
+  transition: text-decoration-color 0.25s;
+}
+
+.prose a:hover { text-decoration-color: currentColor; }
+
+.prose ul, .prose ol { padding-left: 1.3em; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li::marker { color: var(--color-faint); }
+.prose li + li { margin-top: 0.4em; }
+
+.prose blockquote {
+  border-left: 2px solid color-mix(in oklab, var(--color-accent) 60%, transparent);
+  padding-left: 1.1em;
+  font-style: italic;
+  color: var(--color-fg);
+}
+
+.prose img { border-radius: 0.75rem; }
+
+.prose code {
+  background: color-mix(in oklab, white 8%, transparent);
+  border-radius: 0.3em;
+  padding: 0.15em 0.4em;
+  font-size: 0.9em;
+}
+
+.prose pre {
+  background: var(--color-ink);
+  border: 1px solid color-mix(in oklab, white 8%, transparent);
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  overflow-x: auto;
+}
+
+.prose pre code { background: none; padding: 0; }
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid color-mix(in oklab, white 10%, transparent);
+  margin-block: 2.5em;
+}
+
+/* ---------------------------------------------------------------
+   Discipline accents
+   Driven by a data attribute rather than an inline style so the CSP
+   never needs style-src 'unsafe-inline'.
+   --------------------------------------------------------------- */
+[data-discipline] { --card-accent: var(--color-accent); }
+[data-discipline="design"] { --card-accent: var(--color-design); }
+[data-discipline="games"] { --card-accent: var(--color-games); }
+[data-discipline="writing"] { --card-accent: var(--color-writing); }
+
+.accent-text { color: var(--card-accent, var(--color-accent)); }
+.accent-bg { background-color: var(--card-accent, var(--color-accent)); }
+
+/* Reveal stagger. Only affects the IntersectionObserver fallback path;
+   the scroll-driven path is naturally staggered by scroll position. */
+[data-delay="1"] { --reveal-delay: 80ms; }
+[data-delay="2"] { --reveal-delay: 160ms; }
+[data-delay="3"] { --reveal-delay: 240ms; }
+[data-delay="4"] { --reveal-delay: 320ms; }
+
+[data-stagger] > *:nth-child(2) { --reveal-delay: 70ms; }
+[data-stagger] > *:nth-child(3) { --reveal-delay: 140ms; }
+[data-stagger] > *:nth-child(4) { --reveal-delay: 210ms; }
+[data-stagger] > *:nth-child(5) { --reveal-delay: 280ms; }
+[data-stagger] > *:nth-child(n + 6) { --reveal-delay: 350ms; }

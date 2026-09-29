@@ -1,0 +1,28 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import type { WorkEntry } from '../lib/collections';
+
+interface Props {
+  entries: WorkEntry[];
+  /** Promote the first entry to a two-column card. */
+  featureFirst?: boolean;
+  emptyMessage?: string;
+}
+
+const { entries, featureFirst = false, emptyMessage = 'Case studies landing here soon.' } =
+  Astro.props;
+---
+
+{
+  entries.length === 0 ? (
+    <p class="glass rounded-2xl px-6 py-10 text-center text-sm text-(--color-faint)">
+      {emptyMessage}
+    </p>
+  ) : (
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
+      {entries.map((entry, i) => (
+        <ProjectCard entry={entry} index={i} wide={featureFirst && i === 0} />
+      ))}
+    </div>
+  )
+}

@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+import Seo from '../components/Seo.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const { title, description, image, type, noindex } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#0a0b11" />
+    <Seo {title} {description} {image} {type} {noindex} />
+
+    <!-- Without JS and without scroll-driven animation support, revealed
+         elements would never become visible. Fail open. -->
+    <noscript>
+      <style>
+        [data-reveal] {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body>
+    <Nav />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Bundled rather than inline so the CSP can stay at script-src 'self'.
+         Around 400 bytes once minified. -->
+    <script>
+      // No-op on browsers with scroll-driven animations (the CSS already
+      // handles it) and when reduced motion is requested.
+      if (
+        !CSS.supports('animation-timeline: view()') &&
+        !matchMedia('(prefers-reduced-motion: reduce)').matches
+      ) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) continue;
+              entry.target.classList.add('is-revealed');
+              io.unobserve(entry.target);
+            }
+          },
+          { rootMargin: '0px 0px -10% 0px', threshold: 0.08 }
+        );
+        for (const el of document.querySelectorAll('[data-reveal]')) io.observe(el);
+      }
+    </script>
+  </body>
+</html>

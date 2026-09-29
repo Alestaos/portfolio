@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page not found" noindex>
+  <div class="mx-auto flex max-w-2xl flex-col items-start px-4 py-32 sm:px-6">
+    <p class="text-sm uppercase tracking-[0.18em] text-(--color-faint)">404</p>
+    <h1 class="mt-4 text-4xl sm:text-5xl">That page moved, or never existed.</h1>
+    <p class="mt-5 text-lg text-(--color-muted)">
+      Try the work archive — most links point somewhere in there.
+    </p>
+    <a
+      href="/work"
+      class="glass mt-9 rounded-full px-6 py-3 text-sm font-medium transition-transform duration-300 hover:-translate-y-0.5"
+    >
+      Go to work
+    </a>
+  </div>
+</Base>
