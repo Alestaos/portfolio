@@ -18,8 +18,8 @@ export const site = {
 export const socials = [
   { label: 'GitHub', href: 'https://github.com/Alestaos' },
   // TODO: replace with your real itch.io and LinkedIn handles.
-  { label: 'itch.io', href: 'https://alestaos.itch.io' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/alestaos' },
+  //{ label: 'itch.io', href: 'https://alestaos.itch.io' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/stuartmay90' },
 ] as const;
 
 export const nav = [
