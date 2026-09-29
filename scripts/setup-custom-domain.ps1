@@ -1,12 +1,20 @@
 <#
 .SYNOPSIS
-    Registers alestaos.com (apex) and www.alestaos.com on the Static Web App.
+    Registers alestaos.com (apex) and www.alestaos.com on the Static Web App,
+    then reports what still needs doing.
 
 .DESCRIPTION
-    Azure validates the apex domain with a TXT record and the www subdomain
-    with a CNAME. This script requests both and prints the DNS records you
-    need to create at your registrar. Re-run it after the records propagate
-    to confirm validation.
+    Safe to run repeatedly — it is the progress check, not a one-shot.
+
+    Azure validates the two hostnames differently:
+      - apex, via a TXT record. Register first to get the token, then add the
+        TXT and an ALIAS record.
+      - www, via the CNAME itself. The CNAME must already resolve before
+        Azure will accept the hostname, so this script waits to register it
+        until DNS shows it.
+
+    Every Azure call is non-blocking; validation happens server-side and can
+    take up to an hour (Microsoft allows 72h for apex propagation).
 
 .EXAMPLE
     ./scripts/setup-custom-domain.ps1
@@ -18,76 +26,150 @@ param(
     [string]$AppName       = 'swa-alestaos-portfolio',
     [string]$Domain        = 'alestaos.com',
 
-    # Skip the apex record if you only want www.
-    [switch]$WwwOnly
+    # Skip the apex and configure only the www subdomain.
+    [switch]$WwwOnly,
+
+    # Public resolver, so results are not masked by the local DNS cache.
+    [string]$Resolver      = '1.1.1.1'
 )
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 function Write-Step { param([string]$Message) Write-Host "`n==> $Message" -ForegroundColor Cyan }
+function Write-Todo { param([string]$Message) Write-Host "  TODO  $Message" -ForegroundColor Yellow }
+function Write-Ok   { param([string]$Message) Write-Host "  OK    $Message" -ForegroundColor Green }
 
-$swa = az staticwebapp show --name $AppName --resource-group $ResourceGroup --output json | ConvertFrom-Json
+# --- The app ---------------------------------------------------------------
+$swa = az staticwebapp show --name $AppName --resource-group $ResourceGroup -o json 2>$null | ConvertFrom-Json
 if (-not $swa) { throw "Static web app '$AppName' not found in '$ResourceGroup'." }
 
 $defaultHost = $swa.defaultHostname
-Write-Host "Static web app: $AppName"
-Write-Host "Default host  : $defaultHost"
+Write-Host "Static web app : $AppName ($($swa.location))"
+Write-Host "Default host   : $defaultHost"
 
-# --- www: validated by the CNAME itself ------------------------------------
-$wwwHost = "www.$Domain"
-Write-Step "Registering $wwwHost"
-$existingWww = az staticwebapp hostname show --name $AppName --resource-group $ResourceGroup --hostname $wwwHost 2>$null
-if ($existingWww) {
-    Write-Host '  Already registered.'
-} else {
-    az staticwebapp hostname set `
-        --name $AppName `
-        --resource-group $ResourceGroup `
-        --hostname $wwwHost `
-        --output none
-    Write-Host '  Requested.'
+function Get-Hostname {
+    param([string]$Name)
+    $json = az staticwebapp hostname show `
+        --name $AppName --resource-group $ResourceGroup --hostname $Name -o json 2>$null
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($json)) { return $null }
+    return $json | ConvertFrom-Json
 }
 
-Write-Host "`n  DNS record required:" -ForegroundColor Yellow
-Write-Host "    Type: CNAME   Name: www   Value: $defaultHost"
+function Resolve-Record {
+    param([string]$Name, [string]$Type)
+    try {
+        Resolve-DnsName -Name $Name -Type $Type -Server $Resolver -ErrorAction Stop |
+            Where-Object { $_.Type -eq $Type }
+    } catch {
+        @()
+    }
+}
 
-# --- apex: validated by a TXT token ----------------------------------------
+$outstanding = @()
+
+# --- Apex ------------------------------------------------------------------
 if (-not $WwwOnly) {
-    Write-Step "Registering $Domain (apex)"
-    $existingApex = az staticwebapp hostname show --name $AppName --resource-group $ResourceGroup --hostname $Domain 2>$null | ConvertFrom-Json
+    Write-Step "Apex — $Domain"
 
-    if (-not $existingApex) {
+    $apex = Get-Hostname -Name $Domain
+    if (-not $apex) {
         az staticwebapp hostname set `
             --name $AppName `
             --resource-group $ResourceGroup `
             --hostname $Domain `
             --validation-method 'dns-txt-token' `
+            --no-wait `
             --output none
-        Write-Host '  Requested.'
-        Start-Sleep -Seconds 5
-        $existingApex = az staticwebapp hostname show --name $AppName --resource-group $ResourceGroup --hostname $Domain --output json | ConvertFrom-Json
-    } else {
-        Write-Host '  Already requested.'
+        if ($LASTEXITCODE -ne 0) { throw "Failed to register the apex hostname '$Domain'." }
+
+        # The token is minted asynchronously; give it a moment to appear.
+        for ($i = 0; $i -lt 10 -and -not ($apex -and $apex.validationToken); $i++) {
+            Start-Sleep -Seconds 3
+            $apex = Get-Hostname -Name $Domain
+        }
     }
 
-    $txtToken = $existingApex.validationToken
-    $status   = $existingApex.status
+    if (-not $apex) { throw "Apex hostname '$Domain' did not register." }
 
-    Write-Host "`n  Status: $status"
-    Write-Host "`n  DNS records required:" -ForegroundColor Yellow
-    Write-Host "    Type: TXT     Name: @   Value: $txtToken"
-    Write-Host "    Type: ALIAS   Name: @   Value: $defaultHost"
-    Write-Host '      (if your registrar has no ALIAS/ANAME support, use an A record'
-    Write-Host "       pointing at the IP that '$defaultHost' resolves to)"
+    Write-Host "  Azure status: $($apex.status)"
+    if ($apex.errorMessage) { Write-Host "  Azure says  : $($apex.errorMessage)" -ForegroundColor Red }
+
+    # TXT ownership record
+    $wantToken = $apex.validationToken
+    if ($wantToken) {
+        $txt = Resolve-Record -Name $Domain -Type TXT
+        $haveToken = $txt | Where-Object { $_.Strings -contains $wantToken }
+        if ($haveToken) {
+            Write-Ok "TXT @ = $wantToken"
+        } else {
+            Write-Todo ("{0,-6} {1,-5} {2,-4} {3}" -f "add", "TXT", "@", $wantToken)
+            $outstanding += 'apex TXT'
+        }
+    }
+
+    # ALIAS shows up to the outside world as an A record.
+    $apexA = Resolve-Record -Name $Domain -Type A
+    $stale = $apexA | Where-Object { $_.IPAddress -eq '172.233.211.187' }
+    if ($stale) {
+        Write-Todo ("{0,-6} {1,-5} {2,-4} {3}" -f "delete", "A", "@", "172.233.211.187  (stale, blocks the ALIAS)")
+        $outstanding += 'apex stale A'
+    }
+    if (-not $apexA) {
+        Write-Todo ("{0,-6} {1,-5} {2,-4} {3}" -f "add", "ALIAS", "@", $defaultHost)
+        $outstanding += 'apex ALIAS'
+    } elseif (-not $stale) {
+        Write-Ok "apex resolves to $(($apexA.IPAddress) -join ', ')"
+    }
 }
 
-Write-Host @"
+# --- www -------------------------------------------------------------------
+$wwwHost = "www.$Domain"
+Write-Step "Subdomain — $wwwHost"
 
-Create the records above, wait for propagation (usually minutes, up to an
-hour), then re-run this script to check the status. Azure issues the TLS
-certificate automatically once validation passes.
+$cname = Resolve-Record -Name $wwwHost -Type CNAME
+$pointsAtApp = $cname | Where-Object { $_.NameHost -eq $defaultHost }
 
-Afterwards, confirm astro.config.mjs `site` matches the domain you kept as
-canonical — currently https://$Domain
+if (-not $pointsAtApp) {
+    Write-Todo ("{0,-6} {1,-5} {2,-4} {3}" -f "add", "CNAME", "www", $defaultHost)
+    Write-Host '        (Azure validates www from this record, so it must exist first)'
+    $outstanding += 'www CNAME'
+} else {
+    Write-Ok "CNAME www -> $defaultHost"
+
+    $www = Get-Hostname -Name $wwwHost
+    if (-not $www) {
+        Write-Host '  Registering with Azure...'
+        az staticwebapp hostname set `
+            --name $AppName `
+            --resource-group $ResourceGroup `
+            --hostname $wwwHost `
+            --no-wait `
+            --output none
+        if ($LASTEXITCODE -ne 0) { throw "Failed to register '$wwwHost'." }
+        Start-Sleep -Seconds 3
+        $www = Get-Hostname -Name $wwwHost
+    }
+
+    if ($www) {
+        Write-Host "  Azure status: $($www.status)"
+        if ($www.errorMessage) { Write-Host "  Azure says  : $($www.errorMessage)" -ForegroundColor Red }
+        if ($www.status -ne 'Ready') { $outstanding += 'www validation' }
+    }
+}
+
+# --- Summary ---------------------------------------------------------------
+Write-Step 'Summary'
+if ($outstanding.Count -eq 0) {
+    Write-Host @"
+  Both hostnames are configured. Azure issues the TLS certificates
+  automatically; allow a few minutes after validation flips to Ready.
+
+  Verify:
+    curl -sI https://$Domain | Select-String '^HTTP|^location'
 "@ -ForegroundColor Green
+} else {
+    Write-Host "  Outstanding: $($outstanding -join ', ')" -ForegroundColor Yellow
+    Write-Host '  Add the records marked TODO above, then re-run this script.'
+    Write-Host '  DNS changes usually land within minutes; apex can take longer.'
+}
