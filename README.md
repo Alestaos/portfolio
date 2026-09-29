@@ -9,10 +9,10 @@ Static Web Apps (Free tier).
 
 These are deliberate. Please keep them when adding features.
 
-- **No client-side framework.** The site ships one ~400-byte script and nothing
-  else. Scroll animations use CSS `animation-timeline: view()`; the script is
-  only an `IntersectionObserver` fallback that no-ops on browsers with
-  scroll-driven animation support.
+- **No client-side framework.** Zero JS bundles. Scroll animations are CSS
+  (`animation-timeline: view()`); the only script is a small
+  `IntersectionObserver` fallback for Firefox, which no-ops on browsers that
+  support scroll-driven animations.
 - **No inline `style` attributes.** The Content Security Policy is hash-based
   (`style-src 'self'`), so inline styles are blocked. Use a `data-discipline`
   attribute or a utility class instead — see `src/styles/global.css`.
@@ -27,7 +27,7 @@ These are deliberate. Please keep them when adding features.
 | `npm run dev` | Dev server at `localhost:4321` |
 | `npm run build` | Production build to `dist/` |
 | `npm run preview` | Preview the production build locally |
-| `npx astro check` | Typecheck `.astro` and `.ts` files |
+| `npm run check` | Typecheck plus a CSP audit of the built output |
 | `node scripts/generate-placeholders.mjs` | Regenerate placeholder cover art |
 
 ## Adding a project

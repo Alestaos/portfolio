@@ -40,7 +40,7 @@ const gallery = 'gallery' in entry.data ? entry.data.gallery : [];
       All work
     </a>
 
-    <header class="mt-8" data-reveal>
+    <header class="mt-8" data-intro>
       <p class="accent-text mb-4 text-xs font-medium uppercase tracking-[0.16em]">
         {discipline.label}
       </p>
@@ -48,7 +48,7 @@ const gallery = 'gallery' in entry.data ? entry.data.gallery : [];
       <p class="mt-5 text-lg leading-relaxed text-(--color-muted)">{summary}</p>
     </header>
 
-    <div class="glass mt-10 overflow-hidden rounded-2xl" data-reveal data-delay="1">
+    <div class="glass mt-10 overflow-hidden rounded-2xl" data-intro data-delay="1">
       <Image
         src={cover}
         alt={coverAlt}
@@ -61,7 +61,7 @@ const gallery = 'gallery' in entry.data ? entry.data.gallery : [];
 
     <dl
       class="mt-10 grid gap-x-8 gap-y-5 border-y border-white/8 py-7 sm:grid-cols-3"
-      data-reveal
+      data-intro
       data-delay="2"
     >
       {
@@ -76,7 +76,7 @@ const gallery = 'gallery' in entry.data ? entry.data.gallery : [];
 
     {
       links.length > 0 && (
-        <div class="mt-8 flex flex-wrap gap-3" data-reveal>
+        <div class="mt-8 flex flex-wrap gap-3" data-intro data-delay="3">
           {links.map((link) => (
             <a
               href={link.href}

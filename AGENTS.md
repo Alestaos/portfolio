@@ -11,14 +11,20 @@ Violating these breaks the production site, not just style preferences.
    discipline, set `data-discipline="design|games|writing"` on an ancestor and
    use the `.accent-text` / `.accent-bg` classes, which read `--card-accent`.
    For reveal stagger use `data-delay="1..4"` or `data-stagger` on the parent.
-2. **No UI framework, no animation library.** Scroll reveals are CSS
-   (`animation-timeline: view()`), with an `IntersectionObserver` fallback in
-   `src/layouts/Base.astro` that no-ops where the CSS is supported. The site
-   currently ships zero JS bundles beyond that one script.
+2. **No UI framework, no animation library.** Two reveal attributes:
+   `data-reveal` for below-the-fold elements (CSS `animation-timeline: view()`,
+   with an `IntersectionObserver` fallback in `src/layouts/Base.astro` for
+   Firefox, which no-ops elsewhere), and `data-intro` for above-the-fold
+   elements, which a scroll-driven timeline would render instantly at their
+   end state. The site ships zero JS bundles.
 3. **Markdown uses Prism, not Shiki** (`markdown.syntaxHighlight` in
    `astro.config.mjs`) because Shiki emits inline styles the CSP blocks.
 4. **`staticwebapp.config.json` lives in `public/`**, not the repo root — SWA
    reads it from the root of the deployed artifact.
+5. **Inline scripts must be hashed into the CSP.** Astro hashes the scripts it
+   generates but not `is:inline` ones; those are pinned in
+   `security.csp.scriptDirective.hashes`. `npm run check:csp` fails the build
+   if one drifts — never silence it by loosening the CSP.
 
 ## Layout
 
@@ -42,10 +48,10 @@ Run both before committing:
 
 ```sh
 npm run build
-npx astro check
+npm run check
 ```
 
-`astro check` must report 0 errors. The build fails if content frontmatter
+`npm run check` runs `astro check` plus a CSP audit; both must pass. The build fails if content frontmatter
 does not satisfy the schema in `src/content.config.ts`.
 
 ## Documentation

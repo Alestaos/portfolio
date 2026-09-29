@@ -130,10 +130,11 @@
 }
 
 /* ---------------------------------------------------------------
-   Scroll reveal
-   Modern browsers run this entirely on the compositor via
-   scroll-driven animations. Older ones get a class toggled by a
-   ~15-line IntersectionObserver that no-ops where unneeded.
+   Reveal animations
+   Two paths, both CSS-driven. Scroll-driven animations handle anything
+   below the fold on Chrome, Edge and Safari; the small IntersectionObserver
+   in Base.astro covers browsers without them (Firefox, as of 2026) and
+   no-ops everywhere else. Above-the-fold content uses [data-intro].
    --------------------------------------------------------------- */
 @keyframes reveal-in {
   from {
@@ -146,24 +147,47 @@
   }
 }
 
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(1.5rem);
-}
-
-[data-reveal].is-revealed {
-  opacity: 1;
-  transform: none;
-  transition:
-    opacity 0.7s var(--ease-out-expo) var(--reveal-delay, 0ms),
-    transform 0.7s var(--ease-out-expo) var(--reveal-delay, 0ms);
-}
-
+/* Modern browsers: pure CSS, no JS involved. The `both` fill mode supplies
+   the hidden start state, so nothing is hidden by default — a visitor with
+   JS disabled still gets the animation. */
 @supports (animation-timeline: view()) {
   [data-reveal] {
     animation: reveal-in linear both;
     animation-timeline: view();
     animation-range: entry 8% cover 30%;
+  }
+
+  /* Offsetting the range per position gives a grid a diagonal cascade —
+     the scroll-driven equivalent of a stagger, still with no JS. */
+  [data-stagger] > *:nth-child(2) { animation-range: entry 12% cover 34%; }
+  [data-stagger] > *:nth-child(3) { animation-range: entry 16% cover 38%; }
+  [data-stagger] > *:nth-child(4) { animation-range: entry 20% cover 42%; }
+  [data-stagger] > *:nth-child(n + 5) { animation-range: entry 24% cover 46%; }
+}
+
+/* Above-the-fold content is already in view on load, so a view() timeline
+   would render it instantly at its end state. It gets a plain time-based
+   intro instead. */
+[data-intro] {
+  animation: reveal-in 0.7s var(--ease-out-expo) var(--delay, 0ms) both;
+}
+
+/* Everything else (notably Firefox): hide only once we know JS is running to
+   reveal it again. The `js` class is set by a head script before first paint,
+   so there is no flash — and with JS off, content renders plainly visible
+   instead of being stuck at opacity 0. */
+@supports not (animation-timeline: view()) {
+  html.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  html.js [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.7s var(--ease-out-expo) var(--delay, 0ms),
+      transform 0.7s var(--ease-out-expo) var(--delay, 0ms);
   }
 }
 
@@ -171,6 +195,7 @@
   html { scroll-behavior: auto; }
 
   [data-reveal],
+  [data-intro],
   [data-reveal].is-revealed {
     opacity: 1 !important;
     transform: none !important;
@@ -273,13 +298,13 @@
 
 /* Reveal stagger. Only affects the IntersectionObserver fallback path;
    the scroll-driven path is naturally staggered by scroll position. */
-[data-delay="1"] { --reveal-delay: 80ms; }
-[data-delay="2"] { --reveal-delay: 160ms; }
-[data-delay="3"] { --reveal-delay: 240ms; }
-[data-delay="4"] { --reveal-delay: 320ms; }
+[data-delay="1"] { --delay: 80ms; }
+[data-delay="2"] { --delay: 160ms; }
+[data-delay="3"] { --delay: 240ms; }
+[data-delay="4"] { --delay: 320ms; }
 
-[data-stagger] > *:nth-child(2) { --reveal-delay: 70ms; }
-[data-stagger] > *:nth-child(3) { --reveal-delay: 140ms; }
-[data-stagger] > *:nth-child(4) { --reveal-delay: 210ms; }
-[data-stagger] > *:nth-child(5) { --reveal-delay: 280ms; }
-[data-stagger] > *:nth-child(n + 6) { --reveal-delay: 350ms; }
+[data-stagger] > *:nth-child(2) { --delay: 70ms; }
+[data-stagger] > *:nth-child(3) { --delay: 140ms; }
+[data-stagger] > *:nth-child(4) { --delay: 210ms; }
+[data-stagger] > *:nth-child(5) { --delay: 280ms; }
+[data-stagger] > *:nth-child(n + 6) { --delay: 350ms; }

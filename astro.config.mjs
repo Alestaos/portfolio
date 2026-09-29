@@ -32,6 +32,12 @@ export default defineConfig({
         "form-action 'self'",
         "object-src 'none'",
       ],
+      scriptDirective: {
+        // Astro hashes the scripts it generates, but not `is:inline` ones.
+        // This is the one-line head script in Base.astro that sets the `js`
+        // class. `npm run check:csp` fails the build if it drifts.
+        hashes: ['sha256-sa2BD07tH4oO53uT1B5vNSLM2+gcrREM4WTXttKp6oU='],
+      },
     },
   },
 

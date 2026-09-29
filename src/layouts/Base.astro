@@ -25,16 +25,12 @@ const { title, description, image, type, noindex } = Astro.props;
     <meta name="theme-color" content="#0a0b11" />
     <Seo {title} {description} {image} {type} {noindex} />
 
-    <!-- Without JS and without scroll-driven animation support, revealed
-         elements would never become visible. Fail open. -->
-    <noscript>
-      <style>
-        [data-reveal] {
-          opacity: 1 !important;
-          transform: none !important;
-        }
-      </style>
-    </noscript>
+    <!-- Runs before first paint so the reveal CSS can hide elements only
+         when JS is present to reveal them again. Without this the fallback
+         path would either flash or, with JS off, never become visible. -->
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
   </head>
 
   <body>
