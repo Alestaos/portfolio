@@ -23,8 +23,8 @@ export const socials = [
 ] as const;
 
 export const nav = [
-  { label: 'Work', href: '/work' },
-  { label: 'Design', href: '/work#design' },
   { label: 'Games & XR', href: '/work#games' },
+  { label: 'Marketing', href: '/work#writing' },
+  { label: 'Design', href: '/work#design' },
   { label: 'About', href: '/about' },
 ] as const;
