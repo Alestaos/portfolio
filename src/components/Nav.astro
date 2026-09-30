@@ -34,7 +34,10 @@ const isCurrent = (href: string) => {
             <a
               href={item.href}
               aria-current={isCurrent(item.href) ? 'page' : undefined}
-              class="rounded-full px-2.5 py-1.5 text-(--color-muted) transition-colors hover:bg-white/5 hover:text-(--color-fg) aria-[current=page]:bg-white/8 aria-[current=page]:text-(--color-fg) sm:px-3"
+              class:list={[
+                'rounded-full px-2.5 py-1.5 text-(--color-muted) transition-colors hover:bg-white/5 hover:text-(--color-fg) aria-[current=page]:bg-white/8 aria-[current=page]:text-(--color-fg) sm:px-3',
+                item.href !== '/about' && 'border border-white/12 bg-white/4',
+              ]}
             >
               {item.label}
             </a>
