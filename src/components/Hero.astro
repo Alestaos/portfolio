@@ -30,7 +30,7 @@ import { disciplines } from '../lib/collections';
       href="/work"
       class="glass rounded-full px-6 py-3 text-sm font-medium transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-white/10"
     >
-      See the work
+      See My Work
     </a>
     <a
       href="/about"
@@ -48,7 +48,10 @@ import { disciplines } from '../lib/collections';
           data-discipline={d.id}
         >
           <p class="accent-text mb-2 text-xs font-medium uppercase tracking-[0.16em]">
-            <a href={`/work#${d.id}`} class="after:absolute after:inset-0 after:content-['']">
+            <a
+              href={`/work#${d.id}`}
+              class="underline-offset-4 after:absolute after:inset-0 after:content-[''] hover:underline"
+            >
               {d.label}
             </a>
           </p>
