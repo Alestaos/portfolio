@@ -6,11 +6,10 @@ import { getAllWork, disciplines } from '../../lib/collections';
 
 const work = await getAllWork();
 
-// Design leads — it is the deepest archive. Games second, marketing last.
 const sections = [
-  { ...disciplines.design, entries: work.design },
   { ...disciplines.games, entries: work.games },
   { ...disciplines.writing, entries: work.writing },
+  { ...disciplines.design, entries: work.design },
 ];
 ---
 
