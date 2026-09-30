@@ -59,6 +59,14 @@ const experience = [
   },
 ] as const;
 
+const certifications = [
+  { name: 'Certified Digital Marketing Professional (CDMP)', issuer: 'Digital Marketing Institute' },
+  { name: 'Fundamentals of Digital Marketing', issuer: 'Google Digital Garage' },
+  { name: 'Microsoft Office Specialist – Master', issuer: 'Microsoft' },
+  { name: 'Microsoft Excel Expert', issuer: 'Microsoft' },
+  { name: 'Microsoft Word Expert', issuer: 'Microsoft' },
+] as const;
+
 const capabilities = [
   'Brand identity & systems',
   'Campaign art direction',
@@ -122,6 +130,23 @@ const capabilities = [
           ))
         }
       </ol>
+    </section>
+
+    <section class="mt-20" aria-labelledby="certifications">
+      <h2 id="certifications" class="text-2xl" data-reveal>Certifications</h2>
+      <ul class="mt-8 grid gap-3 sm:grid-cols-2" data-reveal>
+        {
+          certifications.map((c) => (
+            <li class="flex items-start gap-3 rounded-xl border border-white/8 bg-white/3 px-4 py-3">
+              <span class="mt-1.5 size-1.5 shrink-0 rounded-full bg-(--color-accent)" aria-hidden="true" />
+              <span>
+                <span class="block text-sm text-(--color-fg)">{c.name}</span>
+                <span class="block text-xs text-(--color-faint)">{c.issuer}</span>
+              </span>
+            </li>
+          ))
+        }
+      </ul>
     </section>
 
     <section class="mt-20" aria-labelledby="capabilities">
