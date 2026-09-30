@@ -67,6 +67,9 @@ const writing = defineCollection({
       /** Short outcome strings, e.g. "+38% organic sessions". */
       results: z.array(z.string()).default([]),
       externalUrl: z.url().optional(),
+      gallery: z
+        .array(z.object({ src: ctx.image(), alt: z.string(), caption: z.string().optional() }))
+        .default([]),
     }),
 });
 
