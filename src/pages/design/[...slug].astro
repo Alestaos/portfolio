@@ -12,7 +12,7 @@ type Props = { entry: CollectionEntry<'design'> };
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { client, role, year, deliverables, tools } = entry.data;
+const { client, role, year, deliverables, tools, pdfUrl } = entry.data;
 
 const meta = [
   { label: 'Client', value: client },
@@ -21,8 +21,10 @@ const meta = [
   ...(deliverables.length ? [{ label: 'Deliverables', value: deliverables.join(', ') }] : []),
   ...(tools.length ? [{ label: 'Tools', value: tools.join(', ') }] : []),
 ];
+
+const links = pdfUrl ? [{ label: 'View full PDF', href: pdfUrl, primary: true }] : [];
 ---
 
-<CaseStudy {entry} {meta}>
+<CaseStudy {entry} {meta} {links}>
   <Content />
 </CaseStudy>

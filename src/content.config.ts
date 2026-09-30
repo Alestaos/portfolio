@@ -31,6 +31,8 @@ const design = defineCollection({
       gallery: z
         .array(z.object({ src: ctx.image(), alt: z.string(), caption: z.string().optional() }))
         .default([]),
+      /** Full print/PDF artefact — e.g. a brochure. Path under public/, or an external URL. */
+      pdfUrl: z.string().optional(),
     }),
 });
 
