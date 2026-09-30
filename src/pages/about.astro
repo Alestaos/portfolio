@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import avatar from '../assets/avatar.webp';
 import { site, socials } from '../config';
 
 // TODO(stuart): rewrite these in your own voice — the shape is right,
@@ -84,20 +86,33 @@ const capabilities = [
   description="Stuart May — marketing graduate, certified graphic designer, MSc game development and XR student."
 >
   <div class="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-28">
-    <header class="max-w-2xl" data-intro>
-      <h1 class="text-4xl sm:text-5xl">About</h1>
-      <div class="prose mt-7">
-        <p>
-          I'm {site.name}. I started in marketing, learned to make the artwork myself, and I'm now
-          studying game development and XR — which is really the same job with an extra dimension
-          and a frame budget.
-        </p>
-        <p>
-          Most of what's in the archive was made under a brief: a launch, a rebrand, a campaign with
-          a date attached. The games and XR work is newer and mostly academic, with playable builds
-          on itch.io where a build exists.
-        </p>
+    <header
+      class="flex flex-col-reverse items-center gap-8 sm:flex-row sm:items-center sm:justify-between"
+      data-intro
+    >
+      <div class="max-w-xl">
+        <h1 class="text-4xl sm:text-5xl">About</h1>
+        <div class="prose mt-7 text-justify">
+          <p>
+            I'm {site.name}. I started in marketing, learned to make the artwork myself, and I'm now
+            studying game development and XR — which is really the same job with an extra dimension
+            and a frame budget.
+          </p>
+          <p>
+            Most of what's in the archive was made under a brief: a launch, a rebrand, a campaign
+            with a date attached. The games and XR work is newer and mostly academic, with playable
+            builds on itch.io where a build exists.
+          </p>
+        </div>
       </div>
+
+      <Image
+        src={avatar}
+        alt={`Illustrated portrait of ${site.name}`}
+        width={384}
+        height={384}
+        class="size-48 shrink-0 rounded-full object-cover sm:size-56 lg:size-64"
+      />
     </header>
 
     <section class="mt-20" aria-labelledby="background">
