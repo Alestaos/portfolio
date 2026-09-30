@@ -26,6 +26,39 @@ const timeline = [
   },
 ] as const;
 
+const experience = [
+  {
+    period: 'Apr 2026 – Present',
+    title: 'Marketing Executive — Beara Beara Ltd',
+    body: 'Multi-channel marketing, ecommerce and lifecycle ownership for an independent leather goods brand across the UK and Ireland — rebuilt GA4/GTM tracking and lifted key events 84% quarter over quarter.',
+    discipline: 'writing',
+  },
+  {
+    period: 'Oct 2025 – Apr 2026',
+    title: 'Social Media Content Creator — SuperValu, Monaghan',
+    body: "A project-based content initiative delivered alongside the Fleming's role — short-form TikTok and Facebook content for the SuperValu Monaghan store, with one video passing 60K views.",
+    discipline: 'writing',
+  },
+  {
+    period: 'Jul 2025 – Apr 2026',
+    title: "E-Commerce & Digital Marketing Executive — Fleming's Department Store",
+    body: 'Sole digital marketing function for a multi-department retailer — SEO, paid media, email and narrative-led video campaigns that drove +108% Q4 revenue and +245% order growth.',
+    discipline: 'writing',
+  },
+  {
+    period: 'Sep 2024 – Jul 2025',
+    title: 'Digital Marketing & Strategy Consultant — Mersus Technologies',
+    body: 'A capstone engagement with a B2B VR training company — website/UX redesign, brand refresh and an organic LinkedIn strategy that lifted LinkedIn-driven active users 183% against a 5.6% industry benchmark.',
+    discipline: 'writing',
+  },
+  {
+    period: 'Jun 2024 – Jul 2025',
+    title: 'Social Media Coordinator — Marks & Spencer, Athlone',
+    body: 'Created and managed TikTok and Facebook content for the M&S Athlone store, including coverage of two in-store fundraising events for Jigsaw.',
+    discipline: 'writing',
+  },
+] as const;
+
 const capabilities = [
   'Brand identity & systems',
   'Campaign art direction',
@@ -62,6 +95,23 @@ const capabilities = [
       <ol class="mt-8 flex flex-col gap-4" data-stagger>
         {
           timeline.map((item) => (
+            <li class="glass rounded-2xl p-6" data-reveal data-discipline={item.discipline}>
+              <p class="accent-text text-xs font-medium uppercase tracking-[0.16em]">
+                {item.period}
+              </p>
+              <h3 class="mt-2 text-lg">{item.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-(--color-muted)">{item.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="mt-20" aria-labelledby="experience">
+      <h2 id="experience" class="text-2xl" data-reveal>Experience</h2>
+      <ol class="mt-8 flex flex-col gap-4" data-stagger>
+        {
+          experience.map((item) => (
             <li class="glass rounded-2xl p-6" data-reveal data-discipline={item.discipline}>
               <p class="accent-text text-xs font-medium uppercase tracking-[0.16em]">
                 {item.period}
