@@ -36,7 +36,7 @@ gallery:
     caption: "Bundle push, weeks 5–6."
   - src: ../../assets/projects/harbour-paid/10-recap.jpg
     alt: "End-of-campaign recap creative with results callout."
-draft: false
+draft: true
 ---
 
 > This is a reference example, not live content — see the note at the bottom
