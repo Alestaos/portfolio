@@ -25,6 +25,7 @@ const collection = entry.collection as WorkCollection;
 const discipline = disciplines[collection];
 const { title, summary, cover, coverAlt, tags } = entry.data;
 const gallery = 'gallery' in entry.data ? entry.data.gallery : [];
+const videos = 'videos' in entry.data ? entry.data.videos : [];
 ---
 
 <Base title={title} description={summary} type="article" image={cover.src}>
@@ -99,6 +100,31 @@ const gallery = 'gallery' in entry.data ? entry.data.gallery : [];
     <div class="prose mt-14 max-w-none" data-reveal>
       <slot />
     </div>
+
+    {
+      videos.length > 0 && (
+        <section class="mt-20" aria-label="Project videos">
+          <div class="grid gap-8 sm:grid-cols-2" data-stagger>
+            {videos.map((clip) => (
+              <figure data-reveal>
+                <div class="glass overflow-hidden rounded-2xl">
+                  <video
+                    src={clip.src}
+                    poster={clip.poster?.src}
+                    controls
+                    preload="metadata"
+                    class="w-full"
+                  />
+                </div>
+                {clip.caption && (
+                  <figcaption class="mt-3 text-sm text-(--color-faint)">{clip.caption}</figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </section>
+      )
+    }
 
     {
       gallery.length > 0 && (

@@ -72,6 +72,16 @@ const writing = defineCollection({
       gallery: z
         .array(z.object({ src: ctx.image(), alt: z.string(), caption: z.string().optional() }))
         .default([]),
+      /** Self-hosted clips. `src` is a path under public/, e.g. "/videos/foo/clip.mp4". */
+      videos: z
+        .array(
+          z.object({
+            src: z.string(),
+            poster: ctx.image().optional(),
+            caption: z.string().optional(),
+          }),
+        )
+        .default([]),
     }),
 });
 
