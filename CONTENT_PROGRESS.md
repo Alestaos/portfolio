@@ -1,0 +1,64 @@
+# Content build progress
+
+Working notes for the real-content build-out, so a new session (or a future me) can pick up
+without re-deriving context. Safe to keep editing/trimming this as work progresses — it's a
+scratch status file, not project documentation (see AGENTS.md for that).
+
+## Status as of 2026-10-01
+
+Replacing placeholder/example entries across the three content collections (`design`, `games`,
+`writing`) with Stuart's real work. Started with Marketing (`writing` collection).
+
+## Done
+
+- `ProjectCard.astro` now shows the client name next to discipline/year on grid cards, so
+  Marketing pieces aren't anonymous until clicked into.
+- Added native self-hosted video support: a `videos` field on the `writing` collection schema
+  (`content.config.ts`) and a plain `<video controls>` gallery in `CaseStudy.astro`. No JS
+  framework, same-origin files under `public/videos/`, so the existing CSP needed no changes.
+- `example-campaign.md` and `example-paid-campaign.md` (Harbour Co. placeholders) set to
+  `draft: true` — hidden in production, kept as local reference templates for the frontmatter
+  shape. `example-brand-system.md` (design) and `example-xr-prototype.md` (games) are
+  **still live placeholders** — not yet touched.
+- Real Marketing entries published:
+  1. **Flemings Department Store — Spring Fashion Campaign**
+     (`src/content/writing/flemings-spring-fashion.md`) — social/email fashion ad series, 9-image
+     gallery. Correctly attributes Red Button / Fransa / White Stuff as third-party brands
+     Flemings stocks, not Flemings house brands (this was a correction mid-build — got it wrong
+     first pass).
+  2. **Elf on the Shelf — Flemings** (`src/content/writing/flemings-elf-on-the-shelf.md`) —
+     "Freddy's Adventures", a 12-episode mystery video series. The real videos and posters were
+     pulled directly from the live storefront page (see below), not from raw OneDrive exports —
+     the first pass using local files only found 4 of the 12 real clips.
+
+## Not started yet
+
+- Stuart had in-house content roles at **4 businesses** total. Only Flemings is done. Ask him
+  which business to do next.
+- More unused Flemings material sitting in OneDrive: a Black Friday electronics push, toy
+  department social reels (Elf/Gabby/Pokémon toy videos), a "Flemings Grand Prix" video in the
+  `Portfolio` folder. Ask before picking one.
+- `design` collection: only has the placeholder `example-brand-system.md`.
+- `games` collection: only has the placeholder `example-xr-prototype.md`.
+
+## Useful context for next session
+
+- Stuart's source assets live in his local OneDrive (Files On-Demand — not everything is synced
+  locally until touched, so a first `find` can under-report what's actually there; re-run it
+  after accessing the folder once):
+  - `C:\Users\stuar\OneDrive\Flemings\` — raw working files for the Flemings role. Contains a
+    `Passwords - Flemings.xlsx` — never read or touch that file.
+  - `C:\Users\stuar\OneDrive\Portfolio\` — exports Stuart already curated specifically for
+    portfolio use. Check here first.
+- **When a campaign is already live somewhere public (e.g. flemingsofmonaghan.com, a Shopify
+  store), pull the real published asset from there instead of trusting raw local exports.** The
+  live page is often the complete, correctly-encoded, authoritative version — raw OneDrive
+  folders can be partial, duplicated, or ambiguously named. (Shopify video CDN URLs can be read
+  straight out of the page's `<video><source>` elements once each tile's player is clicked /
+  mounted — see git history on the Elf entry for the extraction approach.)
+- Stuart's old portfolio (being replaced by this site) is at
+  https://stuartgrahammay.wixsite.com/corevisual/portfolio-collections/my-portfolio/ — useful as
+  a checklist of prior pieces to recreate here.
+- Workflow: Stuart wants commits made **and pushed** each time he asks to see a result — don't
+  leave work uncommitted between sessions. Run `npm run build && npm run check` before every
+  commit (see AGENTS.md).
