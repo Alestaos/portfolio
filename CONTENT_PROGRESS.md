@@ -36,6 +36,12 @@ Replacing placeholder/example entries across the three content collections (`des
      furniture sale ads. Stuart explicitly wanted **only the three Eden ads** — the same source
      folder (`Downloads\Social Media\`) also has Amalfi ads and price-free variants; don't add
      them.
+  4. **Toymaster — RSA Check It Fits Event** (`src/content/writing/toymaster-check-it-fits.md`)
+     — one key visual in 3 formats (1:1, 9:16, A4 poster) for the RSA's free car seat checking
+     day at Flemings on 28 Oct 2025. Facts are taken from the live events blog post (linked as
+     `externalUrl`). The A4 source `OneDrive\Flemings\A42.pdf` is 100MB, too big for Read; it was
+     rendered with the `mupdf` npm package in the scratchpad (sharp can't read PDFs, and
+     Python isn't installed).
 
 ## Not started yet
 
