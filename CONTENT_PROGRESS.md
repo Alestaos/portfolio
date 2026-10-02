@@ -66,6 +66,11 @@ Replacing placeholder/example entries across the three content collections (`des
 - Marketing entry **Beara Beara — Meet the Grace**
   (`src/content/writing/beara-beara-meet-the-grace.md`, 2026). A social post that was **never
   published**; the entry says so in its channel and its "Status" section.
+- Design entry **AIPF — Social Media Best-Practice Infographics**
+  (`src/content/design/aipf-social-infographics.md`, 2025). **Volunteer** work for the
+  Association of Irish Powerchair Football: two 9:16 infographics for young club members.
+  Source PSDs are in `OneDrive\AIPF\`. The artwork has the typos "unrecongisable" and
+  "Coherencey"; these were flagged to Stuart, and the site copy uses the correct spellings.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. The Beara gift card is `featured: true` to take the hidden Northline
   placeholder's slot. `example-xr-prototype.md` (games) is still live and `featured: true`.
