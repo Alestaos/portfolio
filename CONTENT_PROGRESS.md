@@ -85,6 +85,12 @@ Replacing placeholder/example entries across the three content collections (`des
   Illustrator were inferred from the PSD and AI source files, not confirmed by Stuart. There's
   more unused Mersus material in OneDrive: brand guidelines V6, a documentary video, and the
   "Other Alts" and "Post 3/6 Alts" folders.
+- Marketing entry **Mersus Technologies — Organic Social Posts**
+  (`src/content/writing/mersus-organic-social.md`, 2025; the body says 2024–2025). Five blog
+  promotion posts. Three are from `Posts Published\` and two (Education, Success Stories) were
+  rendered from the PSDs in `Template Options\` with the `psd` npm package in the scratchpad
+  (sharp can't read PSD). Mersus's blog has moved to mersus.ie, and its older posts weren't
+  visible to check.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
   are drafts), so the homepage shows the 5 most recent real entries across all sections.
