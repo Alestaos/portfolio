@@ -6,10 +6,9 @@ cover: ../../assets/projects/beara-beara-trustpilot/01-trustpilot-card.jpg
 coverAlt: "Beara Beara in-store Trustpilot card — 'Loved your Beara Beara experience?' above a QR code, framed by engraved illustrations of leather bags and flowers."
 client: "Beara Beara"
 role: "Marketing Executive"
-deliverables: ["In-store display card", "Print artwork", "Illustration"]
-tools: ["Photoshop", "LTX Studio"]
+channels: ["In-store", "Print"]
 tags: ["Print", "In-store", "Illustration", "Reviews"]
-featured: true
+featured: false
 order: 0
 draft: false
 gallery:

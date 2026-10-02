@@ -42,12 +42,17 @@ Replacing placeholder/example entries across the three content collections (`des
      `externalUrl`). The A4 source `OneDrive\Flemings\A42.pdf` is 100MB, too big for Read; it was
      rendered with the `mupdf` npm package in the scratchpad (sharp can't read PDFs, and
      Python isn't installed).
-- First real **Design** entry: **Beara Beara — Trustpilot Review Card**
-  (`src/content/design/beara-beara-trustpilot.md`, 2026). An in-store QR review card in a
-  vintage engraved style. Source is in `Downloads\Beara\`. Stuart said **not** to link the
-  print PDF. He made it in his in-house **Marketing Executive** role at Beara Beara (one of
-  the 4 businesses). Tools: Photoshop, plus LTX Studio AI detailing over his own base
-  illustrations. Keep that split stated honestly in any Beara entry.
+- Marketing entry **Beara Beara — Trustpilot Review Card**
+  (`src/content/writing/beara-beara-trustpilot.md`, 2026). An in-store QR review card in a
+  vintage engraved style. It started in Design and Stuart asked to move it to Marketing,
+  because Design is for his non-marketing pieces. Source is in `Downloads\Beara\`. Stuart said
+  **not** to link the print PDF. He made it in his in-house **Marketing Executive** role at
+  Beara Beara (one of the 4 businesses). Tools: Photoshop, plus LTX Studio AI detailing over
+  his own base illustrations. Keep that split stated honestly in any Beara entry, and don't
+  claim base art is his own unless he says so for that piece.
+- First real **Design** entry: **Beara Beara — Gift Card**
+  (`src/content/design/beara-beara-gift-card.md`, 2026). Front and back, kept as transparent
+  PNGs so the rounded corners survive. Tools: Photoshop, Illustrator, LTX Studio.
   `example-brand-system.md` is now `draft: true`.
 - Marketing entry **Beara Beara — Customer Review Showcase**
   (`src/content/writing/beara-beara-customer-reviews.md`, 2026). Organic social posts plus a
@@ -55,18 +60,18 @@ Replacing placeholder/example entries across the three content collections (`des
   Sources are loose in `Downloads\`. The review block wasn't visible on the bearabeara.co.uk
   homepage when fetched, so the website version wasn't checked live.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
-  otherwise the most recent ones. Beara is set `featured: true` to take the hidden Northline
+  otherwise the most recent ones. The Beara gift card is `featured: true` to take the hidden Northline
   placeholder's slot. `example-xr-prototype.md` (games) is still live and `featured: true`.
   Ask Stuart which real pieces he wants featured.
 
 ## Not started yet
 
-- Stuart had in-house content roles at **4 businesses** total. Only Flemings is done. Ask him
-  which business to do next.
+- Stuart had in-house content roles at **4 businesses** total. Ask him
+  which business to do next. Flemings (incl. Expert, Toymaster) and Beara Beara are in progress.
 - More unused Flemings material sitting in OneDrive: a Black Friday electronics push, toy
   department social reels (Elf/Gabby/Pokémon toy videos), a "Flemings Grand Prix" video in the
   `Portfolio` folder. Ask before picking one.
-- `design` collection: only has the placeholder `example-brand-system.md`.
+- `design` collection: Beara gift card only (placeholder is now draft). Stuart has more non-marketing design pieces to add.
 - `games` collection: only has the placeholder `example-xr-prototype.md`.
 
 ## Useful context for next session
