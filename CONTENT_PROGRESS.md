@@ -4,7 +4,7 @@ Working notes for the real-content build-out, so a new session (or a future me) 
 without re-deriving context. Safe to keep editing/trimming this as work progresses — it's a
 scratch status file, not project documentation (see AGENTS.md for that).
 
-## Status as of 2026-10-01
+## Status as of 2026-10-02
 
 Replacing placeholder/example entries across the three content collections (`design`, `games`,
 `writing`) with Stuart's real work. Started with Marketing (`writing` collection).
@@ -30,6 +30,12 @@ Replacing placeholder/example entries across the three content collections (`des
      "Freddy's Adventures", a 12-episode mystery video series. The real videos and posters were
      pulled directly from the live storefront page (see below), not from raw OneDrive exports —
      the first pass using local files only found 4 of the 12 real clips.
+  3. **Expert Electrical — Outdoor Living Paid Social**
+     (`src/content/writing/expert-outdoor-living.md`) — client is "Expert Electrical (Monaghan)"
+     (Stuart's chosen wording), made as part of his Flemings role. Three Eden (Hartman) garden
+     furniture sale ads. Stuart explicitly wanted **only the three Eden ads** — the same source
+     folder (`Downloads\Social Media\`) also has Amalfi ads and price-free variants; don't add
+     them.
 
 ## Not started yet
 
