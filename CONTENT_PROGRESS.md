@@ -44,8 +44,10 @@ Replacing placeholder/example entries across the three content collections (`des
      Python isn't installed).
 - First real **Design** entry: **Beara Beara — Trustpilot Review Card**
   (`src/content/design/beara-beara-trustpilot.md`, 2026). An in-store QR review card in a
-  vintage engraved style. Source is in `Downloads\Beara\`; the print PDF (28MB) isn't linked.
-  The role is set to "Graphic designer" and has not been confirmed with Stuart.
+  vintage engraved style. Source is in `Downloads\Beara\`. Stuart said **not** to link the
+  print PDF. He made it in his in-house **Marketing Executive** role at Beara Beara (one of
+  the 4 businesses). Tools: Photoshop, plus LTX Studio AI detailing over his own base
+  illustrations. Keep that split stated honestly in any Beara entry.
   `example-brand-system.md` is now `draft: true`.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. Beara is set `featured: true` to take the hidden Northline
