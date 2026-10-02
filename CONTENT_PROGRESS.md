@@ -77,6 +77,14 @@ Replacing placeholder/example entries across the three content collections (`des
   renders as it progresses, so add them to the gallery and keep the WIP framing until he says
   it's finished. `example-xr-prototype.md` is now `draft: true`, so **all placeholders are now
   hidden**.
+- **Mersus Technologies**: 8 Design entries (`src/content/design/mersus-0[1-8]-*.md`), one per
+  post in the series order Stuart set, pinned with `order: 1`–`8`. Role "Digital Marketing
+  Executive & Designer". The work spans 2024–2025 and the year field is 2025 (files dated April
+  2025). Source: `OneDrive\University Documents\Digital Content\Final Projects\Final Versions\`
+  (Stuart's file-to-post mapping is in the git log for this commit). Tools Photoshop and
+  Illustrator were inferred from the PSD and AI source files, not confirmed by Stuart. There's
+  more unused Mersus material in OneDrive: brand guidelines V6, a documentary video, and the
+  "Other Alts" and "Post 3/6 Alts" folders.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
   are drafts), so the homepage shows the 5 most recent real entries across all sections.
