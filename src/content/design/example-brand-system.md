@@ -11,7 +11,7 @@ tools: ["Illustrator", "InDesign", "Figma"]
 tags: ["Branding", "Identity", "Print"]
 featured: true
 order: 0
-draft: false
+draft: true
 ---
 
 > Replace this file with a real case study. The frontmatter above shows every

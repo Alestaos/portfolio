@@ -42,6 +42,15 @@ Replacing placeholder/example entries across the three content collections (`des
      `externalUrl`). The A4 source `OneDrive\Flemings\A42.pdf` is 100MB, too big for Read; it was
      rendered with the `mupdf` npm package in the scratchpad (sharp can't read PDFs, and
      Python isn't installed).
+- First real **Design** entry: **Beara Beara — Trustpilot Review Card**
+  (`src/content/design/beara-beara-trustpilot.md`, 2026). An in-store QR review card in a
+  vintage engraved style. Source is in `Downloads\Beara\`; the print PDF (28MB) isn't linked.
+  The role is set to "Graphic designer" and has not been confirmed with Stuart.
+  `example-brand-system.md` is now `draft: true`.
+- **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
+  otherwise the most recent ones. Beara is set `featured: true` to take the hidden Northline
+  placeholder's slot. `example-xr-prototype.md` (games) is still live and `featured: true`.
+  Ask Stuart which real pieces he wants featured.
 
 ## Not started yet
 
