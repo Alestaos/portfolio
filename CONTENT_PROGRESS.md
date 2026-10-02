@@ -49,6 +49,11 @@ Replacing placeholder/example entries across the three content collections (`des
   the 4 businesses). Tools: Photoshop, plus LTX Studio AI detailing over his own base
   illustrations. Keep that split stated honestly in any Beara entry.
   `example-brand-system.md` is now `draft: true`.
+- Marketing entry **Beara Beara — Customer Review Showcase**
+  (`src/content/writing/beara-beara-customer-reviews.md`, 2026). Organic social posts plus a
+  website "Customer Notes" card built from a real 5-star review (Rebecca bag, Emily R.).
+  Sources are loose in `Downloads\`. The review block wasn't visible on the bearabeara.co.uk
+  homepage when fetched, so the website version wasn't checked live.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. Beara is set `featured: true` to take the hidden Northline
   placeholder's slot. `example-xr-prototype.md` (games) is still live and `featured: true`.
