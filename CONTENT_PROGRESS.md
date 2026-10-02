@@ -62,7 +62,7 @@ Replacing placeholder/example entries across the three content collections (`des
 - Marketing entry **Beara Beara — LinkedIn Brand Introduction**
   (`src/content/writing/beara-beara-linkedin-newspaper.md`, 2026). A single 16:9
   newspaper-front-page post. Its artwork says "Est. 2012" but the dateline reads "MMXIII"
-  (2013); this was flagged to Stuart.
+  (2013). Stuart confirmed MMXIII is decorative, so leave it.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. The Beara gift card is `featured: true` to take the hidden Northline
   placeholder's slot. `example-xr-prototype.md` (games) is still live and `featured: true`.
