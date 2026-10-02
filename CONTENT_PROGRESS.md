@@ -95,6 +95,10 @@ Replacing placeholder/example entries across the three content collections (`des
   (`src/content/writing/mersus-jordan-murphy-spotlight.md`, 2025). A blog post Stuart wrote
   (live at mersus.ie, published 11 Apr 2025, byline "mersusglobal"; linked via `externalUrl`)
   plus his promo banner. Facts in the entry are taken from the live article.
+- Marketing entry **Mersus Technologies — 4 Benefits of VR Training**
+  (`src/content/writing/mersus-vr-benefits-infographic.md`, 2025). A tall LinkedIn infographic
+  from `OneDrive\Portfolio\Infographic-01.png`. Its artwork has the typo "enganging"; this was
+  flagged to Stuart.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
   are drafts), so the homepage shows the 5 most recent real entries across all sections.
