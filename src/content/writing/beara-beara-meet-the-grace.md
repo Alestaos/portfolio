@@ -7,7 +7,7 @@ coverAlt: "A woman lying back on the grass at night gazing up at a starry sky, w
 client: "Beara Beara"
 role: "Marketing Executive"
 channels: ["Social media (unpublished concept)"]
-tags: ["Social media", "Concept", "Art direction", "Photo editing"]
+tags: ["Social media", "Concept", "Art direction", "Photo manipulation"]
 featured: false
 order: 0
 draft: false
@@ -28,7 +28,8 @@ shot, it shows a quiet moment: someone lying back on the grass under a starry ni
 completely content on their own, with the Grace resting at her hip. The bag is part of the
 scene instead of the subject, which suits a piece designed to go everywhere with you.
 
-The night sky and landscape are cooled and darkened so the warm skin tones and pink blouse
+The scene was heavily photo-manipulated in Photoshop to create the starlit night. The sky and
+landscape are cooled and darkened so the warm skin tones and pink blouse
 stand out, drawing the eye to the face and then down the strap to the bag. The headline is set
 in a loose handwritten script that drifts across the sky, like a private thought. A small,
 widely spaced "Meet The Grace" sits at the foot to name the product without breaking the mood.
