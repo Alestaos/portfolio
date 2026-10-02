@@ -102,3 +102,9 @@ Replacing placeholder/example entries across the three content collections (`des
 - Workflow: Stuart wants commits made **and pushed** each time he asks to see a result — don't
   leave work uncommitted between sessions. Run `npm run build && npm run check` before every
   commit (see AGENTS.md).
+
+## Grid ordering
+
+Entries sort by year (newest first), then by `order` (lowest first), then alphabetically by
+title. In Marketing, Stuart wants the Customer Review Showcase directly before the Trustpilot
+card, so they're pinned with `order: -2` and `order: -1`. Everything else is `order: 0`.

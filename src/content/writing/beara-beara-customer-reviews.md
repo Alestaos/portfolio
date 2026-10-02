@@ -9,7 +9,7 @@ role: "Marketing Executive"
 channels: ["Organic social", "Website"]
 tags: ["Social media", "Reviews", "Content", "Art direction"]
 featured: false
-order: 0
+order: -2
 draft: false
 gallery:
   - src: ../../assets/projects/beara-beara-customer-reviews/01-rebecca-review-post.jpg

@@ -9,7 +9,7 @@ role: "Marketing Executive"
 channels: ["In-store", "Print"]
 tags: ["Print", "In-store", "Illustration", "Reviews"]
 featured: false
-order: 0
+order: -1
 draft: false
 gallery:
   - src: ../../assets/projects/beara-beara-trustpilot/01-trustpilot-card.jpg
