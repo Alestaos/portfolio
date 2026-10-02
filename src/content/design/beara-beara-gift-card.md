@@ -9,7 +9,7 @@ role: "Marketing Executive"
 deliverables: ["Gift card (front and back)", "Illustration", "Print artwork"]
 tools: ["Photoshop", "Illustrator", "LTX Studio"]
 tags: ["Print", "Packaging", "Illustration", "Branding"]
-featured: true
+featured: false
 order: 0
 draft: false
 gallery:

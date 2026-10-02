@@ -14,7 +14,7 @@ itchUrl: "https://alestaos.itch.io/tidepool"
 tags: ["Unity", "XR", "Hand tracking", "C#"]
 featured: true
 order: 0
-draft: false
+draft: true
 ---
 
 > Replace this file with a real project. Delete `itchUrl` if there's no

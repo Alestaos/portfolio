@@ -71,9 +71,15 @@ Replacing placeholder/example entries across the three content collections (`des
   Association of Irish Powerchair Football: two 9:16 infographics for young club members.
   Source PSDs are in `OneDrive\AIPF\`. The artwork has the typos "unrecongisable" and
   "Coherencey"; these were flagged to Stuart, and the site copy uses the correct spellings.
+- First real **Games** entry: **Old Man — Blender Character (WIP)**
+  (`src/content/games/blender-old-man.md`, 2026). A pre-materials clay render from Stuart
+  learning Blender, rendered in Eevee, with status `in-development`. Stuart will send updated
+  renders as it progresses, so add them to the gallery and keep the WIP framing until he says
+  it's finished. `example-xr-prototype.md` is now `draft: true`, so **all placeholders are now
+  hidden**.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
-  otherwise the most recent ones. The Beara gift card is `featured: true` to take the hidden Northline
-  placeholder's slot. `example-xr-prototype.md` (games) is still live and `featured: true`.
+  otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
+  are drafts), so the homepage shows the 5 most recent real entries across all sections.
   Ask Stuart which real pieces he wants featured.
 
 ## Not started yet
@@ -84,7 +90,7 @@ Replacing placeholder/example entries across the three content collections (`des
   department social reels (Elf/Gabby/Pokémon toy videos), a "Flemings Grand Prix" video in the
   `Portfolio` folder. Ask before picking one.
 - `design` collection: Beara gift card only (placeholder is now draft). Stuart has more non-marketing design pieces to add.
-- `games` collection: only has the placeholder `example-xr-prototype.md`.
+- `games` collection: Blender Old Man WIP only.
 
 ## Useful context for next session
 
