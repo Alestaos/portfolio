@@ -90,7 +90,7 @@ Replacing placeholder/example entries across the three content collections (`des
   promotion posts. Three are from `Posts Published\` and two (Education, Success Stories) were
   rendered from the PSDs in `Template Options\` with the `psd` npm package in the scratchpad
   (sharp can't read PSD). Mersus's blog has moved to mersus.ie, and its older posts weren't
-  visible to check.
+  visible to check. Stuart confirmed all 5 were posted as part of the same run.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
   are drafts), so the homepage shows the 5 most recent real entries across all sections.
