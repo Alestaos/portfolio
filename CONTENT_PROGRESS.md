@@ -108,3 +108,5 @@ Replacing placeholder/example entries across the three content collections (`des
 Entries sort by year (newest first), then by `order` (lowest first), then alphabetically by
 title. In Marketing, Stuart wants the Customer Review Showcase directly before the Trustpilot
 card, so they're pinned with `order: -2` and `order: -1`. Everything else is `order: 0`.
+Stuart plans to do a **full grid ordering pass once all content is up**, so don't fine-tune
+order values before then unless he asks.
