@@ -99,6 +99,25 @@ Replacing placeholder/example entries across the three content collections (`des
   (`src/content/writing/mersus-vr-benefits-infographic.md`, 2025). A tall LinkedIn infographic
   from `OneDrive\Portfolio\Infographic-01.png`. Its artwork has the typo "enganging"; this was
   flagged to Stuart.
+- **Big design batch (2026-10-03)**: 14 Design entries plus 1 Marketing entry. Sources are
+  mostly in `OneDrive\Portfolio\`.
+  - UCD Professional Diploma in Graphic Design coursework (2022): `ucd-all-the-way-home`
+    (normal edition), `ucd-all-the-way-home-special`, and `nightwalker-poster`.
+  - `bitboi-games` (2021): a logo concept. Uses the "White" artboards from
+    `Portfolio Work\UCD\UCD Images\Bitboi\White\1x\`. The business card is a CMYK JPEG and was
+    converted to sRGB.
+  - **XNDK** (a fictional co-ed K-pop band for his degree; Stuart sometimes types "XNDX", but
+    the artwork says XNDK): `xndk-demi`, `xndk-nari` (2024), `xndk-xaveri`, `xndk-kai` (2023),
+    `xndk-album-promo` (2024, Photoshop double exposure; uses the widescreen version), and
+    `xndk-social-media` (2024, 5 square posts). The member is spelled "Xaveri" (the source file
+    says "Xavier").
+  - `double-exposure-cats` (2023): personal experiments.
+  - Three 2021 Illustrator vectors: `vector-different-shades-of-music`,
+    `vector-drip-fed-color`, and `vector-valentines-day-romance`.
+  - Marketing `toymaster-rolly-toys` (2025): a Photoshop poster plus an AI-animated video,
+    self-hosted at `public/videos/toymaster-rolly-toys/` (H.264/AAC, 15MB).
+  - Tools were only filled in where Stuart named them (Photoshop for the album promo,
+    Illustrator for the vectors). The rest are blank pending his answer.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
   are drafts), so the homepage shows the 5 most recent real entries across all sections.
