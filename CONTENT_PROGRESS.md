@@ -125,6 +125,12 @@ Replacing placeholder/example entries across the three content collections (`des
   (`src/content/writing/beara-beara-tommy-meta.md`, 2026). Six square ads from
   `Downloads\With Text-20261002T191709Z-1-001\With Text\`. Stuart called it "the Tom and
   Tommy bag" but the artwork only says "Tommy"; this was flagged.
+- Design entry **Mersus Technologies — Website Homepage Mockup**
+  (`src/content/design/mersus-website-mockup.md`, 2025, `order: 9` so it follows the Mersus
+  series). The 1440×6790 mockup is cut into 5 section crops plus the full page. Stuart says
+  Mersus adapted it into the live mersus.ie; this was checked on 2026-10-03 and the live site
+  shares the structure (results row, 8-feature "Why Avatar Academy", case studies, contact,
+  partner footer).
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
   are drafts), so the homepage shows the 5 most recent real entries across all sections.
