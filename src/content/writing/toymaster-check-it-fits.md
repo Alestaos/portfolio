@@ -7,6 +7,7 @@ coverAlt: "'Does it fit? We'll check!' — a father fastening his daughter's sea
 client: "Toymaster (Monaghan)"
 role: "E-Commerce & Digital Marketing Executive"
 channels: ["Social media", "Print", "Blog"]
+results: ["8,835 people reached on a €2/day budget", "14,466 impressions", "RSA staff reported it busier than previous visits"]
 tags: ["Event", "Social media", "Print", "Multi-format"]
 featured: false
 order: 0

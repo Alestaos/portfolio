@@ -22,7 +22,10 @@ const meta = [
   ...results.map((result, i) => ({ label: i === 0 ? 'Results' : ' ', value: result })),
 ];
 
-const links = externalUrl ? [{ label: 'View campaign', href: externalUrl, primary: true }] : [];
+const links = [
+  ...(externalUrl ? [{ label: 'View campaign', href: externalUrl, primary: true }] : []),
+  ...(results.length ? [{ label: 'All results', href: '/results' }] : []),
+];
 ---
 
 <CaseStudy {entry} {meta} {links}>

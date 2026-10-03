@@ -1,0 +1,90 @@
+---
+import Base from '../layouts/Base.astro';
+import { resultGroups } from '../data/results';
+---
+
+<Base
+  title="Results"
+  description="Measured results from Stuart May's marketing work at Beara Beara, Flemings Department Store and Mersus Technologies."
+>
+  <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28" data-discipline="writing">
+    <header class="mb-16 max-w-2xl" data-intro>
+      <h1 class="text-4xl sm:text-5xl">Results</h1>
+      <p class="mt-5 text-lg leading-relaxed text-(--color-muted)">
+        Highlights from the campaigns and channels I've run, taken from platform analytics (GA4,
+        Meta, LinkedIn, Klaviyo, Google Business Profile, TikTok and YouTube) and the performance
+        reports I wrote in each role.
+      </p>
+      <p class="mt-4 text-sm leading-relaxed text-(--color-faint)">
+        These are channel and campaign results for work I led, each tied to its own reporting
+        period. Revenue is shown as percentage change only. Tiles marked "Case study" link to the
+        work behind them.
+      </p>
+      <nav aria-label="Jump to employer" class="mt-8 flex flex-wrap gap-2">
+        {
+          resultGroups.map((group) => (
+            <a
+              href={`#${group.id}`}
+              class="rounded-full border border-white/12 px-4 py-2 text-sm text-(--color-muted) transition-colors hover:border-white/25 hover:text-(--color-fg)"
+            >
+              {group.org}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+
+    <div class="flex flex-col gap-24">
+      {
+        resultGroups.map((group) => (
+          <section id={group.id} aria-labelledby={`${group.id}-heading`} class="scroll-mt-28">
+            <div class="mb-10 max-w-2xl" data-reveal>
+              <p class="accent-text text-xs font-medium uppercase tracking-[0.16em]">
+                {group.period}
+              </p>
+              <h2 id={`${group.id}-heading`} class="mt-2 text-3xl">
+                {group.org}
+              </h2>
+              <p class="mt-2 text-sm text-(--color-muted)">{group.role}</p>
+            </div>
+
+            <div class="flex flex-col gap-12">
+              {group.sections.map((section) => (
+                <div>
+                  <h3 class="mb-5 text-sm font-medium uppercase tracking-[0.14em] text-(--color-faint)">
+                    {section.title}
+                  </h3>
+                  <ul
+                    class:list={[
+                      'grid gap-4 sm:grid-cols-2',
+                      section.stats.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3',
+                    ]}
+                    data-stagger
+                  >
+                    {section.stats.map((stat) => (
+                      <li class="glass flex flex-col rounded-2xl p-6" data-reveal>
+                        <p class="text-4xl font-semibold tracking-tight">{stat.value}</p>
+                        <p class="mt-3 text-sm font-medium">{stat.label}</p>
+                        <p class="mt-1.5 text-xs leading-relaxed text-(--color-muted)">
+                          {stat.context}
+                        </p>
+                        {stat.href && (
+                          <a
+                            href={stat.href}
+                            class="accent-text mt-auto inline-flex items-center gap-1.5 pt-4 text-xs font-medium hover:underline"
+                          >
+                            Case study <span aria-hidden="true">&rarr;</span>
+                          </a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</Base>

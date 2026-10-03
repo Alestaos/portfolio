@@ -200,3 +200,28 @@ order values before then unless he asks.
   click-to-load facade.
 - The git history still contains the original large videos (`.git` is about 300MB). That's
   harmless for GitHub, and rewriting history isn't worth it.
+
+## Results page (2026-10-03)
+
+- `/results` (`src/pages/results.astro`) is driven by `src/data/results.ts` and grouped by
+  employer, newest first: Beara Beara (Apr–Sep 2026), Flemings (2025), then Mersus (Jan–Apr
+  2025). "Results" is in the nav (`src/config.ts`). Sections with 4 tiles use a 4-column row;
+  everything else uses 3 columns.
+- Sources: Beara's "Actions and Results 29 Sep 2026" and "Master Work & Evidence Record"
+  docx; Flemings' "Q4 2025 Final.pdf" and Marketing Performance Overview; Stuart's LinkedIn
+  posts (SEO results, Q4 Toys/Giftware results, SuperValu video); and the Mersus capstone
+  "Final Document With Clickable Links.pdf" (results chapter).
+- Stuart's rules:
+  - **Revenue is shown as percentage change only, never absolute amounts.**
+  - **When a LinkedIn post and a report disagree, the LinkedIn post wins** because it was
+    written later and is more up to date (SuperValu 44,854 views; Christmas ad CPM €0.86).
+  - **No Meet Tommy / Travel & Exploring figures.** The campaign was cancelled after about 2
+    days, so the data is skewed.
+  - Leave out figures the source docs mark as not attributable, and leave out negative or
+    diagnostic figures.
+- **The Beara docx includes a personal employment and health section. Never use it anywhere.**
+- Case-study `results` frontmatter has been added to Elf on the Shelf, Check It Fits, Mersus
+  Organic Social and Jordan Murphy. Writing pages with results get an "All results →" button.
+  Keep each entry's `results` in sync with the tiles in `results.ts` that link to it.
+- Possible future entry: the SuperValu bakery video (Flemings' strongest organic post). It's
+  on the Results page but has no case study yet.

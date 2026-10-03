@@ -26,5 +26,6 @@ export const nav = [
   { label: 'Games & XR', href: '/work#games' },
   { label: 'Marketing', href: '/work#writing' },
   { label: 'Design', href: '/work#design' },
+  { label: 'Results', href: '/results' },
   { label: 'About', href: '/about' },
 ] as const;

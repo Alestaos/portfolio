@@ -7,6 +7,7 @@ coverAlt: "Employee spotlight banner — 'Jordan Murphy' in large white capitals
 client: "Mersus Technologies"
 role: "Digital Marketing Executive & Designer"
 channels: ["Blog", "Organic social"]
+results: ["803 LinkedIn impressions and 64 clicks", "+130% daily website users after publishing"]
 tags: ["Content writing", "Blog", "Employee spotlight", "Social media"]
 featured: false
 order: 0

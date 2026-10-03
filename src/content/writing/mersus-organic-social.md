@@ -7,6 +7,7 @@ coverAlt: "Mersus social post 'Virtual Reality Evolution' — a person in a Mers
 client: "Mersus Technologies"
 role: "Digital Marketing Executive & Designer"
 channels: ["Organic social", "Blog promotion"]
+results: ["Avatar Learning: 16% engagement rate, 7.4% CTR", "VR Evolution: 10.5% engagement rate, 5.8% CTR", "Page average engagement rate of 10.7%"]
 tags: ["Social media", "Content marketing", "VR", "Templates"]
 featured: false
 order: 0

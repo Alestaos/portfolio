@@ -7,6 +7,7 @@ coverAlt: "Freddy the Elf tangled with a toy snake hanging from a ceiling tile i
 client: "Flemings Department Store"
 role: "E-Commerce & Digital Marketing Executive"
 channels: ["Social media", "Email", "Website"]
+results: ["22,584 views across the series", "Meta 9,030 · TikTok 6,908 · YouTube Shorts 6,536", "Children and parents sought Freddy out in-store"]
 tags: ["Video", "Christmas", "Campaign", "Toys"]
 featured: false
 order: 0

@@ -81,8 +81,8 @@ const videos = 'videos' in entry.data ? entry.data.videos : [];
           {links.map((link) => (
             <a
               href={link.href}
-              target="_blank"
-              rel="noopener"
+              target={link.href.startsWith('http') ? '_blank' : undefined}
+              rel={link.href.startsWith('http') ? 'noopener' : undefined}
               class:list={[
                 'rounded-full px-5 py-2.5 text-sm font-medium transition-[transform,background-color,border-color] duration-300 hover:-translate-y-0.5',
                 link.primary
@@ -90,7 +90,7 @@ const videos = 'videos' in entry.data ? entry.data.videos : [];
                   : 'border border-white/12 text-(--color-muted) hover:border-white/25 hover:text-(--color-fg)',
               ]}
             >
-              {link.label} &nearr;
+              {link.label} {link.href.startsWith('http') ? <>&nearr;</> : <>&rarr;</>}
             </a>
           ))}
         </div>
