@@ -25,7 +25,7 @@ Their debut album is *Dreams and Nightmares* and its title track is *Blurred Lov
 Xaveri, the "X" in XNDK, was one of the first promos in the series. The **torn-paper**
 treatment here is a single jagged diagonal rip running right across the frame and through his
 face, splitting the portrait into two tonal worlds. The big studio headphones give him a
-music-production edge, and the muted, cinematic grade gives the shot an
+music-production feel, and the muted, cinematic grade gives the shot an
 editorial edge.
 
 "Xaveri" is signed in red script, his accent colour in the set.
