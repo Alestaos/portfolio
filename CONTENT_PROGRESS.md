@@ -118,6 +118,9 @@ Replacing placeholder/example entries across the three content collections (`des
     self-hosted at `public/videos/toymaster-rolly-toys/` (H.264/AAC, 15MB).
   - Tools were only filled in where Stuart named them (Photoshop for the album promo,
     Illustrator for the vectors). The rest are blank pending his answer.
+- Marketing entry **Break Your Barriers — Nike Promo Concept**
+  (`src/content/writing/flemings-nike-break-your-barriers.md`, 2025). A **candidate task** for
+  Flemings' hiring process, not a real Nike campaign; keep it framed as an unpublished concept.
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
   are drafts), so the homepage shows the 5 most recent real entries across all sections.
