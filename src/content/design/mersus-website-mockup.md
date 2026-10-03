@@ -7,6 +7,7 @@ coverAlt: "Mersus website mockup hero — the Avatar Academy logo and 'Award-Win
 client: "Mersus Technologies"
 role: "Digital Marketing Executive & Designer"
 deliverables: ["Homepage design (desktop mockup)", "UI components", "Content structure"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Web design", "UI", "VR", "Mockup"]
 featured: false
 order: 9
