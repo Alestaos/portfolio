@@ -37,6 +37,14 @@ const sections = [
               blurb={section.blurb}
               discipline={section.id}
             />
+            {'note' in section && (
+              <p class="glass -mt-4 mb-10 max-w-3xl rounded-2xl px-6 py-4 text-sm leading-relaxed text-(--color-muted)">
+                {section.note}{' '}
+                <a href="/about#contact" class="underline underline-offset-4 hover:text-(--color-fg)">
+                  Get in touch
+                </a>
+              </p>
+            )}
             <ProjectGrid
               entries={section.entries}
               emptyMessage={`${section.label} case studies are being written up.`}

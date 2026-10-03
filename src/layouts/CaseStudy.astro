@@ -104,6 +104,13 @@ const videos = 'videos' in entry.data ? entry.data.videos : [];
     {
       videos.length > 0 && (
         <section class="mt-20" aria-label="Project videos">
+          <p class="mb-6 text-sm text-(--color-faint)">
+            Videos are compressed for the web. Higher-fidelity versions are available on{' '}
+            <a href="/about#contact" class="underline underline-offset-4 hover:text-(--color-fg)">
+              request
+            </a>
+            .
+          </p>
           <div class="grid gap-8 sm:grid-cols-2" data-stagger>
             {videos.map((clip) => (
               <figure data-reveal>

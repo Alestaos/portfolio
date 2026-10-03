@@ -181,3 +181,22 @@ title. In Marketing, Stuart wants the Customer Review Showcase directly before t
 card, so they're pinned with `order: -2` and `order: -1`. Everything else is `order: 0`.
 Stuart plans to do a **full grid ordering pass once all content is up**, so don't fine-tune
 order values before then unless he asks.
+
+## Video hosting policy (2026-10-03)
+
+- The Azure SWA **Free tier caps the deployed site at 250MB**. `dist/` reached 219MB with 1080p
+  video, so all videos were re-encoded to web quality: short side ≤720px, H.264 CRF 24 capped at
+  2.5 Mbps, AAC 128k, `+faststart`. Video went from 162MB to 30MB and `dist/` from 219MB to 88MB.
+  **Re-encode every new video the same way before committing** (use `ffmpeg-static` from
+  npm in the scratchpad; there's no system ffmpeg):
+  `ffmpeg -i in.mp4 -vf "scale='if(gt(iw,ih),-2,min(720,iw))':'if(gt(iw,ih),min(720,ih),-2)'" -c:v libx264 -preset slow -crf 24 -maxrate 2500k -bufsize 5000k -profile:v high -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart out.mp4`
+- Case-study pages with videos show a line saying higher-fidelity versions are available on
+  request (`CaseStudy.astro`). The Marketing section on `/work` has a callout (the
+  `disciplines.writing.note` field in `collections.ts`) saying Stuart has more brand video
+  content and can send links to it live on TikTok and Instagram.
+- Stuart only plans **2–3 more self-hosted videos**. He'll also upload videos to **YouTube**
+  over time. `youtube-nocookie.com` is already allowed in the CSP `frame-src`, so YouTube embeds
+  can be added later without a CSP change. For any TikTok or Instagram embeds, use a
+  click-to-load facade.
+- The git history still contains the original large videos (`.git` is about 300MB). That's
+  harmless for GitHub, and rewriting history isn't worth it.
