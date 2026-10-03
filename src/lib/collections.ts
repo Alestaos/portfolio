@@ -26,7 +26,7 @@ export const disciplines = {
   writing: {
     id: 'writing',
     label: 'Marketing',
-    blurb: 'Campaigns and content with the numbers they moved.',
+    blurb: 'Campaigns, social content and video for retail, lifestyle and tech brands.',
     accent: 'var(--color-writing)',
     href: '/writing',
     note: "I've created a lot of video content for brands that isn't hosted here. If you'd like to see more of my video editing, get in touch and I'll send links to the videos live on the brands' TikTok and Instagram channels.",
