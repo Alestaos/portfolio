@@ -18,7 +18,7 @@ export const site = {
    * https://web3forms.com and paste it here. It's designed to be public.
    * While it's empty, the form shows a fallback note instead of submitting.
    */
-  contactFormKey: '',
+  contactFormKey: 'eed73f34-6c00-4267-9f0e-35bde1e3f369',
 } as const;
 
 export const socials = [

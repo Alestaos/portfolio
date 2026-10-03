@@ -236,8 +236,8 @@ order values before then unless he asks.
   and directly before XNDK Demi.
 - **Contact form** (`src/components/ContactForm.astro`, on About#contact) posts to Web3Forms
   and redirects to `/thanks` (noindex, not in the sitemap). **It needs `site.contactFormKey`
-  in `src/config.ts`.** Stuart has to create the key at web3forms.com using
-  stuartgrahammay@outlook.com. Until then, the form shows a LinkedIn fallback note. The
+  in `src/config.ts`** (key added 2026-10-03, created for
+  stuartgrahammay@outlook.com). If the key is ever removed, the form falls back to a LinkedIn note. The
   public email address was removed from the site.
 - **SEO/AEO**:
   - `src/lib/schema.ts` builds the JSON-LD. Every page has a WebSite + Person graph; case
