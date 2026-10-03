@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Message sent" description="Thanks for getting in touch." noindex>
+  <div class="mx-auto max-w-2xl px-4 py-32 text-center sm:px-6" data-intro>
+    <h1 class="text-4xl sm:text-5xl">Thanks, message sent.</h1>
+    <p class="mt-5 text-lg text-(--color-muted)">I'll get back to you as soon as I can.</p>
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <a
+        href="/work"
+        class="glass rounded-full px-6 py-3 text-sm font-medium transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+      >
+        Back to my work
+      </a>
+      <a
+        href="/"
+        class="rounded-full border border-white/12 px-6 py-3 text-sm font-medium text-(--color-muted) transition-colors duration-300 hover:border-white/25 hover:text-(--color-fg)"
+      >
+        Home
+      </a>
+    </div>
+  </div>
+</Base>

@@ -9,7 +9,7 @@ role: "Marketing Executive"
 channels: ["Paid social", "Meta Ads"]
 tags: ["Campaign", "Paid social", "Art direction", "Product"]
 featured: false
-order: 0
+order: -4
 draft: false
 gallery:
   - src: ../../assets/projects/beara-beara-tommy-meta/01-from-city-streets.jpg

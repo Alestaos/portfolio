@@ -11,8 +11,14 @@ export const site = {
   description:
     'Portfolio of Stuart May — graphic design and brand marketing work, plus game and XR development from an MSc in Game Development.',
   locale: 'en_GB',
-  /** TODO: confirm before launch — this address goes public. */
-  email: 'hello@alestaos.com',
+  /**
+   * Web3Forms access key for the contact form. Messages are delivered to the
+   * address the key was created for (stuartgrahammay@outlook.com), so the
+   * address itself never appears in the page. Create one at
+   * https://web3forms.com and paste it here. It's designed to be public.
+   * While it's empty, the form shows a fallback note instead of submitting.
+   */
+  contactFormKey: '',
 } as const;
 
 export const socials = [

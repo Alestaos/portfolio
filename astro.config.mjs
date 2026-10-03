@@ -32,7 +32,8 @@ export default defineConfig({
         // itch.io widgets and privacy-mode YouTube for game trailers.
         'frame-src https://itch.io https://*.itch.io https://www.youtube-nocookie.com',
         "base-uri 'self'",
-        "form-action 'self'",
+        // Contact form posts to Web3Forms, which emails the message on.
+        "form-action 'self' https://api.web3forms.com",
         "object-src 'none'",
       ],
       scriptDirective: {

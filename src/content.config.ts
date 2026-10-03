@@ -14,6 +14,8 @@ const common = ({ image }: { image: () => any }) => ({
   coverAlt: z.string(),
   tags: z.array(z.string()).default([]),
   featured: z.boolean().default(false),
+  /** Position on the homepage when featured; lower comes first. */
+  featuredOrder: z.number().optional(),
   draft: z.boolean().default(false),
   /** Lower sorts first within a year. */
   order: z.number().default(0),

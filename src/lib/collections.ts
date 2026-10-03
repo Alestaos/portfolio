@@ -66,7 +66,12 @@ export async function getAllWork() {
 export async function getFeatured(limit = 6) {
   const { design, games, writing } = await getAllWork();
   const all = [...design, ...games, ...writing];
-  const featured = all.filter((entry) => entry.data.featured).sort(byRecency);
+  const featured = all
+    .filter((entry) => entry.data.featured)
+    .sort(
+      (a, b) =>
+        (a.data.featuredOrder ?? Infinity) - (b.data.featuredOrder ?? Infinity) || byRecency(a, b),
+    );
   // Fall back to most recent so the homepage is never empty before content lands.
   return (featured.length ? featured : all.sort(byRecency)).slice(0, limit);
 }

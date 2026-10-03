@@ -10,7 +10,7 @@ deliverables: ["Infographics", "Social media guidelines"]
 tools: ["Photoshop"]
 tags: ["Infographic", "Education", "Charity", "Social media"]
 featured: false
-order: 0
+order: 10
 draft: false
 gallery:
   - src: ../../assets/projects/aipf-social-infographics/01-social-dimensions.png

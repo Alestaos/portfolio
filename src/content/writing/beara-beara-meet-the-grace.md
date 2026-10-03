@@ -8,8 +8,9 @@ client: "Beara Beara"
 role: "Marketing Executive"
 channels: ["Social media (unpublished concept)"]
 tags: ["Social media", "Concept", "Art direction", "Photo manipulation"]
-featured: false
-order: 0
+featured: true
+featuredOrder: 5
+order: -5
 draft: false
 gallery:
   - src: ../../assets/projects/beara-beara-meet-the-grace/01-at-ease.jpg

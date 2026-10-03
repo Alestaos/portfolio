@@ -1,0 +1,63 @@
+---
+import { site, socials } from '../config';
+
+// Plain HTML POST to Web3Forms: no client JS, so the CSP only needs
+// form-action. Web3Forms redirects back to /thanks after sending.
+const ready = site.contactFormKey.length > 0;
+const thanks = new URL('/thanks', site.url).href;
+const linkedin = socials.find((s) => s.label === 'LinkedIn');
+
+const field =
+  'mt-2 w-full rounded-xl border border-white/12 bg-white/[0.03] px-4 py-3 text-sm text-(--color-fg) placeholder:text-(--color-faint) transition-colors focus:border-white/30 focus:outline-none';
+---
+
+{
+  ready ? (
+    <form action="https://api.web3forms.com/submit" method="POST" class="mt-8 grid max-w-2xl gap-5">
+      <input type="hidden" name="access_key" value={site.contactFormKey} />
+      <input type="hidden" name="subject" value={`New message from ${site.name}'s portfolio`} />
+      <input type="hidden" name="from_name" value={`${site.name} — portfolio`} />
+      <input type="hidden" name="redirect" value={thanks} />
+      {/* Honeypot: real visitors never see or tick this. */}
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <div class="grid gap-5 sm:grid-cols-2">
+        <label class="block text-sm font-medium">
+          Name
+          <input type="text" name="name" required autocomplete="name" class={field} />
+        </label>
+        <label class="block text-sm font-medium">
+          Email
+          <input type="email" name="email" required autocomplete="email" class={field} />
+        </label>
+      </div>
+      <label class="block text-sm font-medium">
+        Message
+        <textarea name="message" required rows="6" class={field} />
+      </label>
+      <div>
+        <button
+          type="submit"
+          class="glass rounded-full px-6 py-3 text-sm font-medium transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+        >
+          Send message
+        </button>
+      </div>
+    </form>
+  ) : (
+    <p class="glass mt-8 max-w-2xl rounded-2xl px-6 py-4 text-sm text-(--color-muted)">
+      The contact form is being set up. In the meantime, the quickest way to reach me is
+      {linkedin ? (
+        <>
+          {' '}
+          <a href={linkedin.href} target="_blank" rel="me noopener" class="underline underline-offset-4 hover:text-(--color-fg)">
+            LinkedIn
+          </a>
+          .
+        </>
+      ) : (
+        ' LinkedIn.'
+      )}
+    </p>
+  )
+}

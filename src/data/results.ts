@@ -86,9 +86,9 @@ export const resultGroups: ResultGroup[] = [
             context: '664 website clicks and 1,352 interactions, Apr–Sep 2026',
           },
           {
-            value: '+305%',
-            label: 'TikTok profile views',
-            context: 'Latest 28 days to 9 Sep 2026; views up 13.9% to 5.1K',
+            value: '+62%',
+            label: 'Organic social sessions',
+            context: '16–30 Sep 2026 vs the previous fortnight; Instagram traffic up 51%',
           },
           {
             value: '50K',

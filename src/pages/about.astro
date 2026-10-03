@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import avatar from '../assets/avatar.webp';
 import { site, socials } from '../config';
+import ContactForm from '../components/ContactForm.astro';
 
 // TODO(stuart): rewrite these in your own voice — the shape is right,
 // the specifics are placeholders.
@@ -183,15 +184,10 @@ const capabilities = [
     <section class="mt-20" aria-labelledby="contact" data-reveal>
       <h2 id="contact" class="text-2xl">Get in touch</h2>
       <p class="mt-4 text-(--color-muted)">
-        Open to design work, and to game and XR collaborations.
+        Open to marketing, design and content roles, and to game and XR collaborations.
       </p>
-      <div class="mt-7 flex flex-wrap gap-3">
-        <a
-          href={`mailto:${site.email}`}
-          class="glass rounded-full px-6 py-3 text-sm font-medium transition-transform duration-300 hover:-translate-y-0.5"
-        >
-          {site.email}
-        </a>
+      <ContactForm />
+      <div class="mt-8 flex flex-wrap gap-3">
         {
           socials.map((s) => (
             <a

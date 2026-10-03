@@ -10,7 +10,8 @@ platforms: []
 teamSize: 1
 status: "in-development"
 tags: ["Blender", "3D modelling", "Character", "Work in progress"]
-featured: false
+featured: true
+featuredOrder: 1
 order: 0
 draft: false
 gallery:

@@ -9,7 +9,8 @@ role: "Digital Marketing Executive & Designer"
 deliverables: ["Social media posts (16:9)"]
 tools: ["Photoshop", "Illustrator"]
 tags: ["Social media", "VR", "Illustration", "Before & after"]
-featured: false
+featured: true
+featuredOrder: 2
 order: 4
 draft: false
 gallery:

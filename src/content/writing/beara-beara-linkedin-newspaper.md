@@ -8,8 +8,9 @@ client: "Beara Beara"
 role: "Marketing Executive"
 channels: ["LinkedIn"]
 tags: ["Social media", "Brand storytelling", "Content", "Art direction"]
-featured: false
-order: 0
+featured: true
+featuredOrder: 4
+order: -3
 draft: false
 gallery:
   - src: ../../assets/projects/beara-beara-linkedin-newspaper/01-newspaper-post.jpg
