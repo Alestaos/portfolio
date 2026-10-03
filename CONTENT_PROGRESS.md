@@ -131,6 +131,12 @@ Replacing placeholder/example entries across the three content collections (`des
   Mersus adapted it into the live mersus.ie; this was checked on 2026-10-03 and the live site
   shares the structure (results row, 8-feature "Why Avatar Academy", case studies, contact,
   partner footer).
+- Marketing entry **Toymaster — Disney Descendants: Step Into Your Story**
+  (`src/content/writing/toymaster-disney-descendants.md`, 2025). A 15s 9:16 reel, self-hosted
+  at `public/videos/toymaster-disney-descendants/`, plus 2 frames as stills. Stuart asked for
+  the client as "Toymaster (Flemings Department Store)"; the older Toymaster entries say
+  "Toymaster (Monaghan)", and this was flagged for alignment. Video frames were extracted with
+  `ffmpeg-static` installed in the scratchpad (no system ffmpeg).
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
   are drafts), so the homepage shows the 5 most recent real entries across all sections.
