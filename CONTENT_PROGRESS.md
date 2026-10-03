@@ -19,7 +19,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 - **About page** still has placeholder copy (a `TODO(stuart)` comment), an outdated line about
   games and itch.io builds, and a Mersus title ("Digital Marketing & Strategy Consultant") that
   doesn't match the case studies ("Digital Marketing Executive & Designer"). Offered to rework
-  it with him.
+  it with Stuart.
 - **Homepage pick #2**: Stuart asked for "the Mersus wireframe". I used
   `mersus-04-wireframe-to-colour`, but it could have meant `mersus-website-mockup`. Not yet
   confirmed.
@@ -51,7 +51,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
      the first pass using local files only found 4 of the 12 real clips.
   3. **Expert Electrical — Outdoor Living Paid Social**
      (`src/content/writing/expert-outdoor-living.md`) — client is "Expert Electrical (Monaghan)"
-     (Stuart's chosen wording), made as part of his Flemings role. Three Eden (Hartman) garden
+     (Stuart's chosen wording), made as part of Stuart's Flemings role. Three Eden (Hartman) garden
      furniture sale ads. Stuart explicitly wanted **only the three Eden ads** — the same source
      folder (`Downloads\Social Media\`) also has Amalfi ads and price-free variants; don't add
      them.
@@ -64,11 +64,11 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 - Marketing entry **Beara Beara — Trustpilot Review Card**
   (`src/content/writing/beara-beara-trustpilot.md`, 2026). An in-store QR review card in a
   vintage engraved style. It started in Design and Stuart asked to move it to Marketing,
-  because Design is for his non-marketing pieces. Source is in `Downloads\Beara\`. Stuart said
-  **not** to link the print PDF. He made it in his in-house **Marketing Executive** role at
+  because Design is for Stuart's non-marketing pieces. Source is in `Downloads\Beara\`. Stuart said
+  **not** to link the print PDF. Stuart made it in Stuart's in-house **Marketing Executive** role at
   Beara Beara (one of the 4 businesses). Tools: Photoshop, plus LTX Studio AI detailing over
-  his own base illustrations. Keep that split stated honestly in any Beara entry, and don't
-  claim base art is his own unless he says so for that piece.
+  Stuart's own base illustrations. Keep that split stated honestly in any Beara entry, and don't
+  claim base art is Stuart's own unless Stuart says so for that piece.
 - First real **Design** entry: **Beara Beara — Gift Card**
   (`src/content/design/beara-beara-gift-card.md`, 2026). Front and back, kept as transparent
   PNGs so the rounded corners survive. Tools: Photoshop, Illustrator, LTX Studio.
@@ -93,7 +93,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 - First real **Games** entry: **Old Man — Blender Character (WIP)**
   (`src/content/games/blender-old-man.md`, 2026). A pre-materials clay render from Stuart
   learning Blender, rendered in Eevee, with status `in-development`. Stuart will send updated
-  renders as it progresses, so add them to the gallery and keep the WIP framing until he says
+  renders as it progresses, so add them to the gallery and keep the WIP framing until Stuart says
   it's finished. `example-xr-prototype.md` is now `draft: true`, so **all placeholders are now
   hidden**.
 - **Mersus Technologies**: 8 Design entries (`src/content/design/mersus-0[1-8]-*.md`), one per
@@ -113,7 +113,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 - Marketing entry **Mersus Technologies — Employee Spotlight: Jordan Murphy**
   (`src/content/writing/mersus-jordan-murphy-spotlight.md`, 2025). A blog post Stuart wrote
   (live at mersus.ie, published 11 Apr 2025, byline "mersusglobal"; linked via `externalUrl`)
-  plus his promo banner. Facts in the entry are taken from the live article.
+  plus Stuart's promo banner. Facts in the entry are taken from the live article.
 - Marketing entry **Mersus Technologies — 4 Benefits of VR Training**
   (`src/content/writing/mersus-vr-benefits-infographic.md`, 2025). A tall LinkedIn infographic
   from `OneDrive\Portfolio\Infographic-01.png`. Its artwork has the typo "enganging"; this was
@@ -125,7 +125,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
   - `bitboi-games` (2021): a logo concept. Uses the "White" artboards from
     `Portfolio Work\UCD\UCD Images\Bitboi\White\1x\`. The business card is a CMYK JPEG and was
     converted to sRGB.
-  - **XNDK** (a fictional co-ed K-pop band for his degree; Stuart sometimes types "XNDX", but
+  - **XNDK** (a fictional co-ed K-pop band for Stuart's degree; Stuart sometimes types "XNDX", but
     the artwork says XNDK): `xndk-demi`, `xndk-nari` (2024), `xndk-xaveri`, `xndk-kai` (2023),
     `xndk-album-promo` (2024, Photoshop double exposure; uses the widescreen version), and
     `xndk-social-media` (2024, 5 square posts). The member is spelled "Xaveri" (the source file
@@ -136,7 +136,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
   - Marketing `toymaster-rolly-toys` (2025): a Photoshop poster plus an AI-animated video,
     self-hosted at `public/videos/toymaster-rolly-toys/` (H.264/AAC, 15MB).
   - Tools were only filled in where Stuart named them (Photoshop for the album promo,
-    Illustrator for the vectors). The rest are blank pending his answer.
+    Illustrator for the vectors). The rest are blank pending Stuart's answer.
 - Marketing entry **Break Your Barriers — Nike Promo Concept**
   (`src/content/writing/flemings-nike-break-your-barriers.md`, 2025). A **candidate task** for
   Flemings' hiring process, not a real Nike campaign; keep it framed as an unpublished concept.
@@ -172,7 +172,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 
 ## Useful context for next session
 
-- Stuart's source assets live in his local OneDrive (Files On-Demand — not everything is synced
+- Stuart's source assets live in Stuart's local OneDrive (Files On-Demand — not everything is synced
   locally until touched, so a first `find` can under-report what's actually there; re-run it
   after accessing the folder once):
   - `C:\Users\stuar\OneDrive\Flemings\` — raw working files for the Flemings role. Contains a
@@ -188,7 +188,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 - Stuart's old portfolio (being replaced by this site) is at
   https://stuartgrahammay.wixsite.com/corevisual/portfolio-collections/my-portfolio/ — useful as
   a checklist of prior pieces to recreate here.
-- Workflow: Stuart wants commits made **and pushed** each time he asks to see a result — don't
+- Workflow: Stuart wants commits made **and pushed** each time Stuart asks to see a result — don't
   leave work uncommitted between sessions. Run `npm run build && npm run check` before every
   commit (see AGENTS.md).
 
@@ -199,7 +199,7 @@ title. Current pins: Marketing has Grace -5, Tommy -4, LinkedIn -3, Customer Rev
 Trustpilot -1. Design has the Mersus series 1–8 and the website mockup 9, AIPF 10, XNDK 1–6
 (within their years), UCD covers 1–2, Nightwalker 4, and the vectors 1–3. Everything else is 0.
 Stuart plans to do a **full grid ordering pass once all content is up**, so don't fine-tune
-order values before then unless he asks.
+order values before then unless Stuart asks.
 
 ## Video hosting policy (2026-10-03)
 
@@ -213,7 +213,7 @@ order values before then unless he asks.
   request (`CaseStudy.astro`). The Marketing section on `/work` has a callout (the
   `disciplines.writing.note` field in `collections.ts`) saying Stuart has more brand video
   content and can send links to it live on TikTok and Instagram.
-- Stuart only plans **2–3 more self-hosted videos**. He'll also upload videos to **YouTube**
+- Stuart only plans **2–3 more self-hosted videos**. Stuart'll also upload videos to **YouTube**
   over time. `youtube-nocookie.com` is already allowed in the CSP `frame-src`, so YouTube embeds
   can be added later without a CSP change. For any TikTok or Instagram embeds, use a
   click-to-load facade.
@@ -238,7 +238,7 @@ order values before then unless he asks.
     days, so the data is skewed.
   - Leave out figures the source docs mark as not attributable, and leave out negative or
     diagnostic figures.
-- **The Beara docx includes a personal employment and health section. Never use it anywhere.**
+- From the Beara docx files, use **only** the marketing results sections.
 - Case-study `results` frontmatter has been added to Elf on the Shelf, Check It Fits, Mersus
   Organic Social and Jordan Murphy. Writing pages with results get an "All results →" button.
   Keep each entry's `results` in sync with the tiles in `results.ts` that link to it.
