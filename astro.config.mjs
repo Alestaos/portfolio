@@ -9,7 +9,7 @@ export default defineConfig({
   // Canonical URLs, sitemap entries and the Static Web Apps config all agree
   // on no trailing slash, so internal links never cost a 301.
   trailingSlash: 'never',
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/thanks') })],
 
   markdown: {
     // Shiki colours tokens with inline styles, which the CSP below blocks.

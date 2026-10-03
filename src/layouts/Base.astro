@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Seo from '../components/Seo.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { websiteGraph } from '../lib/schema';
 
 interface Props {
   title: string;
@@ -10,13 +11,16 @@ interface Props {
   image?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
+  /** Extra JSON-LD nodes for this page; merged into the site-wide graph. */
+  schema?: object[];
 }
 
-const { title, description, image, type, noindex } = Astro.props;
+const { title, description, image, type, noindex, schema = [] } = Astro.props;
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [...websiteGraph, ...schema] });
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,6 +28,7 @@ const { title, description, image, type, noindex } = Astro.props;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="theme-color" content="#0a0b11" />
     <Seo {title} {description} {image} {type} {noindex} />
+    <script is:inline type="application/ld+json" set:html={jsonLd} />
 
     <!-- Runs before first paint so the reveal CSS can hide elements only
          when JS is present to reveal them again. Without this the fallback

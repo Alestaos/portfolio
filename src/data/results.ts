@@ -43,7 +43,7 @@ export const resultGroups: ResultGroup[] = [
           {
             value: '+87%',
             label: 'Online revenue',
-            context: '16–30 Sep 2026 vs the previous fortnight (GA4)',
+            context: '16–30 Sep 2026 vs the previous fortnight, GA4',
           },
           {
             value: '+84%',
@@ -273,12 +273,12 @@ export const resultGroups: ResultGroup[] = [
           {
             value: '+24%',
             label: 'Organic search traffic',
-            context: 'Same period, after on-page SEO work',
+            context: '13 Jan–17 Apr 2025 vs the previous period, after on-page SEO work',
           },
           {
             value: '+63%',
             label: 'Active users from Ireland',
-            context: 'Same period',
+            context: '13 Jan–17 Apr 2025 vs the previous period',
           },
           {
             value: '+27.5%',

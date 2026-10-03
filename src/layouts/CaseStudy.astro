@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { caseStudySchema } from '../lib/schema';
 import Base from './Base.astro';
 import { disciplines, type WorkEntry, type WorkCollection } from '../lib/collections';
 
@@ -28,7 +29,13 @@ const gallery = 'gallery' in entry.data ? entry.data.gallery : [];
 const videos = 'videos' in entry.data ? entry.data.videos : [];
 ---
 
-<Base title={title} description={summary} type="article" image={cover.src}>
+<Base
+  title={title}
+  description={summary}
+  type="article"
+  image={cover.src}
+  schema={caseStudySchema(entry, cover.src)}
+>
   <article class="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24" data-discipline={collection}>
     <a
       href="/work"

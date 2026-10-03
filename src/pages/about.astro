@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import avatar from '../assets/avatar.webp';
 import { site, socials } from '../config';
 import ContactForm from '../components/ContactForm.astro';
+import { pageSchema } from '../lib/schema';
 
 // TODO(stuart): rewrite these in your own voice — the shape is right,
 // the specifics are placeholders.
@@ -85,6 +86,7 @@ const capabilities = [
 <Base
   title="About"
   description="Stuart May — marketing graduate, certified graphic designer, MSc game development and XR student."
+  schema={pageSchema('About', '/about', 'About Stuart May: background, experience and how to get in touch.', 'ProfilePage')}
 >
   <div class="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-28">
     <header

@@ -6,10 +6,10 @@ export const site = {
   name: 'Stuart May',
   url: 'https://alestaos.com',
   /** Used as the <title> suffix and in structured data. */
-  title: 'Stuart May — Designer, Marketer, Game Developer',
-  tagline: 'Visual design, brand marketing, and game & XR development.',
+  title: 'Stuart May — Digital Marketer & Designer',
+  tagline: 'Digital marketing, graphic design, and 3D & XR work.',
   description:
-    'Portfolio of Stuart May — graphic design and brand marketing work, plus game and XR development from an MSc in Game Development.',
+    'Stuart May, digital marketing executive and designer: campaigns, social and video for retail, lifestyle and tech brands, plus graphic design and 3D work.',
   locale: 'en_GB',
   /**
    * Web3Forms access key for the contact form. Messages are delivered to the

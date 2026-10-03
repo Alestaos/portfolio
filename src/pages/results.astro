@@ -1,11 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
 import { resultGroups } from '../data/results';
+import { pageSchema } from '../lib/schema';
+
+const description =
+  "Measured results from Stuart May's marketing work at Beara Beara, Flemings Department Store and Mersus Technologies.";
 ---
 
 <Base
   title="Results"
-  description="Measured results from Stuart May's marketing work at Beara Beara, Flemings Department Store and Mersus Technologies."
+  {description}
+  schema={pageSchema('Results', '/results', description)}
 >
   <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28" data-discipline="writing">
     <header class="mb-16 max-w-2xl" data-intro>
