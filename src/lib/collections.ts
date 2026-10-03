@@ -12,14 +12,14 @@ export const disciplines = {
   design: {
     id: 'design',
     label: 'Design',
-    blurb: 'Brand systems, campaign artwork and visual identity built for real briefs.',
+    blurb: 'Identity, print, web and photo-manipulation work, from client briefs to coursework and experiments.',
     accent: 'var(--color-design)',
     href: '/design',
   },
   games: {
     id: 'games',
     label: 'Games & XR',
-    blurb: 'Playable prototypes and XR experiments, most from my MSc coursework.',
+    blurb: "3D modelling and interactive projects, including what I'm learning in Blender.",
     accent: 'var(--color-games)',
     href: '/games',
   },
