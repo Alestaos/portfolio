@@ -225,3 +225,27 @@ order values before then unless he asks.
   Keep each entry's `results` in sync with the tiles in `results.ts` that link to it.
 - Possible future entry: the SuperValu bakery video (Flemings' strongest organic post). It's
   on the Results page but has no case study yet.
+
+## Homepage, contact form and SEO/AEO (2026-10-03)
+
+- **Homepage picks** are hand-set using `featured: true` plus `featuredOrder` (1 = the wide
+  first card): 1 Old Man, 2 Mersus Wireframe to Colour, 3 Beara gift card, 4 Beara LinkedIn
+  newspaper, 5 Meet the Grace. Entries without `featuredOrder` sort after these by recency.
+- **Marketing grid order** (Stuart's choice): Grace -5, Tommy -4, LinkedIn -3, Customer
+  Reviews -2, Trustpilot -1. Design: AIPF is `order: 10`, so it sits after the Mersus series
+  and directly before XNDK Demi.
+- **Contact form** (`src/components/ContactForm.astro`, on About#contact) posts to Web3Forms
+  and redirects to `/thanks` (noindex, not in the sitemap). **It needs `site.contactFormKey`
+  in `src/config.ts`.** Stuart has to create the key at web3forms.com using
+  stuartgrahammay@outlook.com. Until then, the form shows a LinkedIn fallback note. The
+  public email address was removed from the site.
+- **SEO/AEO**:
+  - `src/lib/schema.ts` builds the JSON-LD. Every page has a WebSite + Person graph; case
+    studies add CreativeWork + BreadcrumbList; About, Work and Results add
+    ProfilePage/CollectionPage/WebPage.
+  - `/llms.txt` is generated from content and `results.ts`.
+  - The html lang is `en-GB`.
+  - The site title and description focus on digital marketing and design.
+- Still to do for SEO (Stuart's side): submit `https://alestaos.com/sitemap-index.xml` in
+  Google Search Console and Bing Webmaster Tools. The About page still has placeholder copy
+  (a `TODO(stuart)` comment) and an outdated line about games and itch.io.
