@@ -4,9 +4,9 @@ summary: "A vertical social reel launching the Disney Descendants dolls, with to
 year: 2025
 cover: ../../assets/projects/toymaster-disney-descendants/01-reel-frame.jpg
 coverAlt: "Frame from the Descendants reel — a pink-haired Descendants doll on black, surrounded by hands holding up phones photographing her."
-client: "Toymaster (Flemings Department Store)"
+client: "Toymaster (Monaghan)"
 role: "E-Commerce & Digital Marketing Executive"
-channels: ["Social media", "Reels / Stories"]
+channels: ["Instagram", "TikTok"]
 tags: ["Video", "Social media", "Toys", "Motion"]
 featured: false
 order: 0
@@ -31,7 +31,7 @@ department (Toymaster), aimed at the fans who know the films, and their parents.
 
 ## The approach
 
-A fast, **15-second vertical reel** made for Reels and Stories, styled like the films: bold,
+A fast, **15-second vertical reel** made for Instagram and TikTok, styled like the films: bold,
 glossy, a little rebellious.
 
 - **The open** goes in tight on a red-haired doll's face, so the character is recognisable
@@ -48,4 +48,4 @@ glossy, a little rebellious.
 
 ## Where it ran
 
-Flemings' social channels in the vertical Reels and Stories format.
+Instagram and TikTok, in the vertical 9:16 format.

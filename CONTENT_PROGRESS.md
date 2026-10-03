@@ -135,7 +135,7 @@ Replacing placeholder/example entries across the three content collections (`des
   (`src/content/writing/toymaster-disney-descendants.md`, 2025). A 15s 9:16 reel, self-hosted
   at `public/videos/toymaster-disney-descendants/`, plus 2 frames as stills. Stuart asked for
   the client as "Toymaster (Flemings Department Store)"; the older Toymaster entries say
-  "Toymaster (Monaghan)", and this was flagged for alignment. Video frames were extracted with
+  "Toymaster (Monaghan)", and Stuart chose "Toymaster (Monaghan)" for all of them. It ran on Instagram + TikTok. Video frames were extracted with
   `ffmpeg-static` installed in the scratchpad (no system ffmpeg).
 - **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
   otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
