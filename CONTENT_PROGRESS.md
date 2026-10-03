@@ -4,10 +4,31 @@ Working notes for the real-content build-out, so a new session (or a future me) 
 without re-deriving context. Safe to keep editing/trimming this as work progresses — it's a
 scratch status file, not project documentation (see AGENTS.md for that).
 
-## Status as of 2026-10-02
+## Status as of 2026-10-03
 
-Replacing placeholder/example entries across the three content collections (`design`, `games`,
-`writing`) with Stuart's real work. Started with Marketing (`writing` collection).
+**All placeholder entries are now hidden (`draft: true`). Everything live is Stuart's real
+work:** 15 Marketing entries, 25 Design, and 1 Games (Blender WIP). The site also has a
+**Results** page, a **contact form** and a full **SEO/AEO** setup (see sections below). The
+build passes `npm run build && npm run check` with 0 errors and 0 warnings. The live site is
+https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
+
+### Open items / likely next steps
+- Stuart may add 2–3 more self-hosted videos (re-encode them first; see the video policy) and
+  YouTube embeds later. A possible new Marketing entry is the **SuperValu bakery video**: it's
+  on the Results page but has no case study yet.
+- **About page** still has placeholder copy (a `TODO(stuart)` comment), an outdated line about
+  games and itch.io builds, and a Mersus title ("Digital Marketing & Strategy Consultant") that
+  doesn't match the case studies ("Digital Marketing Executive & Designer"). Offered to rework
+  it with him.
+- **Homepage pick #2**: Stuart asked for "the Mersus wireframe". I used
+  `mersus-04-wireframe-to-colour`, but it could have meant `mersus-website-mockup`. Not yet
+  confirmed.
+- Unconfirmed details flagged earlier: tools for the UCD covers, Nightwalker, BitBoi, the other
+  XNDK pieces and the cats; which AI tool made the Rolly video; whether BitBoi was UCD work;
+  which degree XNDK was for; tools for the Meet Tommy, Grace and LinkedIn Beara pieces.
+- Stuart to do: submit the sitemap in Google Search Console and Bing Webmaster Tools, and send a
+  test message through the contact form (check Outlook's Junk folder).
+- A **full grid ordering pass** happens once all content is up.
 
 ## Done
 
@@ -16,10 +37,8 @@ Replacing placeholder/example entries across the three content collections (`des
 - Added native self-hosted video support: a `videos` field on the `writing` collection schema
   (`content.config.ts`) and a plain `<video controls>` gallery in `CaseStudy.astro`. No JS
   framework, same-origin files under `public/videos/`, so the existing CSP needed no changes.
-- `example-campaign.md` and `example-paid-campaign.md` (Harbour Co. placeholders) set to
-  `draft: true` — hidden in production, kept as local reference templates for the frontmatter
-  shape. `example-brand-system.md` (design) and `example-xr-prototype.md` (games) are
-  **still live placeholders** — not yet touched.
+- All four `example-*.md` placeholders are `draft: true`: hidden in production, and kept as
+  local frontmatter templates. `writing/notes.md` is also a draft-only internal note.
 - Real Marketing entries published:
   1. **Flemings Department Store — Spring Fashion Campaign**
      (`src/content/writing/flemings-spring-fashion.md`) — social/email fashion ad series, 9-image
@@ -137,20 +156,19 @@ Replacing placeholder/example entries across the three content collections (`des
   the client as "Toymaster (Flemings Department Store)"; the older Toymaster entries say
   "Toymaster (Monaghan)", and Stuart chose "Toymaster (Monaghan)" for all of them. It ran on Instagram + TikTok. Video frames were extracted with
   `ffmpeg-static` installed in the scratchpad (no system ffmpeg).
-- **Homepage featuring:** `getFeatured()` shows only `featured: true` entries if any exist,
-  otherwise the most recent ones. **Nothing is featured right now** (both featured placeholders
-  are drafts), so the homepage shows the 5 most recent real entries across all sections.
-  Ask Stuart which real pieces he wants featured.
+- **Homepage featuring:** see "Homepage, contact form and SEO/AEO" below (hand-picked using
+  `featuredOrder`).
 
 ## Not started yet
 
-- Stuart had in-house content roles at **4 businesses** total. Ask him
-  which business to do next. Flemings (incl. Expert, Toymaster) and Beara Beara are in progress.
-- More unused Flemings material sitting in OneDrive: a Black Friday electronics push, toy
-  department social reels (Elf/Gabby/Pokémon toy videos), a "Flemings Grand Prix" video in the
-  `Portfolio` folder. Ask before picking one.
-- `design` collection: Beara gift card only (placeholder is now draft). Stuart has more non-marketing design pieces to add.
-- `games` collection: Blender Old Man WIP only.
+- Covered so far: Flemings (incl. Expert, Toymaster), Beara Beara, Mersus Technologies, AIPF
+  (volunteer), UCD and degree coursework, and personal pieces. The About page also lists
+  SuperValu Monaghan and Marks & Spencer Athlone roles, which have no entries yet. Ask before
+  adding any.
+- Unused Flemings material in OneDrive: a Black Friday electronics push, toy reels
+  (Gabby/Pokémon), a "Flemings Grand Prix" video. More Mersus material: brand guidelines V6, a
+  documentary video, and alternates folders. Ask before picking any.
+- `games` collection: Blender Old Man WIP only. Stuart will send updated renders.
 
 ## Useful context for next session
 
@@ -177,8 +195,9 @@ Replacing placeholder/example entries across the three content collections (`des
 ## Grid ordering
 
 Entries sort by year (newest first), then by `order` (lowest first), then alphabetically by
-title. In Marketing, Stuart wants the Customer Review Showcase directly before the Trustpilot
-card, so they're pinned with `order: -2` and `order: -1`. Everything else is `order: 0`.
+title. Current pins: Marketing has Grace -5, Tommy -4, LinkedIn -3, Customer Reviews -2,
+Trustpilot -1. Design has the Mersus series 1–8 and the website mockup 9, AIPF 10, XNDK 1–6
+(within their years), UCD covers 1–2, Nightwalker 4, and the vectors 1–3. Everything else is 0.
 Stuart plans to do a **full grid ordering pass once all content is up**, so don't fine-tune
 order values before then unless he asks.
 
