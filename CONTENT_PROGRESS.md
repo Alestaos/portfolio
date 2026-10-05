@@ -13,7 +13,7 @@ build passes `npm run build && npm run check` with 0 errors and 0 warnings. The 
 https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 
 ### Open items / likely next steps
-- **Awards banner** (2026-10-05): full-width banner at the end of the Marketing section on /work (`banner` object on `disciplines.writing` in `src/lib/collections.ts`): Finalist, Best Student, Digital Media Awards Ireland 2025, for Stuart's final-year TUS Athlone digital marketing project built around Mersus Technologies. It links to his LinkedIn announcement. Open question: which of the Mersus Marketing entries, if any, came from that project (they could carry a mention).
+- **Awards banner** (2026-10-05): full-width banner at the end of the Marketing section on /work (`banner` object on `disciplines.writing` in `src/lib/collections.ts`): Finalist, Best Student, Digital Media Awards Ireland 2025, for Stuart's final-year TUS Athlone digital marketing project built around Mersus Technologies. It links to his LinkedIn announcement. Stuart confirmed all three Mersus Marketing entries came from that project, so each now ends with a "Recognition" section linking the announcement.
 - Stuart may add 2–3 more self-hosted videos (re-encode them first; see the video policy) and
   YouTube embeds later. A possible new Marketing entry is the **SuperValu bakery video**: it's
   on the Results page but has no case study yet.

@@ -45,3 +45,10 @@ Mersus's content and fits the subject, without competing with the copy.
 ## Where it ran
 
 Mersus Technologies' LinkedIn page.
+
+## Recognition
+
+This was part of my final-year digital marketing project at TUS Athlone, built around the
+challenges Mersus Technologies was facing. The project was a finalist for **Best Student at the
+Digital Media Awards Ireland 2025**
+([see the announcement](https://www.linkedin.com/posts/stuartmay90_dma2025-activity-7370502087454904320-MOeb)).
