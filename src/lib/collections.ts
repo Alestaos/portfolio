@@ -30,6 +30,7 @@ export const disciplines = {
     accent: 'var(--color-writing)',
     href: '/writing',
     note: "I've created a lot of video content for brands that isn't hosted here. If you'd like to see more of my video editing, get in touch and I'll send links to the videos live on the brands' TikTok and Instagram channels.",
+    banner: 'Finalist at the 2025 Digital Media Awards',
   },
 } as const satisfies Record<WorkCollection, {
   id: WorkCollection;
@@ -39,6 +40,8 @@ export const disciplines = {
   href: string;
   /** Optional callout shown under the section heading on /work. */
   note?: string;
+  /** Optional full-width banner shown after the section's grid on /work. */
+  banner?: string;
 }>;
 
 /** Drafts are visible while developing, hidden in production builds. */

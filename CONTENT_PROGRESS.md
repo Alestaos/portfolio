@@ -13,6 +13,7 @@ build passes `npm run build && npm run check` with 0 errors and 0 warnings. The 
 https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 
 ### Open items / likely next steps
+- **Awards banner** (2026-10-05): full-width "Finalist at the 2025 Digital Media Awards" banner at the end of the Marketing section on /work (`banner` field on `disciplines.writing` in `src/lib/collections.ts`). Not yet confirmed: which employer/campaign and category it was for, which could be added to the banner or to a case study.
 - Stuart may add 2–3 more self-hosted videos (re-encode them first; see the video policy) and
   YouTube embeds later. A possible new Marketing entry is the **SuperValu bakery video**: it's
   on the Results page but has no case study yet.

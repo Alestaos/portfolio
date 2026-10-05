@@ -53,6 +53,16 @@ const sections = [
               entries={section.entries}
               emptyMessage={`${section.label} case studies are being written up.`}
             />
+            {'banner' in section && (
+              <div
+                data-reveal
+                data-discipline={section.id}
+                class="glass mt-12 flex items-center gap-4 rounded-2xl px-6 py-5 sm:px-8 sm:py-6"
+              >
+                <span class="accent-bg h-10 w-1 shrink-0 rounded-full" aria-hidden="true" />
+                <p class="text-lg font-medium sm:text-xl">{section.banner}</p>
+              </div>
+            )}
           </section>
         ))
       }
