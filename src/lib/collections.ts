@@ -30,7 +30,12 @@ export const disciplines = {
     accent: 'var(--color-writing)',
     href: '/writing',
     note: "I've created a lot of video content for brands that isn't hosted here. If you'd like to see more of my video editing, get in touch and I'll send links to the videos live on the brands' TikTok and Instagram channels.",
-    banner: 'Finalist at the 2025 Digital Media Awards',
+    banner: {
+      title: 'Finalist, Best Student — Digital Media Awards Ireland 2025',
+      detail: 'Shortlisted for my final-year digital marketing project at TUS Athlone, built around the challenges Mersus Technologies was facing.',
+      href: 'https://www.linkedin.com/posts/stuartmay90_dma2025-activity-7370502087454904320-MOeb',
+      linkLabel: 'See the announcement',
+    },
   },
 } as const satisfies Record<WorkCollection, {
   id: WorkCollection;
@@ -41,7 +46,7 @@ export const disciplines = {
   /** Optional callout shown under the section heading on /work. */
   note?: string;
   /** Optional full-width banner shown after the section's grid on /work. */
-  banner?: string;
+  banner?: { title: string; detail?: string; href?: string; linkLabel?: string };
 }>;
 
 /** Drafts are visible while developing, hidden in production builds. */
