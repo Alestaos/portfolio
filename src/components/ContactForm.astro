@@ -19,7 +19,7 @@ const field =
       <input type="hidden" name="from_name" value={`${site.name} — portfolio`} />
       <input type="hidden" name="redirect" value={thanks} />
       {/* Honeypot: real visitors never see or tick this. */}
-      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+      <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" aria-hidden="true" autocomplete="off" />
 
       <div class="grid gap-5 sm:grid-cols-2">
         <label class="block text-sm font-medium">

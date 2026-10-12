@@ -6,6 +6,12 @@ const isCurrent = (href: string) => {
   const base = href.split('#')[0];
   return base === '/' ? path === '/' : path === base || path.startsWith(`${base}/`);
 };
+
+// About is a plain text link; the discipline and Results links are pills.
+const pills = nav.filter((item) => item.href !== '/about');
+const about = nav.find((item) => item.href === '/about');
+const link =
+  'block rounded-full whitespace-nowrap text-(--color-muted) transition-colors hover:bg-white/5 hover:text-(--color-fg) aria-[current=page]:bg-white/8 aria-[current=page]:text-(--color-fg)';
 ---
 
 <a
@@ -16,28 +22,27 @@ const isCurrent = (href: string) => {
 </a>
 
 <header class="glass-bar sticky top-0 z-40">
+  {/* Below sm the pills drop to their own full-width row under the name, with
+      About beside the name, so nothing pushes a 320px phone sideways. */}
   <nav
     aria-label="Primary"
-    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6"
+    class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-2 gap-y-1.5 px-4 py-2.5 sm:flex-nowrap sm:px-6 sm:py-3"
   >
     <a
       href="/"
-      class="font-[family-name:var(--font-display)] text-base font-semibold tracking-tight transition-opacity hover:opacity-70"
+      class="mr-auto font-[family-name:var(--font-display)] text-base font-semibold tracking-tight transition-opacity hover:opacity-70"
     >
       {site.name}
     </a>
 
-    <ul class="flex items-center gap-1 text-sm sm:gap-2">
+    <ul class="order-last flex w-full items-center justify-between gap-1 text-[0.8125rem] max-[22.5rem]:text-xs sm:order-none sm:w-auto sm:gap-2 sm:text-sm">
       {
-        nav.map((item) => (
+        pills.map((item) => (
           <li>
             <a
               href={item.href}
               aria-current={isCurrent(item.href) ? 'page' : undefined}
-              class:list={[
-                'rounded-full px-2.5 py-1.5 text-(--color-muted) transition-colors hover:bg-white/5 hover:text-(--color-fg) aria-[current=page]:bg-white/8 aria-[current=page]:text-(--color-fg) sm:px-3',
-                item.href !== '/about' && 'border border-white/12 bg-white/4',
-              ]}
+              class={`${link} border border-white/12 bg-white/4 px-2.5 py-2 max-[22.5rem]:px-2 sm:px-3 sm:py-1.5`}
             >
               {item.label}
             </a>
@@ -45,5 +50,17 @@ const isCurrent = (href: string) => {
         ))
       }
     </ul>
+
+    {
+      about && (
+        <a
+          href={about.href}
+          aria-current={isCurrent(about.href) ? 'page' : undefined}
+          class={`${link} -mr-2 px-3 py-2 text-sm sm:mr-0 sm:py-1.5`}
+        >
+          {about.label}
+        </a>
+      )
+    }
   </nav>
 </header>

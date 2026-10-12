@@ -13,6 +13,8 @@ build passes `npm run build && npm run check` with 0 errors and 0 warnings. The 
 https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 
 ### Open items / likely next steps
+- **Mobile nav fix** (2026-10-12): the nav was 438px wide, so on every phone the page scrolled sideways and About sat off-screen. Below `sm`, About now sits beside the name and the four pills get their own row (checked at 320–1280px, no overflow). Also removed the contact form honeypot's inline `style`, which the CSP was blocking.
+- **SEO/AEO check** (2026-10-12): on-page is solid (unique titles and descriptions, one h1 each, valid JSON-LD on all 45 pages, all images have alt text, llms.txt live). But the site doesn't show up in search yet, so the sitemap still needs submitting in GSC/Bing. Also, `www.alestaos.com` serves a 200 instead of redirecting to the apex: set the apex as the default domain in the Azure portal.
 - **Awards banner** (2026-10-05): full-width banner at the end of the Marketing section on /work (`banner` object on `disciplines.writing` in `src/lib/collections.ts`): Finalist, Best Student, Digital Media Awards Ireland 2025, for Stuart's final-year TUS Athlone digital marketing project built around Mersus Technologies. It links to his LinkedIn announcement. Stuart confirmed all three Mersus Marketing entries came from that project, so each now ends with a "Recognition" section linking the announcement.
 - **Mersus role wording** (open): the three Mersus Marketing entries say "Digital Marketing Executive & Designer", but they were also Stuart's TUS final-year project. Asked Stuart whether to change the role or mention both; no answer yet.
 - Stuart may add 2–3 more self-hosted videos (re-encode them first; see the video policy) and

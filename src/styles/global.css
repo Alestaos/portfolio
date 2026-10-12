@@ -39,9 +39,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
+    /* Clears the sticky nav, which is two rows tall below sm. */
+    scroll-padding-top: 7.5rem;
     color-scheme: dark;
     -webkit-text-size-adjust: 100%;
+
+    @media (width >= 40rem) {
+      scroll-padding-top: 6rem;
+    }
   }
 
   body {
