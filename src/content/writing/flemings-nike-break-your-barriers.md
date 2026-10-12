@@ -1,10 +1,10 @@
 ---
 title: "Break Your Barriers — Nike Promo Concept"
-summary: "A Nike sportswear promo concept made as a candidate task for Flemings of Monaghan: a runner bursting through a wall of shattered glass."
+summary: "A Nike sportswear promo concept made as a candidate task for Flemings Department Store: a runner bursting through a wall of shattered glass."
 year: 2025
 cover: ../../assets/projects/flemings-nike-break-your-barriers/01-break-your-barriers.jpg
 coverAlt: "Break Your Barriers promo — a runner in a blue long-sleeve top sprinting past a concrete wall as glowing teal glass shatters around him, with the Nike swoosh in the corner."
-client: "Flemings of Monaghan (candidate task)"
+client: "Flemings Department Store (candidate task)"
 role: "Designer (job application task)"
 channels: ["Concept (unpublished)"]
 tags: ["Concept", "Photo manipulation", "Sportswear", "Promo"]
@@ -18,7 +18,7 @@ gallery:
 
 ## The brief
 
-A **candidate task** set by Flemings of Monaghan as part of their hiring process: create a
+A **candidate task** set by Flemings Department Store as part of their hiring process: create a
 promotional piece for **Nike** sportswear, one of the brands the store carries. It was a
 speculative concept for the application, not a campaign commissioned or run by Nike.
 

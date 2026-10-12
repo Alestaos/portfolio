@@ -54,7 +54,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
      pulled directly from the live storefront page (see below), not from raw OneDrive exports —
      the first pass using local files only found 4 of the 12 real clips.
   3. **Expert Electrical — Outdoor Living Paid Social**
-     (`src/content/writing/expert-outdoor-living.md`) — client is "Expert Electrical (Monaghan)"
+     (`src/content/writing/expert-outdoor-living.md`) — client is "Expert Electrical" (Monaghan qualifier dropped 2026-10-12)
      (Stuart's chosen wording), made as part of Stuart's Flemings role. Three Eden (Hartman) garden
      furniture sale ads. Stuart explicitly wanted **only the three Eden ads** — the same source
      folder (`Downloads\Social Media\`) also has Amalfi ads and price-free variants; don't add
@@ -158,7 +158,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
   (`src/content/writing/toymaster-disney-descendants.md`, 2025). A 15s 9:16 reel, self-hosted
   at `public/videos/toymaster-disney-descendants/`, plus 2 frames as stills. Stuart asked for
   the client as "Toymaster (Flemings Department Store)"; the older Toymaster entries say
-  "Toymaster (Monaghan)", and Stuart chose "Toymaster (Monaghan)" for all of them. It ran on Instagram + TikTok. Video frames were extracted with
+  plain "Toymaster" (Stuart asked on 2026-10-12 to drop "Monaghan" from anything about him). It ran on Instagram + TikTok. Video frames were extracted with
   `ffmpeg-static` installed in the scratchpad (no system ffmpeg).
 - **Homepage featuring:** see "Homepage, contact form and SEO/AEO" below (hand-picked using
   `featuredOrder`).
@@ -167,7 +167,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 
 - Covered so far: Flemings (incl. Expert, Toymaster), Beara Beara, Mersus Technologies, AIPF
   (volunteer), UCD and degree coursework, and personal pieces. The About page also lists
-  SuperValu Monaghan and Marks & Spencer Athlone roles, which have no entries yet. Ask before
+  SuperValu and Marks & Spencer Athlone roles, which have no entries yet. Ask before
   adding any.
 - Unused Flemings material in OneDrive: a Black Friday electronics push, toy reels
   (Gabby/Pokémon), a "Flemings Grand Prix" video. More Mersus material: brand guidelines V6, a

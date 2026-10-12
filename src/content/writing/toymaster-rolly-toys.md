@@ -4,7 +4,7 @@ summary: "A promo poster for Rolly Toys ride-on tractors, designed in Photoshop 
 year: 2025
 cover: ../../assets/projects/toymaster-rolly-toys/01-poster.jpg
 coverAlt: "Rolly Toys poster — a red ride-on tractor with a yellow front loader on a green background, under 'Your Adventure Starts Here!' and the Rolly Toys logo."
-client: "Toymaster (Monaghan)"
+client: "Toymaster"
 role: "E-Commerce & Digital Marketing Executive"
 channels: ["Social media", "In-store"]
 tags: ["Poster", "Video", "AI animation", "Toys"]
@@ -13,7 +13,7 @@ order: 0
 draft: false
 gallery:
   - src: ../../assets/projects/toymaster-rolly-toys/01-poster.jpg
-    alt: "Full poster — the Rolly Toys logo on a yellow band with tyre-track graphics at top, 'Your Adventure Starts Here!' in chunky yellow type, a red ride-on tractor with a front loader on a teal-green ground, and the Flemings, flemingsofmonaghan.com and humm logos along the bottom."
+    alt: "Full poster — the Rolly Toys logo on a yellow band with tyre-track graphics at top, 'Your Adventure Starts Here!' in chunky yellow type, a red ride-on tractor with a front loader on a teal-green ground, and the Flemings, Flemings website and humm logos along the bottom."
     caption: "Poster, designed in Photoshop."
 videos:
   - src: /videos/toymaster-rolly-toys/01-rolly-ai-animation.mp4

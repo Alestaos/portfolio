@@ -17,7 +17,7 @@ export const GET: APIRoute = async () => {
     '',
     `> ${site.description}`,
     '',
-    `${site.name} is a digital marketing executive and designer, with in-house roles at Beara Beara (handcrafted leather bags), Flemings Department Store (Monaghan, including its Toymaster and Expert departments) and Mersus Technologies (VR training). Qualifications: a Bachelor of Business (Hons) in Digital Marketing and a Professional Diploma in Graphic Design; currently studying for an MSc in Game Development & XR.`,
+    `${site.name} is a digital marketing executive and designer, with in-house roles at Beara Beara (handcrafted leather bags), Flemings Department Store (including its Toymaster and Expert departments) and Mersus Technologies (VR training). Qualifications: a Bachelor of Business (Hons) in Digital Marketing and a Professional Diploma in Graphic Design; currently studying for an MSc in Game Development & XR.`,
     '',
     '## Key pages',
     '',

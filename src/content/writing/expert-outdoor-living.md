@@ -4,7 +4,7 @@ summary: "A paid social sale campaign for Hartman's Eden garden furniture range 
 year: 2026
 cover: ../../assets/projects/expert-outdoor-living/01-eden-2-seater-lounge.png
 coverAlt: "Outdoor Living paid social ad — Eden 2 Seater Lounge Set on a patio, with 'Now €1,799.95, was €2,199.95' pricing."
-client: "Expert Electrical (Monaghan)"
+client: "Expert Electrical"
 role: "E-Commerce & Digital Marketing Executive"
 channels: ["Paid social"]
 tags: ["Campaign", "Paid social", "Retail", "Art direction"]
@@ -25,7 +25,7 @@ gallery:
 
 ## The brief
 
-Drive online sales of Hartman's Eden outdoor furniture range for Expert Electrical in Monaghan
+Drive online sales of Hartman's Eden outdoor furniture range for Expert Electrical
 through paid social, as part of my in-house E-Commerce & Digital Marketing role with Flemings
 Department Store. These were high-ticket garden sets, so each ad had to make the saving obvious
 at a glance and point straight to the online store.

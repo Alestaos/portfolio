@@ -4,7 +4,7 @@ summary: "Promotion for a free Road Safety Authority child car seat checking day
 year: 2025
 cover: ../../assets/projects/toymaster-check-it-fits/01-square-feed.jpg
 coverAlt: "'Does it fit? We'll check!' — a father fastening his daughter's seatbelt in a car, with the RSA Check It Fits logo and event date."
-client: "Toymaster (Monaghan)"
+client: "Toymaster"
 role: "E-Commerce & Digital Marketing Executive"
 channels: ["Social media", "Print", "Blog"]
 results: ["8,835 people reached on a €2/day budget", "14,466 impressions", "RSA staff reported it busier than previous visits"]
@@ -27,8 +27,8 @@ gallery:
 
 ## The brief
 
-The Road Safety Authority's **Check It Fits** team was coming to Flemings Department Store in
-Monaghan on Tuesday 28 October 2025, offering free drop-in child car seat checks in the store
+The Road Safety Authority's **Check It Fits** team was coming to Flemings Department Store on
+Tuesday 28 October 2025, offering free drop-in child car seat checks in the store
 car park from 9am to 5:30pm. The aim was to get as many parents, guardians and parents-to-be as
 possible to turn up on the day, and to support the Nursery Department's event-day offer of 10%
 off car seats.

@@ -4,7 +4,7 @@ summary: "A vertical social reel launching the Disney Descendants dolls, with to
 year: 2025
 cover: ../../assets/projects/toymaster-disney-descendants/01-reel-frame.jpg
 coverAlt: "Frame from the Descendants reel — a pink-haired Descendants doll on black, surrounded by hands holding up phones photographing her."
-client: "Toymaster (Monaghan)"
+client: "Toymaster"
 role: "E-Commerce & Digital Marketing Executive"
 channels: ["Instagram", "TikTok"]
 tags: ["Video", "Social media", "Toys", "Motion"]
