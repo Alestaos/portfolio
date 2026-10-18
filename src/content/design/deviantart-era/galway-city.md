@@ -13,6 +13,7 @@ order: 114
 archive:
   category: photography
   highlight: true
+  showcase: 8
   files: ["galway_city_by_neoandroid_dpder9-414w-2x.jpg"]
 ---
 
