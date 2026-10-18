@@ -13,7 +13,6 @@ const sections = archive.categories.map((category) => ({
   entries: entries.filter((entry) => entry.data.archive!.category === category.id),
 }));
 
-const highlight = (slug: string) => `${archive.href}/${slug}`;
 ---
 
 <Base
@@ -37,45 +36,64 @@ const highlight = (slug: string) => `${archive.href}/${slug}`;
       <p class="accent-text mb-4 text-xs font-medium uppercase tracking-[0.16em]">
         Design · Historical archive
       </p>
-      <h1 class="text-4xl sm:text-5xl">{archive.title}</h1>
+      <h1 class="text-4xl sm:text-5xl">{archive.seoTitle}</h1>
       <p class="mt-4 text-lg text-(--color-muted)">
-        <em>{archive.period} · {archive.subtitle}</em>
+        <em>{archive.subtitle}</em>
       </p>
       <div class="prose mt-8">
         <p>
-          Before the degrees, professional design briefs, marketing campaigns and game development,
-          there was DeviantArt.
+          Before the qualifications, professional design work, marketing campaigns and game development, there was DeviantArt.
         </p>
         <p>
-          My interest in digital design started in the early 2000s, when I began experimenting with
-          Photoshop and sharing artwork online under the name Neo Android.
+          Growing up with undiagnosed autism and ADHD wasn't always easy. I often struggled with things that seemed to come naturally to other people, and those difficulties weren't always understood.
         </p>
         <p>
-          I spent those years creating everything from anime and video game compositions to photo
-          manipulations, decorative graphics, experimental textures and website layouts.
+          I was frequently told that I was intelligent but didn't apply myself, that I was slow, or that I wouldn't amount to much if I didn't try harder. What people didn't necessarily see was that I was trying. I just didn't always understand why my mind seemed to work differently.
         </p>
         <p>
-          Looking back, some of these creations are wonderfully representative of their time.
-          Dramatic lighting, elaborate textures, experimental typography and probably far too many
-          blending modes.
+          Creativity became my outlet.
         </p>
         <p>
-          But they also represent something important: the beginning of my interest in composition,
-          colour, visual storytelling and digital creativity.
+          It was somewhere I could experiment, explore ideas and express myself without needing to fit into someone else's expectations. Whether I was working with Photoshop, creating digital artwork, experimenting with website layouts or making graphics for online communities, I could lose myself in the process of creating something.
         </p>
         <p>
-          This collection preserves some of my earliest surviving creative experiments. Not
-          necessarily my most technically refined work, but an important part of how I became the
-          designer and developer I am today.
+          I remember thinking to myself:
+        </p>
+        <blockquote>
+          <p>"When I find that one thing I'm good at, you'll all see."</p>
+        </blockquote>
+        <p>
+          Looking back, I recognise that there was a lot of frustration behind those words. I wanted to prove that I was capable of something, that I wasn't defined by the things I struggled with or by what other people thought my future would look like.
         </p>
         <p>
-          A few pieces show the range especially well: the{' '}
-          <a href={highlight('heaven-on-earth')}>Heaven on Earth</a> website concept, the{' '}
-          <a href={highlight('im-supergirl')}>I'm Supergirl</a> composition, the{' '}
-          <a href={highlight('galway-city')}>Galway City</a> photo edit, the ornamental{' '}
-          <a href={highlight('tribal-flower-design')}>Tribal Flower Design</a> and{' '}
-          <a href={highlight('a-tribal-design')}>A Tribal Design</a>, and the manga-inspired{' '}
-          <a href={highlight('you-found-me-you-loved-me')}>You Found Me, You Loved Me</a>.
+          Under the name Neo Android, I spent years creating artwork inspired by anime, video games, fantasy, music and whatever else caught my imagination.
+        </p>
+        <p>
+          Some of it is wonderfully dated now. The dramatic lighting, excessive textures, elaborate typography and an almost criminal enthusiasm for Photoshop blending modes are very much products of their time.
+        </p>
+        <p>
+          But I wouldn't change them.
+        </p>
+        <p>
+          These pieces represent a period when I was discovering what I enjoyed, developing skills through experimentation and finding confidence in my own creativity.
+        </p>
+        <p>
+          Today, I've gone on to study graphic design, graduate with First Class Honours in Digital Marketing, work professionally in creative and digital roles, and pursue a master's degree in Games and Extended Reality.
+        </p>
+        <p>
+          But the most interesting thing about looking back at this work isn't how much I've achieved since.
+        </p>
+        <p>
+          It's realising that I didn't need to wait until I found something I was good at. I was already learning, experimenting and creating all along.
+        </p>
+        <p>
+          I just couldn't see it yet.
+        </p>
+        <p>
+          This archive is a little tribute to that younger version of me, to the online communities that encouraged creativity, and to the beginning of a journey I'm still figuring out.
+        </p>
+        <p>
+          And perhaps a reminder that sometimes the things we struggle with don't tell the whole story of what we're capable of becoming.
         </p>
       </div>
     </header>
