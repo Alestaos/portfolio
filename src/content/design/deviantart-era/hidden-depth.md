@@ -12,7 +12,7 @@ tags: ["Signature", "Celebrity", "Panel layout"]
 order: 3
 archive:
   category: compositing
-  showcase: true
+  showcase: 5
   files: ["jessicaalba.gif"]
 ---
 

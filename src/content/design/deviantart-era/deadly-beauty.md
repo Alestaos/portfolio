@@ -12,7 +12,7 @@ tags: ["Signature", "Anime fan art", "Out of frame"]
 order: 5
 archive:
   category: compositing
-  showcase: true
+  showcase: 6
   files: ["newschool5.png"]
 ---
 

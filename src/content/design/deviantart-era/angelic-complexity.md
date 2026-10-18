@@ -12,7 +12,7 @@ tags: ["Signature", "Anime fan art", "Compositing"]
 order: 0
 archive:
   category: compositing
-  showcase: true
+  showcase: 3
   files: ["a2neo.png"]
 ---
 

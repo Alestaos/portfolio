@@ -13,7 +13,7 @@ order: 223
 archive:
   category: web
   highlight: true
-  showcase: true
+  showcase: 9
   files: ["heaven2.png"]
 ---
 

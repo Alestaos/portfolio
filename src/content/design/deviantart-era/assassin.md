@@ -12,7 +12,7 @@ tags: ["Signature", "Anime fan art", "Texture"]
 order: 1
 archive:
   category: compositing
-  showcase: true
+  showcase: 4
   files: ["assassin.png"]
 ---
 

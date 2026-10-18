@@ -12,7 +12,7 @@ tags: ["Signature", "Video game fan art", "Grid layout"]
 order: 4
 archive:
   category: compositing
-  showcase: true
+  showcase: 7
   files: ["masseffect1.png"]
 ---
 

@@ -8,7 +8,9 @@ import { pageSchema } from '../../lib/schema';
 const work = await getAllWork();
 // Stand-out DeviantArt Era pieces shown under the Design banner; the rest live on the archive page.
 const archived = await getArchive();
-const archiveHighlights = archived.filter((entry) => entry.data.archive!.showcase);
+const archiveHighlights = archived
+  .filter((entry) => entry.data.archive!.showcase)
+  .sort((a, b) => a.data.archive!.showcase! - b.data.archive!.showcase!);
 
 const sections = [
   { ...disciplines.games, entries: work.games },
