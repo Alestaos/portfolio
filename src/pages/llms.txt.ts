@@ -5,7 +5,7 @@
  */
 import type { APIRoute } from 'astro';
 import { site, socials } from '../config';
-import { getAllWork, disciplines, hrefFor } from '../lib/collections';
+import { archive, getAllWork, getArchive, disciplines, hrefFor } from '../lib/collections';
 import { resultGroups } from '../data/results';
 
 const abs = (path: string) => new URL(path, site.url).href;
@@ -50,6 +50,16 @@ export const GET: APIRoute = async () => {
     }
     lines.push('');
   }
+
+  const archived = await getArchive();
+  lines.push(
+    `## ${archive.seoTitle}`,
+    '',
+    `${archive.description} [Archive page](${abs(archive.href)}). ${archive.notice}`,
+    '',
+    ...archived.map((entry) => `- [${entry.data.title}](${abs(hrefFor(entry))}): ${entry.data.summary}`),
+    '',
+  );
 
   return new Response(lines.join('\n'), {
     headers: { 'Content-Type': 'text/plain; charset=utf-8' },

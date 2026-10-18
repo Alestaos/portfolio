@@ -4,7 +4,7 @@
  * back at it by @id rather than repeating it.
  */
 import { site, socials } from '../config';
-import { disciplines, type WorkCollection, type WorkEntry } from './collections';
+import { archive, disciplines, type WorkCollection, type WorkEntry } from './collections';
 
 const abs = (path: string) => new URL(path, site.url).href;
 
@@ -82,7 +82,8 @@ export function caseStudySchema(entry: WorkEntry, imagePath: string) {
       description: data.summary,
       url: abs(path),
       image: abs(imagePath),
-      dateCreated: String(data.year),
+      // Archive pieces are only dated to a range, so they don't claim a year.
+      ...('archive' in data && data.archive ? {} : { dateCreated: String(data.year) }),
       inLanguage: 'en-GB',
       genre: discipline.label,
       keywords: [...data.tags, ...tools].join(', '),
@@ -95,6 +96,7 @@ export function caseStudySchema(entry: WorkEntry, imagePath: string) {
       { name: 'Home', path: '/' },
       { name: 'Work', path: '/work' },
       { name: discipline.label, path: `/work#${collection}` },
+      ...('archive' in data && data.archive ? [{ name: archive.seoTitle, path: archive.href }] : []),
       { name: data.title, path },
     ]),
   ];

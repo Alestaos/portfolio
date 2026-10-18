@@ -1,0 +1,168 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import ProjectGrid from '../../components/ProjectGrid.astro';
+import { archive, getArchive } from '../../lib/collections';
+import { pageSchema } from '../../lib/schema';
+
+const entries = await getArchive();
+const files = entries.reduce((n, entry) => n + entry.data.archive!.files.length, 0);
+
+const sections = archive.categories.map((category) => ({
+  ...category,
+  entries: entries.filter((entry) => entry.data.archive!.category === category.id),
+}));
+
+const highlight = (slug: string) => `${archive.href}/${slug}`;
+---
+
+<Base
+  title={archive.seoTitle}
+  description={archive.description}
+  schema={pageSchema(archive.seoTitle, archive.href, archive.description, 'CollectionPage')}
+>
+  <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28" data-discipline="design">
+    <a
+      href="/work#design"
+      class="group inline-flex items-center gap-2 text-sm text-(--color-faint) transition-colors hover:text-(--color-fg)"
+    >
+      <span
+        class="transition-transform duration-300 ease-(--ease-out-expo) group-hover:-translate-x-1"
+        aria-hidden="true">&larr;</span
+      >
+      Design
+    </a>
+
+    <header class="mt-8 mb-16 max-w-2xl" data-intro>
+      <p class="accent-text mb-4 text-xs font-medium uppercase tracking-[0.16em]">
+        Design · Historical archive
+      </p>
+      <h1 class="text-4xl sm:text-5xl">{archive.title}</h1>
+      <p class="mt-4 text-lg text-(--color-muted)">
+        <em>{archive.period} · {archive.subtitle}</em>
+      </p>
+      <div class="prose mt-8">
+        <p>
+          Before the degrees, professional design briefs, marketing campaigns and game development,
+          there was DeviantArt.
+        </p>
+        <p>
+          My interest in digital design started in the early 2000s, when I began experimenting with
+          Photoshop and sharing artwork online under the name Neo Android.
+        </p>
+        <p>
+          I spent those years creating everything from anime and video game compositions to photo
+          manipulations, decorative graphics, experimental textures and website layouts.
+        </p>
+        <p>
+          Looking back, some of these creations are wonderfully representative of their time.
+          Dramatic lighting, elaborate textures, experimental typography and probably far too many
+          blending modes.
+        </p>
+        <p>
+          But they also represent something important: the beginning of my interest in composition,
+          colour, visual storytelling and digital creativity.
+        </p>
+        <p>
+          This collection preserves some of my earliest surviving creative experiments. Not
+          necessarily my most technically refined work, but an important part of how I became the
+          designer and developer I am today.
+        </p>
+        <p>
+          A few pieces show the range especially well: the{' '}
+          <a href={highlight('heaven-on-earth')}>Heaven on Earth</a> website concept, the{' '}
+          <a href={highlight('im-supergirl')}>I'm Supergirl</a> composition, the{' '}
+          <a href={highlight('galway-city')}>Galway City</a> photo edit, the ornamental{' '}
+          <a href={highlight('tribal-flower-design')}>Tribal Flower Design</a> and{' '}
+          <a href={highlight('a-tribal-design')}>A Tribal Design</a>, and the manga-inspired{' '}
+          <a href={highlight('you-found-me-you-loved-me')}>You Found Me, You Loved Me</a>.
+        </p>
+      </div>
+    </header>
+
+    <aside
+      class="glass mb-12 max-w-3xl rounded-2xl px-6 py-4 text-sm leading-relaxed text-(--color-muted)"
+      aria-label="Archive note"
+      data-reveal
+    >
+      {archive.notice} Every piece is shown at its original size and proportions;
+      {' '}{files} recovered files across {entries.length} entries.
+    </aside>
+
+    <nav aria-label="Archive categories" class="mb-20" data-reveal>
+      <ul class="flex flex-wrap gap-2 text-sm">
+        {
+          sections.map((section) => (
+            <li>
+              <a
+                href={`#${section.id}`}
+                class="block rounded-full border border-white/12 bg-white/4 px-3.5 py-1.5 text-(--color-muted) transition-colors hover:bg-white/8 hover:text-(--color-fg)"
+              >
+                {section.label} <span class="text-(--color-faint)">({section.entries.length})</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="flex flex-col gap-24">
+      {
+        sections.map((section) => (
+          <section id={section.id} aria-labelledby={`${section.id}-heading`} class="scroll-mt-24">
+            <SectionHeading
+              id={`${section.id}-heading`}
+              eyebrow={archive.title}
+              title={section.label}
+              blurb={section.blurb}
+              discipline="design"
+            />
+            <ProjectGrid entries={section.entries} />
+          </section>
+        ))
+      }
+    </div>
+
+    <section class="mt-28 max-w-2xl" aria-labelledby="looking-back" data-reveal>
+      <h2 id="looking-back" class="text-3xl sm:text-4xl">Looking Back, Moving Forward</h2>
+      <div class="prose mt-8">
+        <p>It's strange revisiting artwork I made so long ago.</p>
+        <p>
+          At the time, I wasn't thinking about career paths, design principles or professional
+          portfolios. I simply enjoyed making things, experimenting with Photoshop and sharing my
+          work with people who enjoyed similar interests.
+        </p>
+        <p>
+          My techniques and understanding of design have changed considerably since then, but many
+          of the things that inspired me haven't.
+        </p>
+        <p>
+          Fantasy worlds, science fiction, characters, dramatic visuals and storytelling are still a
+          huge part of what I love creating.
+        </p>
+        <p>
+          These days, I'm exploring those interests through game development, Unreal Engine, Blender
+          and extended reality.
+        </p>
+        <p>
+          In some ways, it feels less like starting something new and more like returning to where
+          it all began.
+        </p>
+      </div>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a
+          href="/work#games"
+          class="glass rounded-full px-5 py-2.5 text-sm font-medium transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+        >
+          See my games &amp; XR work &rarr;
+        </a>
+        <a
+          href="/work#design"
+          class="rounded-full border border-white/12 px-5 py-2.5 text-sm font-medium text-(--color-muted) transition-[transform,border-color] duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:text-(--color-fg)"
+        >
+          Current design work &rarr;
+        </a>
+      </div>
+    </section>
+  </div>
+</Base>

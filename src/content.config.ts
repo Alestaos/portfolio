@@ -35,6 +35,21 @@ const design = defineCollection({
         .default([]),
       /** Full print/PDF artefact — e.g. a brochure. Path under public/, or an external URL. */
       pdfUrl: z.string().optional(),
+      /**
+       * Marks an entry as part of The DeviantArt Era archive (2003–2011). These
+       * entries are undated individually, so `period` is shown instead of `year`,
+       * and they're kept out of the main Design grid. See `archive` in lib/collections.
+       */
+      archive: z
+        .object({
+          category: z.enum(['compositing', 'photography', 'web', 'identity', 'abstract']),
+          /** Pulled to the front of its category with a badge. */
+          highlight: z.boolean().default(false),
+          period: z.string().default('2003–2011'),
+          /** Original filenames, as recovered, in display order. */
+          files: z.array(z.string()).min(1),
+        })
+        .optional(),
     }),
 });
 

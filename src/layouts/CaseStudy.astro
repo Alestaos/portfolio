@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import { caseStudySchema } from '../lib/schema';
 import Base from './Base.astro';
-import { disciplines, type WorkEntry, type WorkCollection } from '../lib/collections';
+import { archive as archiveMeta, disciplines, type WorkEntry, type WorkCollection } from '../lib/collections';
 
 interface MetaItem {
   label: string;
@@ -27,6 +27,17 @@ const discipline = disciplines[collection];
 const { title, summary, cover, coverAlt, tags } = entry.data;
 const gallery = 'gallery' in entry.data ? entry.data.gallery : [];
 const videos = 'videos' in entry.data ? entry.data.videos : [];
+
+// Archive originals are shown at their real size, never cropped or upscaled,
+// so the 2000s pixels look the way they did.
+const archive = 'archive' in entry.data ? entry.data.archive : undefined;
+const back = archive
+  ? { href: archiveMeta.href, label: archiveMeta.title }
+  : { href: '/work', label: 'All work' };
+const nativeWidths = (img: { width: number }, sizes: number[]) => [
+  ...sizes.filter((w) => w < img.width),
+  img.width,
+];
 ---
 
 <Base
@@ -38,34 +49,53 @@ const videos = 'videos' in entry.data ? entry.data.videos : [];
 >
   <article class="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24" data-discipline={collection}>
     <a
-      href="/work"
+      href={back.href}
       class="group inline-flex items-center gap-2 text-sm text-(--color-faint) transition-colors hover:text-(--color-fg)"
     >
       <span
         class="transition-transform duration-300 ease-(--ease-out-expo) group-hover:-translate-x-1"
         aria-hidden="true">&larr;</span
       >
-      All work
+      {back.label}
     </a>
 
     <header class="mt-8" data-intro>
       <p class="accent-text mb-4 text-xs font-medium uppercase tracking-[0.16em]">
-        {discipline.label}
+        {discipline.label}{archive && <> · Historical archive, {archive.period}</>}
       </p>
       <h1 class="text-4xl leading-[1.1] sm:text-5xl">{title}</h1>
       <p class="mt-5 text-lg leading-relaxed text-(--color-muted)">{summary}</p>
     </header>
 
-    <div class="glass mt-10 overflow-hidden rounded-2xl" data-intro data-delay="1">
-      <Image
-        src={cover}
-        alt={coverAlt}
-        widths={[600, 1000, 1600]}
-        sizes="(min-width: 896px) 896px, 100vw"
-        loading="eager"
-        class="w-full object-cover"
-      />
-    </div>
+    {
+      archive ? (
+        <div
+          class="glass mt-10 flex justify-center overflow-hidden rounded-2xl bg-(--color-ink) p-4 sm:p-8"
+          data-intro
+          data-delay="1"
+        >
+          <Image
+            src={cover}
+            alt={coverAlt}
+            widths={nativeWidths(cover, [600, 1000])}
+            sizes={`(min-width: ${cover.width + 64}px) ${cover.width}px, 100vw`}
+            loading="eager"
+            class="h-auto max-w-full"
+          />
+        </div>
+      ) : (
+        <div class="glass mt-10 overflow-hidden rounded-2xl" data-intro data-delay="1">
+          <Image
+            src={cover}
+            alt={coverAlt}
+            widths={[600, 1000, 1600]}
+            sizes="(min-width: 896px) 896px, 100vw"
+            loading="eager"
+            class="w-full object-cover"
+          />
+        </div>
+      )
+    }
 
     <dl
       class="mt-10 grid gap-x-8 gap-y-5 border-y border-white/8 py-7 sm:grid-cols-3"
@@ -146,14 +176,19 @@ const videos = 'videos' in entry.data ? entry.data.videos : [];
           <div class="grid gap-8 sm:grid-cols-2" data-stagger>
             {gallery.map((shot) => (
               <figure data-reveal>
-                <div class="glass overflow-hidden rounded-2xl">
+                <div
+                  class:list={[
+                    'glass overflow-hidden rounded-2xl',
+                    archive && 'flex justify-center bg-(--color-ink) p-4',
+                  ]}
+                >
                   <Image
                     src={shot.src}
                     alt={shot.alt}
-                    widths={[600, 1000, 1600]}
+                    widths={archive ? nativeWidths(shot.src, [600, 1000]) : [600, 1000, 1600]}
                     sizes="(min-width: 640px) 408px, 100vw"
                     loading="lazy"
-                    class="w-full object-cover"
+                    class={archive ? 'h-auto max-w-full' : 'w-full object-cover'}
                   />
                 </div>
                 {shot.caption && (
@@ -163,6 +198,23 @@ const videos = 'videos' in entry.data ? entry.data.videos : [];
             ))}
           </div>
         </section>
+      )
+    }
+
+    {
+      archive && (
+        <aside
+          class="glass mt-16 rounded-2xl px-6 py-5 text-sm leading-relaxed text-(--color-muted)"
+          aria-label="Archive note"
+          data-reveal
+        >
+          <p>{archiveMeta.notice}</p>
+          <p class="mt-3">
+            <a href={archiveMeta.href} class="underline underline-offset-4 hover:text-(--color-fg)">
+              Back to {archiveMeta.title} <span aria-hidden="true">&rarr;</span>
+            </a>
+          </p>
+        </aside>
       )
     }
 

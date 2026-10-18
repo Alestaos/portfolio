@@ -25,7 +25,8 @@ const sections = [
       <p class="mt-5 text-lg leading-relaxed text-(--color-muted)">
         Grouped by discipline. Marketing is in-house work for the brands I've worked with:
         campaigns, social content and video. Design mixes client pieces with coursework from my
-        UCD Graphic Design diploma and degree, plus a few personal experiments. Games and XR covers
+        UCD Graphic Design diploma and degree, plus a few personal experiments, with my earliest
+        work kept in its own archive. Games and XR covers
         my 3D and interactive work.
       </p>
     </header>
@@ -66,14 +67,23 @@ const sections = [
                     <p class="mt-2 text-sm leading-relaxed text-(--color-muted)">
                       {section.banner.detail}{' '}
                       {section.banner.href && (
-                        <a
-                          href={section.banner.href}
-                          target="_blank"
-                          rel="noopener"
-                          class="underline underline-offset-4 hover:text-(--color-fg)"
-                        >
-                          {section.banner.linkLabel ?? 'Read more'}
-                        </a>
+                        section.banner.href.startsWith('http') ? (
+                          <a
+                            href={section.banner.href}
+                            target="_blank"
+                            rel="noopener"
+                            class="underline underline-offset-4 hover:text-(--color-fg)"
+                          >
+                            {section.banner.linkLabel ?? 'Read more'}
+                          </a>
+                        ) : (
+                          <a
+                            href={section.banner.href}
+                            class="underline underline-offset-4 hover:text-(--color-fg)"
+                          >
+                            {section.banner.linkLabel ?? 'Read more'} <span aria-hidden="true">&rarr;</span>
+                          </a>
+                        )
                       )}
                     </p>
                   )}

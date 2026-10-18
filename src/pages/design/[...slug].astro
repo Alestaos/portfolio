@@ -1,10 +1,10 @@
 ---
 import { render, type CollectionEntry } from 'astro:content';
 import CaseStudy from '../../layouts/CaseStudy.astro';
-import { getWork } from '../../lib/collections';
+import { archive as archiveMeta, getArchive, getWork } from '../../lib/collections';
 
 export async function getStaticPaths() {
-  const entries = await getWork('design');
+  const entries = [...(await getWork('design')), ...(await getArchive())];
   return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
 }
 
@@ -12,15 +12,25 @@ type Props = { entry: CollectionEntry<'design'> };
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { client, role, year, deliverables, tools, pdfUrl } = entry.data;
+const { client, role, year, deliverables, tools, pdfUrl, archive } = entry.data;
 
-const meta = [
-  { label: 'Client', value: client },
-  { label: 'Role', value: role },
-  { label: 'Year', value: String(year) },
-  ...(deliverables.length ? [{ label: 'Deliverables', value: deliverables.join(', ') }] : []),
-  ...(tools.length ? [{ label: 'Tools', value: tools.join(', ') }] : []),
-];
+const category = archive && archiveMeta.categories.find((c) => c.id === archive.category);
+
+const meta = archive
+  ? [
+      { label: 'Collection', value: `${archiveMeta.title} (${archive.period})` },
+      { label: 'Category', value: category!.label },
+      { label: 'Made as', value: role },
+      ...(deliverables.length ? [{ label: 'Format', value: deliverables.join(', ') }] : []),
+      { label: archive.files.length > 1 ? 'Original files' : 'Original file', value: archive.files.join(', ') },
+    ]
+  : [
+      { label: 'Client', value: client },
+      { label: 'Role', value: role },
+      { label: 'Year', value: String(year) },
+      ...(deliverables.length ? [{ label: 'Deliverables', value: deliverables.join(', ') }] : []),
+      ...(tools.length ? [{ label: 'Tools', value: tools.join(', ') }] : []),
+    ];
 
 const links = pdfUrl ? [{ label: 'View full PDF', href: pdfUrl, primary: true }] : [];
 ---

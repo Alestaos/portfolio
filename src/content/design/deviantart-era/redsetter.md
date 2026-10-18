@@ -1,0 +1,19 @@
+---
+title: "Redsetter"
+summary: "A red setter in profile, edited with a crosshatched texture and rich, saturated reds and greens."
+year: 2011
+cover: ../../../assets/projects/deviantart-era/redsetter_by_neoandroid_dptf9z-375w-2x.jpg
+coverAlt: "Portrait of a red setter dog in profile against a green background, with a crosshatched texture over the image, a round tag on its collar, and \"Redsetter\" in script."
+client: "Personal project"
+role: "Designer, as Neo Android"
+deliverables: ["Stylised animal portrait, 672 × 768 px"]
+tags: ["Photo manipulation", "Animal portrait", "Texture"]
+order: 115
+archive:
+  category: photography
+  files: ["redsetter_by_neoandroid_dptf9z-375w-2x.jpg"]
+---
+
+## About this piece
+
+A stylised dog portrait. The crosshatch texture and saturated colour make the photo feel closer to an illustration.
