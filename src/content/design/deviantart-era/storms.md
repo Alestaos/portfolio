@@ -12,6 +12,7 @@ tags: ["Texture", "Gradient"]
 order: 434
 archive:
   category: abstract
+  showcase: true
   files: ["storms_by_neoandroid_dt4gtp-fullview.jpg"]
 ---
 

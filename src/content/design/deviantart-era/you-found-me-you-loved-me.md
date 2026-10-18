@@ -13,6 +13,7 @@ order: 12
 archive:
   category: compositing
   highlight: true
+  showcase: true
   files: ["you_found_me_by_neoandroid_d2wn301-pre.jpg"]
 ---
 

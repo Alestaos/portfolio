@@ -13,6 +13,7 @@ order: 11
 archive:
   category: compositing
   highlight: true
+  showcase: true
   files: ["i_m_supergirl_by_neoandroid_d2vwhix-fullview.jpg"]
 ---
 

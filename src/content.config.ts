@@ -45,6 +45,8 @@ const design = defineCollection({
           category: z.enum(['compositing', 'photography', 'web', 'identity', 'abstract']),
           /** Pulled to the front of its category with a badge. */
           highlight: z.boolean().default(false),
+          /** Shown under the archive banner on /work; the rest stay on the archive page. */
+          showcase: z.boolean().default(false),
           period: z.string().default('2003–2011'),
           /** Original filenames, as recovered, in display order. */
           files: z.array(z.string()).min(1),
