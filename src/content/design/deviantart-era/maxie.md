@@ -17,4 +17,4 @@ archive:
 
 ## About this piece
 
-A simple, lightly edited photo: a border collie, its ball and a patio.
+A simple, lightly edited photo I took: a border collie called Maxie, a ball and a patio.

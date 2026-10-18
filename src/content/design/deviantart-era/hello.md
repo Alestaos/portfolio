@@ -18,3 +18,7 @@ archive:
 ## About this piece
 
 A cat portrait with a painterly filter and a soft border, signed "Tasha" in the corner.
+
+## Sources
+
+The original photograph isn't mine. My part was the edit: the colour, texture and type.

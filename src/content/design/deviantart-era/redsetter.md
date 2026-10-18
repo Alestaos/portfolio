@@ -18,3 +18,7 @@ archive:
 ## About this piece
 
 A stylised dog portrait. The crosshatch texture and saturated colour make the photo feel closer to an illustration.
+
+## Sources
+
+The original photograph isn't mine. My part was the edit: the colour, texture and type.

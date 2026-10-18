@@ -18,3 +18,7 @@ archive:
 ## About this piece
 
 A high-key edit: the highlights are pushed almost to white and the greens made vivid, which suits the gentle moment between the dog and the puppy.
+
+## Sources
+
+The original photograph isn't mine. My part was the edit: the colour, texture and type.

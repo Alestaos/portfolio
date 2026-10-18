@@ -1,5 +1,5 @@
 ---
-title: "Angelus"
+title: "Angelus Viscus"
 summary: "An oval guild emblem: a winged silhouette over a blue sunburst, with \"Angelus Viscus\" in script."
 year: 2011
 cover: ../../../assets/projects/deviantart-era/angelguildicon.png

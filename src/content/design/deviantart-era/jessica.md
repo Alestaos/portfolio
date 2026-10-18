@@ -17,4 +17,4 @@ archive:
 
 ## About this piece
 
-A low-light dog portrait. Instead of fighting the grain, the edit leans into it with warm colour and a cinematic letterbox.
+A low-light portrait I took of Jessica, a German shepherd. Instead of fighting the grain, the edit leans into it with warm colour and a cinematic letterbox.
