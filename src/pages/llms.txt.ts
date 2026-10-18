@@ -23,6 +23,7 @@ export const GET: APIRoute = async () => {
     '',
     `- [Work](${abs('/work')}): every case study, grouped by discipline`,
     `- [Results](${abs('/results')}): measured campaign and channel results by employer`,
+    `- [${archive.seoTitle}](${abs(archive.href)}): early personal artwork made as Neo Android`,
     `- [About](${abs('/about')}): background, experience and a contact form`,
     ...socials.map((s) => `- [${s.label}](${s.href})`),
     '',

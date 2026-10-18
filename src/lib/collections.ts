@@ -19,7 +19,7 @@ export const disciplines = {
       title: 'The DeviantArt Era (2003–2011)',
       detail: 'Where my creative journey began: 37 recovered pieces from my early Photoshop years as Neo Android, from fan art and photo edits to an early website concept.',
       href: '/design/deviantart-era',
-      linkLabel: 'Explore the archive',
+      linkLabel: 'Explore the Full Archive',
     },
   },
   games: {

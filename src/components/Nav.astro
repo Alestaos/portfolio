@@ -8,7 +8,10 @@ const isCurrent = (href: string) => {
 };
 
 // About is a plain text link; the discipline and Results links are pills.
-const pills = nav.filter((item) => item.href !== '/about');
+// Archive is a pill too, but sits outside the pill row so that, below sm, it
+// shares the top row with About: five pills don't fit across a phone.
+const pills = nav.filter((item) => item.href !== '/about' && item.href !== '/design/deviantart-era');
+const archive = nav.find((item) => item.href === '/design/deviantart-era');
 const about = nav.find((item) => item.href === '/about');
 const link =
   'block rounded-full whitespace-nowrap text-(--color-muted) transition-colors hover:bg-white/5 hover:text-(--color-fg) aria-[current=page]:bg-white/8 aria-[current=page]:text-(--color-fg)';
@@ -50,6 +53,18 @@ const link =
         ))
       }
     </ul>
+
+    {
+      archive && (
+        <a
+          href={archive.href}
+          aria-current={isCurrent(archive.href) ? 'page' : undefined}
+          class={`${link} border border-white/12 bg-white/4 px-2.5 py-1.5 text-[0.8125rem] max-[22.5rem]:text-xs sm:px-3 sm:text-sm`}
+        >
+          {archive.label}
+        </a>
+      )
+    }
 
     {
       about && (

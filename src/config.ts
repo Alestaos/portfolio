@@ -33,5 +33,6 @@ export const nav = [
   { label: 'Marketing', href: '/work#writing' },
   { label: 'Design', href: '/work#design' },
   { label: 'Results', href: '/results' },
+  { label: 'Archive', href: '/design/deviantart-era' },
   { label: 'About', href: '/about' },
 ] as const;
