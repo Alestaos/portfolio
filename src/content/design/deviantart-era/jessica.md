@@ -7,6 +7,7 @@ coverAlt: "A German shepherd lying down in dim light, looking towards the camera
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Photograph, 1032 × 774 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Photography", "Animal portrait", "Low light"]
 order: 119
 archive:

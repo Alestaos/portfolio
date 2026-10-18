@@ -7,6 +7,7 @@ coverAlt: "Wide banner with a purple nebula and grid texture: a spiky blond anim
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 500 × 150 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Anime fan art", "Redesign"]
 order: 10
 archive:

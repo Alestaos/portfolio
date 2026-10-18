@@ -7,6 +7,7 @@ coverAlt: "A wide banner of a crimson and pink macro flower with small white spa
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Decorative signature, 500 × 185 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Decorative", "Typography"]
 order: 327
 archive:

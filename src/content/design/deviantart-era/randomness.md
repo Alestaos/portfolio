@@ -7,6 +7,7 @@ coverAlt: "A wide, short banner of deep red crossed by thin, glowing white light
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Abstract banner, 400 × 100 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Abstract", "Light effects", "Experiment"]
 order: 435
 archive:

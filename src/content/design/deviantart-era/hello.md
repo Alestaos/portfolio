@@ -7,6 +7,7 @@ coverAlt: "A tortoiseshell cat with green eyes looking down and to the side, wit
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Stylised animal portrait, 600 × 611 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Photo manipulation", "Animal portrait"]
 order: 117
 archive:

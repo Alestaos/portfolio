@@ -7,6 +7,7 @@ coverAlt: "Wide navy banner with a soft starry texture and \"MistMuse\" in pale 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 500 × 150 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Anime fan art"]
 order: 7
 archive:

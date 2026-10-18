@@ -7,6 +7,7 @@ coverAlt: "Tall narrow strip of offset, overlapping manga panels in pale pink an
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Vertical banner, 150 × 525 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Manga", "Fan art", "Layout"]
 order: 2
 archive:

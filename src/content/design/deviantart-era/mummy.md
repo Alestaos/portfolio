@@ -7,6 +7,7 @@ coverAlt: "A golden retriever lowering its head to a pale puppy in long grass, e
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Stylised animal portrait, 533 × 400 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Photo manipulation", "Animal portrait", "High key"]
 order: 116
 archive:

@@ -7,6 +7,7 @@ coverAlt: "A narrow Galway street at night, the shopfronts and cobbles glowing s
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Photo manipulation, 768 × 512 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Photo manipulation", "Colour grading", "Urban"]
 order: 114
 archive:

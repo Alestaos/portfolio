@@ -7,6 +7,7 @@ coverAlt: "Wide banner washed in green: a grid texture and white radiating lines
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 500 × 150 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Anime fan art", "Texture"]
 order: 1
 archive:

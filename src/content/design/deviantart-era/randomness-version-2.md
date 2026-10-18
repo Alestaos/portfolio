@@ -7,6 +7,7 @@ coverAlt: "A wide monochrome banner: smoky black swirls on the left fading to wh
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Abstract banner, 500 × 150 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Abstract", "Monochrome", "Experiment"]
 order: 436
 archive:

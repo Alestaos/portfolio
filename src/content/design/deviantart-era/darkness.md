@@ -7,6 +7,7 @@ coverAlt: "Black background: a red-tinted woman in shadow with dark tendrils on 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Typographic composition, 1024 × 768 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Typography", "Photo manipulation", "Mood"]
 order: 13
 archive:

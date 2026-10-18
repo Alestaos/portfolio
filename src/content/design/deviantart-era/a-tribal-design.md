@@ -7,6 +7,7 @@ coverAlt: "Two overlapping circular discs: an orange one with a mirrored tribal 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Ornamental graphic, 1002 × 768 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Ornamental", "Symmetry", "Pattern"]
 order: 431
 archive:

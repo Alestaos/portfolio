@@ -7,6 +7,7 @@ coverAlt: "Wide banner in saturated orange, yellow and red: two blended photos o
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 502 × 152 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Celebrity", "Colour grading"]
 order: 8
 archive:

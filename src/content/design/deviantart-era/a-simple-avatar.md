@@ -7,6 +7,7 @@ coverAlt: "A small square avatar with a dark red border: a rose-tinted feathery 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Avatar, 120 × 120 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Avatar", "Typography", "Bevel and emboss"]
 order: 326
 archive:

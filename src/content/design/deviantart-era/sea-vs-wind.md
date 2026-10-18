@@ -7,6 +7,7 @@ coverAlt: "A very slim horizontal banner of marbled, wave-like blue and white te
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Banner, 500 × 50 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Banner", "Texture"]
 order: 328
 archive:

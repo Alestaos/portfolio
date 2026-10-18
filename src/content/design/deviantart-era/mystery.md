@@ -7,6 +7,7 @@ coverAlt: "A dark red grunge texture with scratched, glitch-like horizontal band
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Texture study, 640 × 480 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Texture", "Grunge"]
 order: 433
 archive:

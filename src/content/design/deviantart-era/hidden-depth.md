@@ -7,6 +7,7 @@ coverAlt: "Wide banner of four framed panels with white borders: teal feather te
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 450 × 150 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Celebrity", "Panel layout"]
 order: 3
 archive:

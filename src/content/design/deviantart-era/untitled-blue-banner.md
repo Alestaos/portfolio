@@ -7,6 +7,7 @@ coverAlt: "A wide, short banner of pale lavender-blue watercolour texture, with 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Banner, 507 × 96 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Banner", "Texture"]
 order: 329
 archive:

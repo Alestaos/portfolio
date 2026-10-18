@@ -7,6 +7,7 @@ coverAlt: "Looking up between tall blue glass skyscrapers into a bright sky, an 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Digital composition, 893 × 708 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Compositing", "Perspective", "Motion blur", "Fan art"]
 order: 11
 archive:

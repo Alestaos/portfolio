@@ -7,6 +7,7 @@ coverAlt: "A symmetrical eight-petalled tribal flower with curling, blade-like p
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Ornamental graphic, 662 × 800 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Ornamental", "Symmetry", "Bevel and emboss"]
 order: 430
 archive:

@@ -7,6 +7,7 @@ coverAlt: "Wide banner: an anime girl with long dark hair and folded dark wings,
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 502 × 152 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Anime fan art", "Compositing"]
 order: 0
 archive:

@@ -7,6 +7,7 @@ coverAlt: "A character with very long black hair in a black outfit stands in the
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Digital composition, 873 × 915 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Manga", "Compositing", "Layering", "Typography"]
 order: 12
 archive:

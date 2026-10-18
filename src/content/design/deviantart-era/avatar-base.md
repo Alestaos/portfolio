@@ -7,6 +7,7 @@ coverAlt: "A small square avatar: a dark purple, starry texture framed by a whit
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Avatar, 100 × 100 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Avatar", "Community graphics", "Texture"]
 order: 325
 archive:

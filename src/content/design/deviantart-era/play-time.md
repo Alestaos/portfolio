@@ -7,6 +7,7 @@ coverAlt: "Three dolphins swimming under water in cool blue light, with a heavy 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Photo manipulation, 700 × 476 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Photo manipulation", "Texture"]
 order: 120
 archive:

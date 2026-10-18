@@ -7,6 +7,7 @@ coverAlt: "A tall, narrow image fading from cloudy cream at the top to black at 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Texture study, 290 × 480 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Texture", "Gradient"]
 order: 434
 archive:

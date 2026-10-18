@@ -7,6 +7,7 @@ coverAlt: "A website layout mock-up: a cloudy blue and white sky, a \"Heaven on 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Website design concept, 700 × 500 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Web design", "Layout", "Branding"]
 order: 223
 archive:

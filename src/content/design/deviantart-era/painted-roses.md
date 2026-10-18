@@ -7,6 +7,7 @@ coverAlt: "A close-up of several cream-coloured roses filling the frame, with a 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Photo manipulation, 1000 × 750 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Photo manipulation", "Painterly"]
 order: 121
 archive:

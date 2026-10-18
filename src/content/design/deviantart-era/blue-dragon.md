@@ -7,6 +7,7 @@ coverAlt: "Wide sepia and cream banner: a character from Blue Dragon with white 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 500 × 150 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Video game fan art"]
 order: 6
 archive:

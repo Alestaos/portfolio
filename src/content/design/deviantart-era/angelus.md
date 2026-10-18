@@ -7,6 +7,7 @@ coverAlt: "An oval emblem with a dark border: a black silhouette of a woman with
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Guild emblem, 247 × 330 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Emblem", "Community graphics", "Silhouette"]
 order: 324
 archive:

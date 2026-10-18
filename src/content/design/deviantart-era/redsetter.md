@@ -7,6 +7,7 @@ coverAlt: "Portrait of a red setter dog in profile against a green background, w
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Stylised animal portrait, 672 × 768 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Photo manipulation", "Animal portrait", "Texture"]
 order: 115
 archive:

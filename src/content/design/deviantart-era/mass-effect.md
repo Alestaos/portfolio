@@ -7,6 +7,7 @@ coverAlt: "Wide banner broken into a grid of glowing orange and red tiles of dif
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 500 × 150 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Video game fan art", "Grid layout"]
 order: 4
 archive:

@@ -7,6 +7,7 @@ coverAlt: "A dark green-black banner with \"Deadly Beauty\" in white script and 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 459 × 317 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Anime fan art", "Out of frame"]
 order: 5
 archive:

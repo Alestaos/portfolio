@@ -7,6 +7,7 @@ coverAlt: "A painterly winter landscape: a red house with glowing windows among 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Environmental artwork, 1049 × 762 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Environment", "Painterly", "Seasonal"]
 order: 122
 archive:

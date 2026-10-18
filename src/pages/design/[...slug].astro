@@ -22,6 +22,7 @@ const meta = archive
       { label: 'Category', value: category!.label },
       { label: 'Made as', value: role },
       ...(deliverables.length ? [{ label: 'Format', value: deliverables.join(', ') }] : []),
+      ...(tools.length ? [{ label: 'Tools', value: tools.join(', ') }] : []),
       { label: archive.files.length > 1 ? 'Original files' : 'Original file', value: archive.files.join(', ') },
     ]
   : [

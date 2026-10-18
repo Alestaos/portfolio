@@ -7,6 +7,7 @@ coverAlt: "A tilted oval filled with fragmented grey and brown brush shapes, wra
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Abstract graphic, 500 × 500 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Abstract", "Geometric", "Experiment"]
 order: 432
 archive:

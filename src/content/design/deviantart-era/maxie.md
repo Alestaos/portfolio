@@ -7,6 +7,7 @@ coverAlt: "A black and white border collie standing on a concrete patio, looking
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Photograph, 1032 × 774 px"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Photography", "Animal portrait"]
 order: 118
 archive:

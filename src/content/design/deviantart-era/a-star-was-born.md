@@ -7,6 +7,7 @@ coverAlt: "Wide banner: a figure in a black leather jacket on the left, against 
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Signature banner, 2 versions"]
+tools: ["Photoshop", "Illustrator"]
 tags: ["Signature", "Celebrity", "Typography", "Iterations"]
 order: 9
 archive:
