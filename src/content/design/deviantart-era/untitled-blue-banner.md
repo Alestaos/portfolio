@@ -17,4 +17,4 @@ archive:
 
 ## About this piece
 
-A banner that survived without a title. It's a soft watercolour texture with dotted arcs drawn across it.
+This banner survived, but its name didn't. It's a soft lavender-blue watercolour texture with dotted arcs drawn across it and a few small dark-blue shapes.

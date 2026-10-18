@@ -17,7 +17,9 @@ archive:
 
 ## About this piece
 
-A vertical piece made from offset, overlapping manga panels in pale pink tones. The text set up the side of the artwork reads "Loves First Kiss", and the original filename points to Fruits Basket as the source.
+A tall, narrow strip of offset, overlapping manga panels in pale pinks. The line running up the side reads "Loves First Kiss", and the original filename points to Fruits Basket as the source.
+
+At 150 pixels wide, there's not a lot of room to play with.
 
 ## Sources
 

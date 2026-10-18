@@ -18,7 +18,9 @@ archive:
 
 ## About this piece
 
-A single-colour study: everything is pushed into greens, with a fine grid texture and a burst of white lines behind the character to give the flat banner some energy.
+Everything in this one went green. A fine grid texture and a burst of sharp white lines behind the character give a flat banner a bit of energy.
+
+Picking one colour and pushing everything into it is a trick that turns up a lot in this archive.
 
 ## Sources
 

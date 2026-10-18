@@ -18,6 +18,6 @@ archive:
 
 ## About this piece
 
-A pair of ornamental discs that try two kinds of symmetry side by side: one pattern is mirrored left to right, the other repeats around a centre point.
+Two ornamental discs side by side, each trying a different kind of symmetry. One is mirrored left to right, the other repeats around a centre point, all in burnt orange, brown and pale pink.
 
-As with Tribal Flower Design, the misspelling "Desgin" is in the original artwork.
+You may spot "Desgin" in the artwork. Same typo as [Tribal Flower Design](/design/deviantart-era/tribal-flower-design). I was consistent, at least.

@@ -17,4 +17,4 @@ archive:
 
 ## About this piece
 
-A macro-style shot of roses with a painterly filter. The petals become soft, almost fabric-like shapes.
+Cream roses up close, given a painterly filter and warm, glowing highlights. The petals turn into soft, almost fabric-like shapes.

@@ -17,4 +17,6 @@ archive:
 
 ## About this piece
 
-Exactly what the title says. A personal avatar with my name in chunky bevelled type, the kind of bevel and emboss that was everywhere at the time.
+Does exactly what it says on the tin: my name in chunky bevelled capitals over a rose-tinted feather texture.
+
+Bevel and emboss was everywhere back then, and I was not immune. If it could be bevelled, I bevelled it.

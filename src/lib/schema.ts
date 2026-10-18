@@ -15,6 +15,8 @@ export const person = {
   '@type': 'Person',
   '@id': personId,
   name: site.name,
+  // The alias the DeviantArt Era archive was made under.
+  alternateName: 'Neo Android',
   url: site.url,
   image: abs('/og-default.png'),
   jobTitle: 'Digital Marketing Executive & Designer',
@@ -72,6 +74,7 @@ export function caseStudySchema(entry: WorkEntry, imagePath: string) {
   const data = entry.data;
   const client = 'client' in data ? data.client : undefined;
   const tools = 'tools' in data ? data.tools : [];
+  const archived = 'archive' in data && !!data.archive;
 
   return [
     {
@@ -83,20 +86,23 @@ export function caseStudySchema(entry: WorkEntry, imagePath: string) {
       url: abs(path),
       image: abs(imagePath),
       // Archive pieces are only dated to a range, so they don't claim a year.
-      ...('archive' in data && data.archive ? {} : { dateCreated: String(data.year) }),
+      ...(archived ? { temporalCoverage: archive.period.replace('–', '/') } : { dateCreated: String(data.year) }),
       inLanguage: 'en-GB',
       genre: discipline.label,
       keywords: [...data.tags, ...tools].join(', '),
       creator: { '@id': personId },
       author: { '@id': personId },
-      ...(client ? { sourceOrganization: { '@type': 'Organization', name: client } } : {}),
-      isPartOf: { '@id': websiteId },
+      // "Personal project" is a label, not an organisation.
+      ...(client && client !== 'Personal project'
+        ? { sourceOrganization: { '@type': 'Organization', name: client } }
+        : {}),
+      isPartOf: archived ? [{ '@id': abs(`${archive.href}#page`) }, { '@id': websiteId }] : { '@id': websiteId },
     },
     breadcrumbs([
       { name: 'Home', path: '/' },
       { name: 'Work', path: '/work' },
       { name: discipline.label, path: `/work#${collection}` },
-      ...('archive' in data && data.archive ? [{ name: archive.seoTitle, path: archive.href }] : []),
+      ...(archived ? [{ name: archive.seoTitle, path: archive.href }] : []),
       { name: data.title, path },
     ]),
   ];

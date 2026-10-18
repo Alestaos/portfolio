@@ -19,7 +19,7 @@ archive:
 
 ## About this piece
 
-This one combines illustrated character art, manga panels and decorative type. The panels are tinted red and pink and pushed into the background, the character sits in front in full colour, and a pink border and script title frame it like a page.
+This one brings together character art, manga panels and decorative type. The panels are tinted red and pink and pushed into the background, the character sits in front in full colour, and a pink border and script title frame it all like a page from a book.
 
 ## Sources
 

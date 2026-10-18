@@ -19,4 +19,6 @@ archive:
 
 ## About this piece
 
-An urban photo edit. I pushed the colour grading hard into orange and red, crushed the shadows to black and added texture over the top, so a fairly ordinary night street turns into something closer to a painting.
+A night street in Galway, pushed hard. I turned the colour grading right up into orange and red, crushed the shadows to black and laid texture over the top.
+
+A fairly ordinary street ended up looking closer to a painting.

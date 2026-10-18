@@ -17,7 +17,9 @@ archive:
 
 ## About this piece
 
-Fan art for the game Blue Dragon. Unlike most of the signatures, this one is quiet: muted sepia and cream, soft blurred light, and a narrow serif title.
+Fan art for the game Blue Dragon. Most of my signatures are loud, but this one is quiet: muted sepia and cream, soft blurred light and a narrow serif title.
+
+Sometimes less really was more, even back then.
 
 ## Sources
 

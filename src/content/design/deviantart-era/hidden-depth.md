@@ -18,7 +18,7 @@ archive:
 
 ## About this piece
 
-Instead of one blended image, this one breaks the banner into framed panels, a layout trend of the time. The warm skin tones play against a cool teal feather texture, and the script title runs across the panel edges to tie them together.
+Rather than blend everything into one image, this one splits the banner into framed panels, which was very much the look at the time. The warm skin tones play against a cool teal feather texture, and the script title runs across the panel edges to tie it all together.
 
 ## Sources
 

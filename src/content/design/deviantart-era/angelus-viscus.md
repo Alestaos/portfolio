@@ -17,4 +17,6 @@ archive:
 
 ## About this piece
 
-A community emblem; the original filename calls it a guild icon. A solid black silhouette in front of a radiating blue background keeps it readable even at small sizes, which matters for an icon.
+An emblem for an online community. The original filename calls it a guild icon.
+
+It's a simple one: a solid black winged silhouette over a radiating blue sunburst, which means it still reads at tiny sizes. Looking back, that's exactly what an icon needs.

@@ -17,7 +17,9 @@ archive:
 
 ## About this piece
 
-A darker, quieter piece: a red-tinted figure fading into shadow on one side, and lines of verse in widely spaced capitals on the other, divided by a small floral ornament.
+One of the darker, quieter pieces in the archive. A red-tinted figure fades into shadow on one side, and lines of verse in widely spaced capitals sit on the other, divided by a small floral ornament.
+
+Every DeviantArt profile had a moody phase. This was mine.
 
 ## Sources
 

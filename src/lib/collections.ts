@@ -63,34 +63,34 @@ export const archive = {
   href: '/design/deviantart-era',
   seoTitle: 'The DeviantArt Era (2003–2011)',
   description:
-    'Explore the early creative work of Stuart May, formerly Neo Android, including Photoshop compositions, fan art, photography, abstract graphics and early website designs.',
+    'Early creative work by Stuart May, made as Neo Android from 2003 to 2011: Photoshop compositions, fan art, photography, abstract graphics and early web design.',
   notice:
     'Historical personal artwork created during 2003–2011. Some pieces incorporate third-party characters, illustrations or photographs. Original source imagery and characters remain the property of their respective rights holders.',
   categories: [
     {
       id: 'compositing',
       label: 'Digital Compositing & Fan Art',
-      blurb: 'Anime, video game, celebrity and fantasy-inspired compositions, including the signature-style work.',
+      blurb: 'Anime, video games, celebrities, fantasy and whatever else caught my imagination, mostly as signature banners.',
     },
     {
       id: 'photography',
       label: 'Photography & Image Manipulation',
-      blurb: 'Photographic edits, stylised animal portraits, urban compositions, environmental artwork and personal photography.',
+      blurb: 'Photo edits, animal portraits (including my childhood dogs, Jessica and Maxie), a Galway night street and a painterly winter scene.',
     },
     {
       id: 'web',
       label: 'Early Web Design',
-      blurb: 'Historical website layout experiments, particularly the Heaven on Earth concept.',
+      blurb: 'Where my interest in web design started: the Heaven on Earth concept.',
     },
     {
       id: 'identity',
       label: 'Visual Identity & Community Graphics',
-      blurb: 'Avatars, decorative signatures, emblems, banners and community graphics.',
+      blurb: 'Avatars, name signatures, emblems and banners: the little graphics we all used to show who we were online.',
     },
     {
       id: 'abstract',
       label: 'Abstract & Experimental Design',
-      blurb: 'Textures, symmetrical ornamental designs, geometric compositions and miscellaneous Photoshop experiments.',
+      blurb: 'Textures, symmetry, geometry and plenty of Photoshop experiments, a few typos included.',
     },
   ],
 } as const;

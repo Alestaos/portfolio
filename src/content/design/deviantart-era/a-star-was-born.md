@@ -24,7 +24,9 @@ gallery:
 
 ## About this piece
 
-Both versions of this banner survived, so they are kept together here. The composition is the same, a figure in a leather jacket against blurred city lights, but the title treatment changes: one uses glowing gold type, the other cut-out, outlined lettering. It is a small record of me trying out type styles on the same piece.
+Two versions of this banner survived, so they live here together. The picture is the same in both, a figure in a leather jacket against blurred city lights at night. What changes is the title: one has glowing gold type, the other cut-out, outlined lettering.
+
+I'm honestly not sure which came first. Either way, it's a nice little record of me trying the same idea two ways to see which one landed.
 
 ## Sources
 

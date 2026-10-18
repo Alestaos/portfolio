@@ -17,7 +17,7 @@ archive:
 
 ## About this piece
 
-A signature in purple and black with a grid overlay and a small silhouette emblem. The original filename marks it as a redesign, and the name Espio Rion sits in the corner.
+A purple and black signature with a nebula feel, a grid overlay and a small silhouette emblem. The original filename marks it as a redesign, so this is at least my second go at it, and the name Espio Rion sits in the corner.
 
 ## Sources
 

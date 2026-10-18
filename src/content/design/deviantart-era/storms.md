@@ -17,4 +17,4 @@ archive:
 
 ## About this piece
 
-A vertical texture study: the cloudy cream at the top darkens through a band of speckled gold grain into black.
+A tall texture study. Cloudy cream at the top darkens through a band of speckled gold grain into black, a bit like weather rolling in.

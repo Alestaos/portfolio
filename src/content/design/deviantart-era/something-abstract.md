@@ -17,4 +17,6 @@ archive:
 
 ## About this piece
 
-A geometric experiment: an oval made of fragmented brush shapes, held together by silver crescent bands. The label in the artwork reads "An Abstract Desgin By Stuart", typo included.
+A geometric experiment: a tilted oval of fragmented brush shapes, held together by silver crescent bands.
+
+The label in the artwork reads "An Abstract Desgin By Stuart". Yes, that typo again. At this point it's practically my signature.

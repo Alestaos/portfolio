@@ -17,7 +17,9 @@ archive:
 
 ## About this piece
 
-Two photos blended into one warm, glowing banner, with bokeh circles and heavy colour grading pushing everything into orange and gold. A very 2000s amount of glow.
+Two photos blended into one warm, glowing banner, with bokeh circles and heavy colour grading pushing everything into orange and gold.
+
+Is there too much glow? Probably. Was it the 2000s? Absolutely.
 
 ## Sources
 

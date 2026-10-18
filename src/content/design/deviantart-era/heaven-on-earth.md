@@ -19,9 +19,11 @@ archive:
 
 ## About this piece
 
-One of my first attempts at designing a website. It's a single-page layout concept rather than a site I can confirm launched, and it already has the pieces I still think about now: a logotype, an illustrated background that sets the mood, and a framed content area placed so it doesn't fight the artwork.
+One of my first goes at designing a website. It's a single-page layout concept rather than a site I can say for sure went live.
 
-The content panel holds an "under construction" message signed "Neo Android AKA Stuart", and the footer credits the design to me. The mock-up shows it was planned for a real domain, but it's presented here as a concept.
+Looking at it now, the basics I still think about were already there: a logotype, an illustrated background that sets the mood, and a framed content area placed so it doesn't fight the artwork.
+
+The content panel says the site is "under construction", signed "Neo Android AKA Stuart", and the footer credits the design to me. The mock-up was planned for a real domain, but I'm showing it here as a concept.
 
 ## Sources
 

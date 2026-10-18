@@ -17,7 +17,7 @@ archive:
 
 ## About this piece
 
-A stylised dog portrait. The crosshatch texture and saturated colour make the photo feel closer to an illustration.
+A red setter in profile. The crosshatch texture and rich, saturated reds and greens push the photo towards something closer to an illustration.
 
 ## Sources
 

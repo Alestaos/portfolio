@@ -17,7 +17,7 @@ archive:
 
 ## About this piece
 
-A cooler, calmer signature. The dark navy background is softened with a misty star texture, which lets the bright flowers around the character carry the composition.
+A cooler, calmer signature. The deep navy background is softened with a misty star texture, which leaves the bright white flowers around the character to carry the whole thing.
 
 ## Sources
 

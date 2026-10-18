@@ -1,9 +1,9 @@
 ---
 title: "Maxie"
-summary: "A black and white border collie on a patio beside its ball, a lightly edited snapshot."
+summary: "Maxie, my childhood border collie, on the patio beside a ball: a lightly edited snapshot."
 year: 2011
 cover: ../../../assets/projects/deviantart-era/maxie_by_neoandroid_djmhzz-pre.jpg
-coverAlt: "A black and white border collie standing on a concrete patio, looking at the camera, with a white ball to one side and a metal mat in the foreground."
+coverAlt: "Maxie, a black and white border collie, standing on a concrete patio and looking at the camera, with a white ball to one side and a metal mat in the foreground."
 client: "Personal project"
 role: "Designer, as Neo Android"
 deliverables: ["Photograph, 1032 × 774 px"]
@@ -17,4 +17,8 @@ archive:
 
 ## About this piece
 
-A simple, lightly edited photo I took: a border collie called Maxie, a ball and a patio.
+Maxie was one of my dogs growing up, a black and white border collie, and I loved that dog.
+
+It's a simple snapshot: Maxie on the patio with the ball close by, looking straight at the camera. I barely edited it, and I didn't need to.
+
+My other childhood dog, [Jessica](/design/deviantart-era/jessica), is in here too.

@@ -17,4 +17,6 @@ archive:
 
 ## About this piece
 
-A festive environment piece. The warm, glowing windows of the house are the focal point against the cold blues and purples of the snow and sky.
+A festive scene: a house glowing with light, tucked among snowy pines under purple mountains and a starry sky.
+
+The warm windows are what pull you in. Everything around them is cold blues and purples, so the house feels like the only warm place for miles.

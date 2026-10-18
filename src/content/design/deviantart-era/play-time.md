@@ -17,7 +17,7 @@ archive:
 
 ## About this piece
 
-A canvas texture and strong blue grading turn an underwater photo into something closer to a painting.
+A pod of dolphins under water. A heavy canvas texture and strong blue grading turn the photo into something closer to a painting, finished off with a script title.
 
 ## Sources
 

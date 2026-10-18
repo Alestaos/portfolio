@@ -17,4 +17,4 @@ archive:
 
 ## About this piece
 
-The second take on Randomness, this time without colour. Smoke on one side, a fine starburst on the other, and a gradient between.
+My second go at [Randomness](/design/deviantart-era/randomness), this time with the colour taken out. Smoke on one side, a fine burst of dark streaks on the other, and a gradient fading from black to white between them.

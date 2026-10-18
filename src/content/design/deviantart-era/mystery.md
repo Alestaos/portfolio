@@ -17,4 +17,6 @@ archive:
 
 ## About this piece
 
-A texture study in deep red. Layers of grunge and scratched horizontal bands build up a surface that feels like a damaged wall or an old screen.
+A texture study in deep red. Layers of grunge and scratched horizontal bands build up into something that feels like a damaged wall or an old, glitching screen.
+
+Grunge brushes: another thing the 2000s and I could not get enough of.

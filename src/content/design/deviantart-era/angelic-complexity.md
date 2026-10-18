@@ -18,7 +18,9 @@ archive:
 
 ## About this piece
 
-One of the signature banners I made for forum and DeviantArt profiles. The palette is almost all deep red and black, with a couple of thin white light streaks cutting across to lead the eye to the title.
+One of the many signature banners I made for forum and DeviantArt profiles. Back then, your signature was basically your calling card, so a lot of care went into them.
+
+This one is almost all deep red and black, with a couple of thin white light streaks cutting across to lead your eye to the title.
 
 ## Sources
 

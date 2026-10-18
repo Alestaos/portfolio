@@ -19,7 +19,9 @@ archive:
 
 ## About this piece
 
-An experiment in perspective, light and movement. The camera looks straight up between skyscrapers, and a radial motion blur pulls everything towards the centre, so the figure seems to burst out of the city towards you. The bright sky behind gives the scene its dramatic backlight.
+An experiment in perspective, light and movement. You're looking straight up between skyscrapers, and a radial motion blur pulls everything into the centre, so the figure seems to burst out of the city towards you. The bright sky behind gives it that dramatic backlight.
+
+Motion blur: another Photoshop filter I was very, very fond of.
 
 ## Sources
 

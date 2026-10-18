@@ -17,7 +17,7 @@ archive:
 
 ## About this piece
 
-A high-key edit: the highlights are pushed almost to white and the greens made vivid, which suits the gentle moment between the dog and the puppy.
+A gentle moment between a golden retriever and a puppy. I pushed the highlights almost to white and made the greens vivid, a bright, high-key edit that suits how soft the moment is.
 
 ## Sources
 

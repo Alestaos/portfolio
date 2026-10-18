@@ -17,4 +17,6 @@ archive:
 
 ## About this piece
 
-A blank base for forum avatars at the standard 100-pixel size, with a starfield texture inside a film-strip frame, ready for an image or name to be dropped in.
+A blank avatar base at the standard 100-pixel forum size: a dusky starfield inside a film-strip frame, ready for a picture or a name to be dropped in.
+
+One hundred pixels doesn't leave much room, so every pixel had a job to do.

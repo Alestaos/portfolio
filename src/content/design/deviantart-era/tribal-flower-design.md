@@ -18,6 +18,6 @@ archive:
 
 ## About this piece
 
-An experiment in symmetry and repeated shapes. One curling petal is rotated eight times around a centre point, then given a bevelled, metallic finish so the flat shape reads as something carved.
+An experiment in symmetry. I took one curling petal, rotated it eight times around a centre point, then gave it a bevelled, metallic finish so the flat shape looks carved.
 
-The word "design" is misspelled ("Desgin") in the artwork itself. It's kept as it was.
+And yes, "design" is spelled "Desgin" in the artwork. I've left it as it was. It's part of the charm.

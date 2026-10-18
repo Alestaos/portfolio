@@ -18,7 +18,7 @@ archive:
 
 ## About this piece
 
-Fan art for Mass Effect. The image is cut into a grid of tiles of different sizes, each glowing orange and red, so it reads like a sci-fi interface rather than a single picture.
+Fan art for Mass Effect, subtitled "Dark Desires". I cut the image into a grid of tiles of different sizes, each glowing orange and red, so it reads more like a sci-fi interface than a single picture. Fitting, for a game set in space.
 
 ## Sources
 

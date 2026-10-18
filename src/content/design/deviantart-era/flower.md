@@ -17,4 +17,6 @@ archive:
 
 ## About this piece
 
-A decorative name signature: a soft macro flower in crimson and pink, a scattering of sparkles, and my old alias in an ornate script.
+A decorative name signature: a soft macro flower in crimson and pink, a scattering of sparkles, and my old alias, Neo Android, in a very ornate script.
+
+Subtle, it was not.

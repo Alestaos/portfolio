@@ -17,7 +17,7 @@ archive:
 
 ## About this piece
 
-A cat portrait with a painterly filter and a soft border, signed "Tasha" in the corner.
+A tortoiseshell cat with green eyes, given a painterly filter and a soft border, and signed "Tasha" in the corner.
 
 ## Sources
 

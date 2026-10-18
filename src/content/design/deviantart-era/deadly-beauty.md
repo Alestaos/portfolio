@@ -18,7 +18,9 @@ archive:
 
 ## About this piece
 
-The trick here is the out-of-frame effect: the banner itself is a dark rectangle, but the character steps out above it, so the gun points straight at the viewer. Faint Japanese characters add texture behind the script title.
+The trick here is breaking the frame. The banner is a dark rectangle, but the character steps out above it, so the gun points straight at you. Faint Japanese characters add texture behind the script title.
+
+Out-of-frame effects felt like magic the first time you figured them out.
 
 ## Sources
 
