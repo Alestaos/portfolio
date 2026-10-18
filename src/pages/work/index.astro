@@ -2,10 +2,13 @@
 import Base from '../../layouts/Base.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import ProjectGrid from '../../components/ProjectGrid.astro';
-import { getAllWork, disciplines } from '../../lib/collections';
+import { archive, getAllWork, getArchive, disciplines } from '../../lib/collections';
 import { pageSchema } from '../../lib/schema';
 
 const work = await getAllWork();
+// Stand-out DeviantArt Era pieces shown under the Design banner; the rest live on the archive page.
+const archived = await getArchive();
+const archiveHighlights = archived.filter((entry) => entry.data.archive!.highlight);
 
 const sections = [
   { ...disciplines.games, entries: work.games },
@@ -88,6 +91,17 @@ const sections = [
                     </p>
                   )}
                 </div>
+              </div>
+            )}
+            {section.id === 'design' && archiveHighlights.length > 0 && (
+              <div class="mt-8">
+                <ProjectGrid entries={archiveHighlights} />
+                <p class="mt-8 text-sm text-(--color-muted)" data-reveal>
+                  These are a few stand-out pieces. The other {archived.length - archiveHighlights.length} are on the{' '}
+                  <a href={archive.href} class="underline underline-offset-4 hover:text-(--color-fg)">
+                    {archive.title} page <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </p>
               </div>
             )}
           </section>
