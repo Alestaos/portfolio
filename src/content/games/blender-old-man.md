@@ -12,7 +12,7 @@ status: "in-development"
 tags: ["Blender", "3D modelling", "Character", "Work in progress"]
 featured: true
 featuredOrder: 1
-order: 0
+order: 1
 draft: false
 gallery:
   - src: ../../assets/projects/blender-old-man/01-pre-materials-render.png
