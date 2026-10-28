@@ -13,6 +13,20 @@ build passes `npm run build && npm run check` with 0 errors and 0 warnings. The 
 https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 
 ### Open items / likely next steps
+- **Beara Beara print batch** (2026-10-28): four entries from `D:\Final Brochures\`, all
+  printed professionally for outreach and brand collaborations. Design:
+  `beara-beara-brand-brochure` (12-page A5, Photoshop, from `Images\A5 BB\1–12.png`, order -1).
+  Marketing: `beara-beara-cafe-partnerships` and `beara-beara-hotel-partnerships` (the "Crafted
+  Connections" A4-folded-to-A5 series, from `PDF\Final\Cafe` and `Hotel`, orders 1–2) and
+  `beara-beara-a5-flyer` (from `PDF\Final\A5 Flyer`, order 3). The 3mm/1.5mm bleed is trimmed,
+  and each folded spread is split into A5 panels so they read at gallery size. The hotel
+  brochure shows both front-cover options. Not confirmed with Stuart yet: who made the
+  photography and concept visuals (the folder has "Codex Image" files, so some may be AI, so
+  no imagery credit is claimed); which hotel cover was printed; tools for the flyer, café and
+  hotel pieces (the source files are PSD/PSB, so Photoshop is assumed, but no `tools` field is
+  set on Marketing). Typos flagged in the artwork: "LETS STAY CONNECTED", "Jakes design
+  process", "Opportunites", "At Beara Beara were always open". The contact panels show Stuart's
+  old stuart@bearabeara.co.uk address. No print PDFs are linked.
 - **The DeviantArt Era archive** (2026-10-18): 37 entries / 38 original files (2003–2011, made as "Neo Android") in `src/content/design/deviantart-era/`, generated from one data table, with original filenames kept in `src/assets/projects/deviantart-era/`. Archive page at `/design/deviantart-era`, linked from the Design banner on /work and from About. Entries have an `archive` object (category, highlight, period, files), are kept out of `getWork()` (so they stay off the main Design grid, homepage and llms Design list), and show "2003–2011" in place of `year`, which is a placeholder of 2011 used only for sorting. Pushed 2026-10-18 after the copyright concerns were flagged to Stuart (celebrity photos in Beauty Divine, A Star Was Born and Hidden Depth; DC's Supergirl; anime, manga and game art throughout). Tools on every entry: Photoshop, Illustrator (Stuart confirmed). Nine pieces chosen by Stuart show under the Design banner on /work, ordered by `archive.showcase` (1–9); `archive.highlight` only affects the archive page. "Archive" is in the nav: a pill before About on desktop, and beside About in the top row on phones, because five pills overflow a 320–390px screen. About has a 2003–2011 timeline card and a creative-history paragraph. Answered 2026-10-18: Fruuba.gif is titled "Love First Kiss" (the artwork reads "Loves First Kiss"), the emblem is "Angelus Viscus", Maxie and Jessica are Stuart's own photos of his childhood dogs, and Hello, Mummy and Redsetter are not. Entry copy and category blurbs were rewritten in Stuart's voice on 2026-10-18, modelled on his archive intro; the jokes about the era are inferred from the work, not his memories, so he should read them over. JSON-LD now gives Person an alternateName of Neo Android, and archive pieces carry temporalCoverage 2003/2011 and sit in the archive CollectionPage. Still unknown: which A Star Was Born version came first (Stuart is unsure, so they're labelled by type style), and the year of each piece.
 - **Mobile nav fix** (2026-10-12): the nav was 438px wide, so on every phone the page scrolled sideways and About sat off-screen. Below `sm`, About now sits beside the name and the four pills get their own row (checked at 320–1280px, no overflow). Also removed the contact form honeypot's inline `style`, which the CSP was blocking.
 - **SEO/AEO check** (2026-10-12): on-page is solid (unique titles and descriptions, one h1 each, valid JSON-LD on all 45 pages, all images have alt text, llms.txt live). But the site doesn't show up in search yet, so the sitemap still needs submitting in GSC/Bing. Also, `www.alestaos.com` serves a 200 instead of redirecting to the apex: set the apex as the default domain in the Azure portal.
@@ -63,7 +77,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
   4. **Toymaster — RSA Check It Fits Event** (`src/content/writing/toymaster-check-it-fits.md`)
      — one key visual in 3 formats (1:1, 9:16, A4 poster) for the RSA's free car seat checking
      day at Flemings on 28 Oct 2025. Facts are taken from the live events blog post (linked as
-     `externalUrl`). The A4 source `OneDrive\Flemings\A42.pdf` is 100MB, too big for Read; it was
+     `externalUrl`). The A4 source `OneDrive\Work\Flemings\A42.pdf` is 100MB, too big for Read; it was
      rendered with the `mupdf` npm package in the scratchpad (sharp can't read PDFs, and
      Python isn't installed).
 - Marketing entry **Beara Beara — Trustpilot Review Card**
@@ -93,7 +107,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 - Design entry **AIPF — Social Media Best-Practice Infographics**
   (`src/content/design/aipf-social-infographics.md`, 2025). **Volunteer** work for the
   Association of Irish Powerchair Football: two 9:16 infographics for young club members.
-  Source PSDs are in `OneDrive\AIPF\`. The artwork has the typos "unrecongisable" and
+  Source PSDs are in `OneDrive\Design & Creative\AIPF\`. The artwork has the typos "unrecongisable" and
   "Coherencey"; these were flagged to Stuart, and the site copy uses the correct spellings.
 - First real **Games** entry: **Old Man — Blender Character (WIP)**
   (`src/content/games/blender-old-man.md`, 2026). A pre-materials clay render from Stuart
@@ -104,7 +118,7 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 - **Mersus Technologies**: 8 Design entries (`src/content/design/mersus-0[1-8]-*.md`), one per
   post in the series order Stuart set, pinned with `order: 1`–`8`. Role "Digital Marketing
   Executive & Designer". The work spans 2024–2025 and the year field is 2025 (files dated April
-  2025). Source: `OneDrive\University Documents\Digital Content\Final Projects\Final Versions\`
+  2025). Source: `OneDrive\Study\University Documents\Digital Content\Final Projects\Final Versions\`
   (Stuart's file-to-post mapping is in the git log for this commit). Tools Photoshop and
   Illustrator were inferred from the PSD and AI source files, not confirmed by Stuart. There's
   more unused Mersus material in OneDrive: brand guidelines V6, a documentary video, and the
@@ -121,10 +135,10 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
   plus Stuart's promo banner. Facts in the entry are taken from the live article.
 - Marketing entry **Mersus Technologies — 4 Benefits of VR Training**
   (`src/content/writing/mersus-vr-benefits-infographic.md`, 2025). A tall LinkedIn infographic
-  from `OneDrive\Portfolio\Infographic-01.png`. Its artwork has the typo "enganging"; this was
+  from `OneDrive\Design & Creative\Portfolio\Infographic-01.png`. Its artwork has the typo "enganging"; this was
   flagged to Stuart.
 - **Big design batch (2026-10-03)**: 14 Design entries plus 1 Marketing entry. Sources are
-  mostly in `OneDrive\Portfolio\`.
+  mostly in `OneDrive\Design & Creative\Portfolio\`.
   - UCD Professional Diploma in Graphic Design coursework (2022): `ucd-all-the-way-home`
     (normal edition), `ucd-all-the-way-home-special`, and `nightwalker-poster`.
   - `bitboi-games` (2021): a logo concept. Uses the "White" artboards from
@@ -180,9 +194,9 @@ https://alestaos.com (Azure SWA Free, auto-deploys from `main`).
 - Stuart's source assets live in Stuart's local OneDrive (Files On-Demand — not everything is synced
   locally until touched, so a first `find` can under-report what's actually there; re-run it
   after accessing the folder once):
-  - `C:\Users\stuar\OneDrive\Flemings\` — raw working files for the Flemings role. Contains a
+  - `C:\Users\stuar\OneDrive\Work\Flemings\` — raw working files for the Flemings role. Contains a
     `Passwords - Flemings.xlsx` — never read or touch that file.
-  - `C:\Users\stuar\OneDrive\Portfolio\` — exports Stuart already curated specifically for
+  - `C:\Users\stuar\OneDrive\Design & Creative\Portfolio\` — exports Stuart already curated specifically for
     portfolio use. Check here first.
 - **When a campaign is already live somewhere public (e.g. flemingsofmonaghan.com, a Shopify
   store), pull the real published asset from there instead of trusting raw local exports.** The
