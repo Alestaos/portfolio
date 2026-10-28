@@ -24,8 +24,9 @@ gallery:
 
 Beara Beara needed something light to leave behind: a single sheet that introduces the brand
 to potential stockists and collaborators in the time it takes to read one side. As the
-brand's in-house Marketing Executive, I designed it and had it printed professionally for our
-outreach.
+brand's in-house Marketing Executive, I wrote and designed it and had it printed
+professionally for our outreach. I made all the visuals myself, mainly from Beara Beara's own
+photography, with AI tools used for some of the imagery.
 
 ## The approach
 

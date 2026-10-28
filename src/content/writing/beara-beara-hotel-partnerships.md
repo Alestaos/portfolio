@@ -32,9 +32,10 @@ gallery:
 ## The brief
 
 Alongside cafés, Beara Beara reached out to London hotels about brand collaborations. As the
-brand's in-house Marketing Executive, I designed a printed brochure to open those
+brand's in-house Marketing Executive, I wrote and designed a printed brochure to open those
 conversations, showing what a partnership with a King's Cross leather brand could offer a
-hotel's guests.
+hotel's guests. I made all the visuals myself, mainly from Beara Beara's own photography, with
+AI tools used for some of the imagery.
 
 ## The approach
 
@@ -42,7 +43,7 @@ This is the hotel edition of the "Crafted Connections" series, an A4 sheet folde
 printed professionally. It shares its layout with the café brochure, with the copy and
 imagery rewritten for hotels. I designed two front covers around the same reception-desk
 scene, with leather bags, a miniature hotel building and a brass bell: a lighter, open
-version, and a darker, closer one.
+version, and a darker, closer one. Both versions were printed.
 
 Inside, the left page covers "Bespoke Guest Experiences": a private store visit, co-branded
 leather pieces from passport holders to satchels, VIP gifting with personalisation, and

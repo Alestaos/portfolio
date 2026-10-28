@@ -6,7 +6,7 @@ cover: ../../assets/projects/beara-beara-brand-brochure/01-page.jpg
 coverAlt: "Beara Beara brochure cover — two dark brown leather bags on a stone ledge in front of the Houses of Parliament and Big Ben, under the Beara Beara London logo and 'Handmade Leather Bags'."
 client: "Beara Beara"
 role: "Marketing Executive"
-deliverables: ["12-page A5 brochure", "Editorial layout", "Print artwork"]
+deliverables: ["12-page A5 brochure", "Editorial layout", "Copywriting", "Print artwork"]
 tools: ["Photoshop"]
 tags: ["Print", "Editorial", "Brochure", "Branding"]
 featured: false
@@ -60,7 +60,9 @@ before the conversation even starts.
 
 ## The approach
 
-The brochure is a 12-page A5 booklet, laid out in Photoshop and printed professionally. It
+The brochure is a 12-page A5 booklet that I wrote, designed and laid out in Photoshop, and had
+printed professionally. I made all the visuals myself, mainly from Beara Beara's own
+photography, with AI tools used for some of the imagery. It
 moves from the brand's story to its products and back to the people behind it: a welcome
 from the founder, the journey from Bolivia to London, the five brand values, the workshop
 team, the Handbag, Adventure and Accessories collections, the craftsmanship process, past

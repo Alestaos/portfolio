@@ -29,8 +29,10 @@ gallery:
 ## The brief
 
 Beara Beara reached out to cafés about brand collaborations. As the brand's in-house
-Marketing Executive, I designed a printed brochure to open those conversations, so a café
-owner could see what a partnership might look like before we'd even met.
+Marketing Executive, I wrote and designed a printed brochure to open those conversations, so a
+café owner could see what a partnership might look like before we'd even met. I made all the
+visuals myself, mainly from Beara Beara's own photography, with AI tools used for some of the
+imagery.
 
 ## The approach
 
