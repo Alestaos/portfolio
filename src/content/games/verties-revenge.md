@@ -14,6 +14,9 @@ featured: false
 order: 0
 draft: false
 gallery:
+  - src: ../../assets/projects/verties-revenge/00-playthrough.webp
+    alt: "Animated playthrough: the gauntlet prints fight by fight, with the player beating Rusty Probe, Mark II Remote and then Vertie's Shadow on 3 HP. After a keypress, Vertie's Maze runs for 40 steps as the droids patrol and Vertie's Shadow enters halfway and hunts down the player."
+    caption: "A full run, from the gauntlet to the maze. The maze plays at the game's real speed. The gauntlet is shown a line at a time so it can be read, but in the game it prints all at once."
   - src: ../../assets/projects/verties-revenge/01-maze-vertie-hunts.jpg
     alt: "Vertie's Maze mid-run: the Linear Droid is stuck against the brick wall, the Wander Droid has drifted to the top right, the Sentry stands guard beside the player, and Vertie's eye is two cells away and closing."
     caption: "Vertie's Shadow arrives halfway through the run and heads straight for the player."
