@@ -1,8 +1,8 @@
 ---
-title: "Vertie's Great Trial — Console C# RPG"
+title: "Vertie's Revenge — Console C# RPG"
 summary: "A retro text-adventure Jedi RPG I'm building in console C#: an auto-battling gauntlet, a weighted loot table with a pity counter, and a maze where Vertie's Shadow hunts you down."
 year: 2026
-cover: ../../assets/projects/verties-great-trial/01-maze-vertie-hunts.jpg
+cover: ../../assets/projects/verties-revenge/01-maze-vertie-hunts.jpg
 coverAlt: "Terminal output of Vertie's Maze — a dotted 12 by 6 grid with a robot, a column of brick walls, a ninja, a police sentry, a smiley-face player and Vertie's eye closing in, under the message 'Vertie's Shadow has entered the maze...'"
 role: "Solo developer and designer"
 engine: "C# / .NET (console)"
@@ -12,34 +12,38 @@ status: "in-development"
 tags: ["C#", ".NET", "Console", "Game systems", "RPG", "Learning project"]
 featured: false
 order: 0
-draft: true
+draft: false
 gallery:
-  - src: ../../assets/projects/verties-great-trial/01-maze-vertie-hunts.jpg
+  - src: ../../assets/projects/verties-revenge/01-maze-vertie-hunts.jpg
     alt: "Vertie's Maze mid-run: the Linear Droid is stuck against the brick wall, the Wander Droid has drifted to the top right, the Sentry stands guard beside the player, and Vertie's eye is two cells away and closing."
     caption: "Vertie's Shadow arrives halfway through the run and heads straight for the player."
-  - src: ../../assets/projects/verties-great-trial/02-maze-patrols.jpg
+  - src: ../../assets/projects/verties-revenge/02-maze-patrols.jpg
     alt: "Vertie's Maze early in the run: a robot on the top patrol route, a column of three brick walls, a ninja wandering beside them, and a police sentry next to the player."
     caption: "Three patrol behaviours: the Linear Droid walks a set route, the Wander Droid moves at random, and the Sentry holds its post. Walls block all of them."
-  - src: ../../assets/projects/verties-great-trial/03-gauntlet-vertie.jpg
+  - src: ../../assets/projects/verties-revenge/03-gauntlet-vertie.jpg
     alt: "Terminal output of the final gauntlet fight against Vertie's Shadow over seven rounds, with hits, misses and both health totals each round, ending with the player on 2 HP and a prompt to enter Vertie's Maze."
     caption: "The gauntlet: both sides roll to hit every round, and the trash talk is part of the game."
-  - src: ../../assets/projects/verties-great-trial/04-mockup-title.jpg
+  - src: ../../assets/projects/verties-revenge/04-mockup-title.jpg
     alt: "Title screen mockup with the 'Verties Final Revenge' logo — a red V and silver lettering over a purple shape with a single red eye — above a Continue, Start, Load and Exit menu."
-    caption: "Title screen mockup."
-  - src: ../../assets/projects/verties-great-trial/05-mockup-character-creator.jpg
+    caption: "Title screen mockup for Vertie's Final Revenge, the planned finished game. I drew most of the logo, used ChatGPT to finish the colouring, then vectorised it."
+  - src: ../../assets/projects/verties-revenge/05-mockup-character-creator.jpg
     alt: "Character creator layout: an ASCII art banner, a panel for player name, species, attunement and pet, a player and pet emote box, a starting stats box and an action bar."
     caption: "Character creator layout. The Force or Saber choice will set your starting stats."
-  - src: ../../assets/projects/verties-great-trial/06-mockup-main-screen.jpg
+  - src: ../../assets/projects/verties-revenge/06-mockup-main-screen.jpg
     alt: "Main screen layout: a player HUD for health and Force points, a box for maze, world and round or opponent HP, a large maze area and an action bar."
     caption: "Main screen layout."
-  - src: ../../assets/projects/verties-great-trial/07-mockup-battle.jpg
+  - src: ../../assets/projects/verties-revenge/07-mockup-battle.jpg
     alt: "Battle screen layout: an ASCII art banner above stacked player and opponent info bars, a combat log and an action bar."
     caption: "Battle screen layout."
 ---
 
 ## What it is
 
-Vertie's Great Trial is a retro text-adventure Jedi RPG that runs in the terminal. Vertie is an
+Vertie's Revenge is a retro text-adventure Jedi RPG that runs in the terminal. It started life as
+Vertie's Great Trial and became Vertie's Revenge as I added more to it. Vertie's Final Revenge is
+the finished game I'm working toward, which is on hold while I do my MSc.
+
+Vertie is an
 AI who's tired of training Padawans and wants to become the Master herself, so the trials stop
 being friendly. In the full game you create a Padawan, choose whether they lean toward the Force or the Saber,
 and that choice keeps mattering for the rest of the game. The core systems are built, and the character creator and story come next.
@@ -87,5 +91,6 @@ character creator and battle layout.
 
 I wrote the code myself across the course, building on Tim's lesson starters and taking them
 further. Tim tutored the course, and an AI assistant (Claude) reviewed my code and asked questions
-as I worked, rather than writing the game for me. The terminal screenshots are real output from the
-current build, shown in a terminal-style frame.
+as I worked, rather than writing the game for me. I drew most of the title logo myself, used
+ChatGPT to finish the colouring while I was sick, and then vectorised it. The terminal screenshots
+are real output from the current build, shown in a terminal-style frame.
